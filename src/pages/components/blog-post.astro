@@ -71,7 +71,8 @@ import DocsLayout from '../../layouts/DocsLayout.astro';
       <tr><td>.blog-post__content h3</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Sub-section heading inside content</td></tr>
       <tr><td>.blog-post__content h4</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Minor heading inside content</td></tr>
       <tr><td>.blog-post__content p</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Body paragraph</td></tr>
-      <tr><td>.blog-post__content a:not(.btn)</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Inline link in prose</td></tr>
+      <tr><td>.blog-post__content a:not(.btn)</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Inline link; var(--color-accent), underline, text-underline-offset 2px</td></tr>
+      <tr><td>.blog-post__content a:not(.btn):hover</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Color shifts to var(--color-accent-dark)</td></tr>
       <tr><td>.blog-post__content strong</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Bold inline text</td></tr>
       <tr><td>.blog-post__content ul</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Unordered list</td></tr>
       <tr><td>.blog-post__content ol</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Ordered list</td></tr>
@@ -85,8 +86,12 @@ import DocsLayout from '../../layouts/DocsLayout.astro';
       <tr><td>.blog-post__content figure</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Figure wrapper</td></tr>
       <tr><td>.blog-post__content figure img</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Image inside a figure</td></tr>
       <tr><td>.blog-post__content figcaption</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Caption below a figure</td></tr>
-      <tr><td>img.blog-img--wide</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td style="color:var(--docs-text-muted)">Full-bleed image wider than the column</td></tr>
-      <tr><td>img.blog-img--badge</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td style="color:var(--docs-text-muted)">Small badge-sized image</td></tr>
+      <tr><td>.blog-post__content hr</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Horizontal rule; borderless top 1px solid rgba(44,36,24,.08), margin var(--space-xl) 0</td></tr>
+      <tr><td>.blog-callout</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Callout box; padding var(--space-md) var(--space-lg), 3 px border-radius, margin-bottom var(--space-md)</td></tr>
+      <tr><td>.blog-callout--warning</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td style="color:var(--docs-text-muted)">Warning variant; background #fef9ec, border 1px solid #c89b3c</td></tr>
+      <tr><td>.container--article</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Article-width constraint; max-width 700px, margin-inline auto, padding-inline var(--space-md)</td></tr>
+      <tr><td>img.blog-img--wide</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td style="color:var(--docs-text-muted)">800 px wide image offset with left 50% / translateX(-50%); collapses to 100vw below 768 px</td></tr>
+      <tr><td>img.blog-img--badge</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td style="color:var(--docs-text-muted)">300 px wide badge image (max 65%), centered block, no border</td></tr>
       <tr><td>.hljs-comment</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">highlight.js: comment token</td></tr>
       <tr><td>.hljs-quote</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">highlight.js: quote token</td></tr>
       <tr><td>.hljs-keyword</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">highlight.js: keyword token</td></tr>
