@@ -15,8 +15,13 @@
 body {
   font-family: var(--docs-font);
   background: var(--docs-bg) !important;
-  color: var(--docs-text) !important;
+  color: var(--docs-text);
   line-height: 1.6;
+}
+
+.docs-main,
+.docs-sidebar {
+  color: var(--docs-text);
 }
 
 .docs-shell {
@@ -138,13 +143,17 @@ body {
 /* Preview box */
 .docs-preview {
   background: #fcfaf5;
-  color: #2c2418;
+  color: #2c2418 !important;
   font-family: 'DM Sans', sans-serif;
   border: 1px solid var(--docs-border);
   border-radius: 10px;
   padding: 2rem;
   margin-bottom: 0.5rem;
   overflow: auto;
+}
+
+.docs-preview * {
+  color: inherit;
 }
 
 /* Code block */

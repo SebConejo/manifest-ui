@@ -7,36 +7,52 @@ import DocsLayout from '../../layouts/DocsLayout.astro';
 
   <h2>Preview</h2>
   <div class="docs-preview">
-    
+
     <section class="hero">
-      <div class="hero__top container">
+      <div class="container hero__top">
         <div class="hero__copy">
-          <p class="hero__eyebrow">Tag line</p>
-          <h1 class="hero__title">Title <span class="hero__title-accent">accent</span></h1>
-          <p class="hero__subtitle">Subtitle text</p>
+          <div class="hero__backed-row">
+            <span class="hero__backed-label">Backed by</span>
+            <span class="hero__backed-separator">•</span>
+            <span class="hero__backed-label">Berkeley SkyDeck</span>
+          </div>
+          <h1 class="hero__title">
+            LLM calls
+            <span class="hero__title-accent">that don't break</span>
+          </h1>
+          <p class="hero__subtitle">The open source LLM Gateway that auto-fixes your bad requests on the fly.</p>
           <div class="hero__actions">
-            <button class="btn btn--primary">Get started</button>
-            <button class="btn btn--secondary">Learn more</button>
+            <button class="btn btn--primary">Get Started for Free</button>
+            <button class="btn btn--secondary">Self-host Manifest</button>
           </div>
         </div>
-        <div class="hero__diagram"><!-- visual --></div>
+        <div class="hero__diagram"><!-- diagram visual --></div>
       </div>
     </section>
   </div>
 
   <h2>HTML</h2>
   <div class="docs-code"><pre>&lt;section class="hero"&gt;
-  &lt;div class="hero__top container"&gt;
+  &lt;div class="container hero__top"&gt;
     &lt;div class="hero__copy"&gt;
-      &lt;p class="hero__eyebrow"&gt;Tag line&lt;/p&gt;
-      &lt;h1 class="hero__title"&gt;Title &lt;span class="hero__title-accent"&gt;accent&lt;/span&gt;&lt;/h1&gt;
+      &lt;div class="hero__backed-row"&gt;
+        &lt;span class="hero__backed-label"&gt;Backed by&lt;/span&gt;
+        &lt;span class="hero__backed-separator"&gt;&amp;bull;&lt;/span&gt;
+        &lt;a class="hero__backed-logo-link" href="..."&gt;
+          &lt;img class="hero__backed-logo" src="..." alt="..." /&gt;
+        &lt;/a&gt;
+      &lt;/div&gt;
+      &lt;h1 class="hero__title"&gt;
+        LLM calls
+        &lt;span class="hero__title-accent"&gt;that don&amp;apos;t break&lt;/span&gt;
+      &lt;/h1&gt;
       &lt;p class="hero__subtitle"&gt;Subtitle text&lt;/p&gt;
       &lt;div class="hero__actions"&gt;
         &lt;button class="btn btn--primary"&gt;Get started&lt;/button&gt;
         &lt;button class="btn btn--secondary"&gt;Learn more&lt;/button&gt;
       &lt;/div&gt;
     &lt;/div&gt;
-    &lt;div class="hero__diagram"&gt;&lt;!-- visual --&gt;&lt;/div&gt;
+    &lt;div class="hero__diagram"&gt;&lt;!-- diagram visual --&gt;&lt;/div&gt;
   &lt;/div&gt;
 &lt;/section&gt;</pre></div>
 

@@ -7,21 +7,18 @@ import DocsLayout from '../../layouts/DocsLayout.astro';
 
   <h2>Preview</h2>
   <div class="docs-preview">
-    
+
     <section class="cta">
-      <div class="cta__outer">
-        <div class="cta__inner">
+      <div class="container container--wide">
+        <div class="cta__outer">
           <canvas class="cta__canvas"></canvas>
-          <img class="cta__logo" src="..." alt="Manifest" />
-          <h2 class="cta__title">Start building today</h2>
-          <p class="cta__subtitle">Free tier, no credit card required.</p>
-          <ul class="cta__features">
-            <li>Feature one</li>
-            <li>Feature two</li>
-          </ul>
-          <div class="cta__actions">
-            <a class="btn btn--primary" href="#">Get started free</a>
-            <a class="btn btn--secondary" href="#">Talk to us</a>
+          <div class="cta__card">
+            <h2 class="cta__title">Don't let LLM API errors reduce the value of your workflows.</h2>
+            <p class="cta__subtitle">Build reliable products now.</p>
+            <div class="hero__actions">
+              <a class="btn btn--primary btn--large" href="#">Get started</a>
+              <a class="btn btn--secondary btn--large" href="#">Talk to sales</a>
+            </div>
           </div>
         </div>
       </div>
@@ -30,19 +27,16 @@ import DocsLayout from '../../layouts/DocsLayout.astro';
 
   <h2>HTML</h2>
   <div class="docs-code"><pre>&lt;section class="cta"&gt;
-  &lt;div class="cta__outer"&gt;
-    &lt;div class="cta__inner"&gt;
+  &lt;div class="container container--wide"&gt;
+    &lt;div class="cta__outer"&gt;
       &lt;canvas class="cta__canvas"&gt;&lt;/canvas&gt;
-      &lt;img class="cta__logo" src="..." alt="Manifest" /&gt;
-      &lt;h2 class="cta__title"&gt;Start building today&lt;/h2&gt;
-      &lt;p class="cta__subtitle"&gt;Free tier, no credit card required.&lt;/p&gt;
-      &lt;ul class="cta__features"&gt;
-        &lt;li&gt;Feature one&lt;/li&gt;
-        &lt;li&gt;Feature two&lt;/li&gt;
-      &lt;/ul&gt;
-      &lt;div class="cta__actions"&gt;
-        &lt;a class="btn btn--primary" href="#"&gt;Get started free&lt;/a&gt;
-        &lt;a class="btn btn--secondary" href="#"&gt;Talk to us&lt;/a&gt;
+      &lt;div class="cta__card"&gt;
+        &lt;h2 class="cta__title"&gt;Don&amp;apos;t let LLM API errors reduce the value of your workflows.&lt;/h2&gt;
+        &lt;p class="cta__subtitle"&gt;Build reliable products now.&lt;/p&gt;
+        &lt;div class="hero__actions"&gt;
+          &lt;a class="btn btn--primary btn--large" href="#"&gt;Get started&lt;/a&gt;
+          &lt;a class="btn btn--secondary btn--large" href="#"&gt;Talk to sales&lt;/a&gt;
+        &lt;/div&gt;
       &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;

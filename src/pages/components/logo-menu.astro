@@ -7,28 +7,48 @@ import DocsLayout from '../../layouts/DocsLayout.astro';
 
   <h2>Preview</h2>
   <div class="docs-preview">
-    
-    <div class="logo-menu is-open">
-      <button class="logo-menu__item">
-        <i class="bx bx-circle"></i> Default
+
+    <div class="logo-menu is-open" style="position:relative;opacity:1;visibility:visible;transform:none;">
+      <button class="logo-menu__item" data-action="copy-svg">
+        <i class="bx bx-code-alt"></i>
+        Copy Logo as SVG
+      </button>
+      <button class="logo-menu__item" data-action="download-png">
+        <i class="bx bx-image"></i>
+        Download Logo PNG
+      </button>
+      <button class="logo-menu__item" data-action="download-svg">
+        <i class="bx bx-download"></i>
+        Download Logo SVG
       </button>
       <div class="logo-menu__separator"></div>
-      <button class="logo-menu__item">
-        <i class="bx bx-image"></i> Custom logo
-      </button>
+      <a class="logo-menu__item" href="/brand-assets/">
+        <i class="bx bx-package"></i>
+        Brand Assets
+      </a>
     </div>
   </div>
 
   <h2>HTML</h2>
   <div class="docs-code">
     <pre>&lt;div class="logo-menu is-open"&gt;
-  &lt;button class="logo-menu__item"&gt;
-    &lt;i class="bx bx-circle"&gt;&lt;/i&gt; Default
+  &lt;button class="logo-menu__item" data-action="copy-svg"&gt;
+    &lt;i class="bx bx-code-alt"&gt;&lt;/i&gt;
+    Copy Logo as SVG
+  &lt;/button&gt;
+  &lt;button class="logo-menu__item" data-action="download-png"&gt;
+    &lt;i class="bx bx-image"&gt;&lt;/i&gt;
+    Download Logo PNG
+  &lt;/button&gt;
+  &lt;button class="logo-menu__item" data-action="download-svg"&gt;
+    &lt;i class="bx bx-download"&gt;&lt;/i&gt;
+    Download Logo SVG
   &lt;/button&gt;
   &lt;div class="logo-menu__separator"&gt;&lt;/div&gt;
-  &lt;button class="logo-menu__item"&gt;
-    &lt;i class="bx bx-image"&gt;&lt;/i&gt; Custom logo
-  &lt;/button&gt;
+  &lt;a class="logo-menu__item" href="/brand-assets/"&gt;
+    &lt;i class="bx bx-package"&gt;&lt;/i&gt;
+    Brand Assets
+  &lt;/a&gt;
 &lt;/div&gt;</pre>
   </div>
 

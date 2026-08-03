@@ -7,18 +7,26 @@ import DocsLayout from '../../layouts/DocsLayout.astro';
 
   <h2>Preview</h2>
   <div class="docs-preview">
-    
-    <div class="canvas-card">
-      <div class="container--narrow">
-        <p>Content inside a canvas card with a narrow container.</p>
+
+    <div class="cta__outer">
+      <canvas class="cta__canvas"></canvas>
+      <div class="canvas-card">
+        <div class="container--narrow">
+          <span class="section__tag">USAGE</span>
+          <p style="font-family:'Bricolage Grotesque',serif;font-weight:700;font-size:1.5rem;margin:0.5rem 0;">Who uses Manifest?</p>
+          <p style="color:#7a6e5e;">Content inside a canvas card sits above the animated canvas background.</p>
+        </div>
       </div>
     </div>
   </div>
 
   <h2>HTML</h2>
-  <div class="docs-code"><pre>&lt;div class="canvas-card"&gt;
-  &lt;div class="container--narrow"&gt;
-    &lt;!-- page content --&gt;
+  <div class="docs-code"><pre>&lt;div class="cta__outer"&gt;
+  &lt;canvas class="cta__canvas"&gt;&lt;/canvas&gt;
+  &lt;div class="canvas-card"&gt;
+    &lt;div class="container--narrow"&gt;
+      &lt;!-- page content --&gt;
+    &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</pre></div>
 
