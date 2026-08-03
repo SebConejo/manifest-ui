@@ -1,0 +1,38 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+const scale = [
+  { token: '--space-xs', rem: '0.5rem', px: '8px' },
+  { token: '--space-sm', rem: '1rem', px: '16px' },
+  { token: '--space-md', rem: '1.5rem', px: '24px' },
+  { token: '--space-lg', rem: '2rem', px: '32px' },
+  { token: '--space-xl', rem: '3rem', px: '48px' },
+  { token: '--space-2xl', rem: '5rem', px: '80px' },
+  { token: '--space-3xl', rem: '7rem', px: '112px' },
+];
+---
+<DocsLayout title="Spacing">
+  <h1>Spacing</h1>
+  <p class="docs-lead">7-step spacing scale. Always use tokens, never hardcoded values.</p>
+  <h2>Scale</h2>
+  <table class="docs-table">
+    <thead><tr><th>Token</th><th>rem</th><th>px</th><th>Visual</th></tr></thead>
+    <tbody>
+      {scale.map(s => (
+        <tr>
+          <td>{s.token}</td>
+          <td>{s.rem}</td>
+          <td>{s.px}</td>
+          <td><div style={`height: 8px; background: #2633ef; border-radius: 2px; width: ${s.px}`}></div></td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+  <h2>Other layout tokens</h2>
+  <table class="docs-table">
+    <thead><tr><th>Token</th><th>Value</th><th>Usage</th></tr></thead>
+    <tbody>
+      <tr><td>--max-width</td><td>1080px</td><td style="color:var(--docs-text-muted)">Container max-width</td></tr>
+      <tr><td>--nav-height</td><td>68px</td><td style="color:var(--docs-text-muted)">Navigation bar height</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>

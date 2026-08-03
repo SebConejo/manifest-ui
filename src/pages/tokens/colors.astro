@@ -1,0 +1,74 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+
+const colors = [
+  { name: '--color-bg', value: '#fcfaf5', description: 'Background principal' },
+  { name: '--color-bg-alt', value: '#f5f3ee', description: 'Background alternatif' },
+  { name: '--color-bg-card', value: '#ffffff', description: 'Background des cartes' },
+  { name: '--color-text', value: '#2c2418', description: 'Texte principal' },
+  { name: '--color-text-muted', value: '#7a6e5e', description: 'Texte secondaire' },
+  { name: '--color-text-light', value: '#a89b8a', description: 'Texte léger' },
+  { name: '--color-accent', value: '#2633ef', description: 'Bleu accent principal' },
+  { name: '--color-accent-dark', value: '#0f1683', description: 'Bleu accent foncé' },
+  { name: '--color-accent-glow', value: '#6b76f8', description: 'Bleu luminescent' },
+  { name: '--color-accent-subtle', value: 'rgba(38,51,239,0.08)', description: 'Bleu très transparent' },
+  { name: '--color-error', value: '#dc2626', description: 'Rouge erreur' },
+  { name: '--color-success', value: '#16a34a', description: 'Vert succès' },
+  { name: '--color-cta-bg', value: '#2c2418', description: 'Fond CTA' },
+  { name: '--color-cta-text', value: '#fafafa', description: 'Texte CTA' },
+  { name: '--dot-color', value: '#a89b8a', description: 'Points status badge' },
+];
+
+const borders = [
+  { name: 'border-subtle', value: 'rgba(44,36,24,0.06)', description: 'Bordure très légère' },
+  { name: 'border-default', value: 'rgba(44,36,24,0.08)', description: 'Bordure standard' },
+  { name: 'border-medium', value: 'rgba(44,36,24,0.1)', description: 'Bordure medium' },
+  { name: 'border-strong', value: 'rgba(44,36,24,0.2)', description: 'Bordure marquée' },
+];
+---
+<DocsLayout title="Colors">
+  <h1>Colors</h1>
+  <p class="docs-lead">All color tokens used across the Manifest website. Use CSS custom properties for all color values — never hardcode.</p>
+
+  <h2>Core palette</h2>
+  <div class="docs-swatches">
+    {colors.map(c => (
+      <div class="docs-swatch">
+        <div class="docs-swatch__color" style={`background: ${c.value}`}></div>
+        <div class="docs-swatch__label">
+          <span class="docs-swatch__name">{c.name}</span>
+          <span class="docs-swatch__value">{c.value}</span>
+        </div>
+      </div>
+    ))}
+  </div>
+
+  <h2>Border colors (non-tokenized)</h2>
+  <div class="docs-swatches">
+    {borders.map(c => (
+      <div class="docs-swatch">
+        <div class="docs-swatch__color" style={`background: ${c.value}`}></div>
+        <div class="docs-swatch__label">
+          <span class="docs-swatch__name">{c.name}</span>
+          <span class="docs-swatch__value">{c.value}</span>
+        </div>
+      </div>
+    ))}
+  </div>
+
+  <h2>Reference table</h2>
+  <table class="docs-table">
+    <thead>
+      <tr><th>Token</th><th>Value</th><th>Usage</th></tr>
+    </thead>
+    <tbody>
+      {colors.map(c => (
+        <tr>
+          <td>{c.name}</td>
+          <td>{c.value}</td>
+          <td style="color: var(--docs-text-muted)">{c.description}</td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</DocsLayout>

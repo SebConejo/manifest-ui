@@ -1,0 +1,14 @@
+{
+  "name": "manifest-ui",
+  "version": "1.0.0",
+  "description": "Manifest website design system — component registry and documentation",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "astro": "^4.0.0"
+  }
+}

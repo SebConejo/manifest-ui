@@ -1,0 +1,50 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Button">
+  <h1>Button <span class="docs-tag">Global</span></h1>
+  <p class="docs-lead">Primary action element. Five variants covering all use cases across the site.</p>
+
+  <h2>Preview</h2>
+  <div class="docs-preview">
+    <link rel="stylesheet" href="/styles/manifest.css" />
+    <button class="btn btn--primary">Primary</button>
+    <button class="btn btn--secondary">Secondary</button>
+    <button class="btn btn--large btn--primary">Large</button>
+    <button class="btn btn--sm btn--primary">Small</button>
+    <button class="btn btn--blue">Blue</button>
+  </div>
+
+  <h2>HTML</h2>
+  <div class="docs-code">
+    <pre>&lt;button class="btn btn--primary"&gt;Label&lt;/button&gt;
+&lt;button class="btn btn--secondary"&gt;Label&lt;/button&gt;
+&lt;button class="btn btn--large btn--primary"&gt;Label&lt;/button&gt;
+&lt;button class="btn btn--sm btn--primary"&gt;Label&lt;/button&gt;
+&lt;button class="btn btn--blue"&gt;Label&lt;/button&gt;</pre>
+  </div>
+
+  <h2>Class reference</h2>
+  <table class="docs-table">
+    <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>.btn</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Base button styles</td></tr>
+      <tr><td>.btn--primary</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td style="color:var(--docs-text-muted)">Dark background, CTA style</td></tr>
+      <tr><td>.btn--secondary</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td style="color:var(--docs-text-muted)">White background, outline style</td></tr>
+      <tr><td>.btn--large</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td style="color:var(--docs-text-muted)">Larger padding and font size</td></tr>
+      <tr><td>.btn--sm</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td style="color:var(--docs-text-muted)">Smaller padding and font size</td></tr>
+      <tr><td>.btn--blue</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td style="color:var(--docs-text-muted)">Accent blue variant</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Tokens used</h2>
+  <table class="docs-table">
+    <thead><tr><th>Token</th><th>Role</th></tr></thead>
+    <tbody>
+      <tr><td>--color-cta-bg</td><td style="color:var(--docs-text-muted)">Background of --primary</td></tr>
+      <tr><td>--color-cta-text</td><td style="color:var(--docs-text-muted)">Text of --primary</td></tr>
+      <tr><td>--color-accent</td><td style="color:var(--docs-text-muted)">Background of --blue</td></tr>
+      <tr><td>--radius</td><td style="color:var(--docs-text-muted)">Not used (btn uses 3px hardcoded)</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>

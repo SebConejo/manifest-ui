@@ -1,0 +1,27 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Borders & Radius">
+  <h1>Borders & Radius</h1>
+  <p class="docs-lead">Two radius tokens and a set of radius values used for specific contexts.</p>
+  <h2>Radius tokens</h2>
+  <table class="docs-table">
+    <thead><tr><th>Token</th><th>Value</th><th>Usage</th></tr></thead>
+    <tbody>
+      <tr><td>--radius</td><td>14px</td><td style="color:var(--docs-text-muted)">Border radius standard (cartes, modales)</td></tr>
+      <tr><td>--radius-lg</td><td>20px</td><td style="color:var(--docs-text-muted)">Border radius large</td></tr>
+    </tbody>
+  </table>
+  <h2>Radius values (context-specific)</h2>
+  <table class="docs-table">
+    <thead><tr><th>Value</th><th>Usage</th></tr></thead>
+    <tbody>
+      <tr><td>3px</td><td style="color:var(--docs-text-muted)">Buttons, small UI elements</td></tr>
+      <tr><td>6px</td><td style="color:var(--docs-text-muted)">Tags, badges</td></tr>
+      <tr><td>8px</td><td style="color:var(--docs-text-muted)">Code blocks, inputs</td></tr>
+      <tr><td>12px</td><td style="color:var(--docs-text-muted)">Medium cards</td></tr>
+      <tr><td>9999px / 50px</td><td style="color:var(--docs-text-muted)">Pills, rounded buttons</td></tr>
+      <tr><td>50%</td><td style="color:var(--docs-text-muted)">Circles, avatar images</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>

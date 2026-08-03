@@ -1,0 +1,59 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Typography">
+  <h1>Typography</h1>
+  <p class="docs-lead">Three font families, a 9-step size scale, and strict line-height rules.</p>
+
+  <h2>Font families</h2>
+  <table class="docs-table">
+    <thead><tr><th>Token</th><th>Value</th><th>Usage</th></tr></thead>
+    <tbody>
+      <tr><td>--font-display</td><td>"Bricolage Grotesque", serif</td><td style="color:var(--docs-text-muted)">Headings h1–h4</td></tr>
+      <tr><td>--font-body</td><td>"DM Sans", sans-serif</td><td style="color:var(--docs-text-muted)">Body text, UI elements</td></tr>
+      <tr><td>--font-mono</td><td>"Fira Code", monospace</td><td style="color:var(--docs-text-muted)">Code blocks, version badges</td></tr>
+      <tr><td>font-cursive</td><td>"Permanent Marker", cursive</td><td style="color:var(--docs-text-muted)">Hero accent text (ponctuel)</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Size scale</h2>
+  <table class="docs-table">
+    <thead><tr><th>Token</th><th>rem</th><th>px</th></tr></thead>
+    <tbody>
+      <tr><td>--size-xs</td><td>0.75rem</td><td>12px</td></tr>
+      <tr><td>--size-sm</td><td>0.875rem</td><td>14px</td></tr>
+      <tr><td>--size-base</td><td>1rem</td><td>16px</td></tr>
+      <tr><td>--size-lg</td><td>1.125rem</td><td>18px</td></tr>
+      <tr><td>--size-xl</td><td>1.25rem</td><td>20px</td></tr>
+      <tr><td>--size-2xl</td><td>1.5rem</td><td>24px</td></tr>
+      <tr><td>--size-3xl</td><td>2.25rem</td><td>36px</td></tr>
+      <tr><td>--size-4xl</td><td>3rem</td><td>48px</td></tr>
+      <tr><td>--size-5xl</td><td>4rem</td><td>64px</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Weights</h2>
+  <table class="docs-table">
+    <thead><tr><th>Name</th><th>Value</th><th>Usage</th></tr></thead>
+    <tbody>
+      <tr><td>Regular</td><td>400</td><td style="color:var(--docs-text-muted)">Body text, h2–h4</td></tr>
+      <tr><td>Medium</td><td>500</td><td style="color:var(--docs-text-muted)">Buttons, labels, tags</td></tr>
+      <tr><td>Semibold</td><td>600</td><td style="color:var(--docs-text-muted)">Navigation, emphasis</td></tr>
+      <tr><td>Bold</td><td>700</td><td style="color:var(--docs-text-muted)">Badges, strong emphasis</td></tr>
+      <tr><td>Extrabold</td><td>800</td><td style="color:var(--docs-text-muted)">h1 uniquement</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Line heights</h2>
+  <table class="docs-table">
+    <thead><tr><th>Value</th><th>Usage</th></tr></thead>
+    <tbody>
+      <tr><td>1.15</td><td style="color:var(--docs-text-muted)">Headings h1–h4</td></tr>
+      <tr><td>1.3</td><td style="color:var(--docs-text-muted)">Blog card titles</td></tr>
+      <tr><td>1.4</td><td style="color:var(--docs-text-muted)">Small text, code</td></tr>
+      <tr><td>1.6</td><td style="color:var(--docs-text-muted)">Lists</td></tr>
+      <tr><td>1.7</td><td style="color:var(--docs-text-muted)">Body text standard</td></tr>
+      <tr><td>1.8</td><td style="color:var(--docs-text-muted)">Agent pages</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>

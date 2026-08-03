@@ -1,0 +1,237 @@
+---
+const { title = 'Manifest UI' } = Astro.props;
+
+const nav = [
+  {
+    label: 'TOKENS',
+    items: [
+      { label: 'Colors', href: '/tokens/colors' },
+      { label: 'Typography', href: '/tokens/typography' },
+      { label: 'Spacing', href: '/tokens/spacing' },
+      { label: 'Breakpoints', href: '/tokens/breakpoints' },
+      { label: 'Borders & Radius', href: '/tokens/borders' },
+    ],
+  },
+  {
+    label: 'LAYOUT',
+    items: [
+      { label: 'Container', href: '/components/container' },
+      { label: 'Section', href: '/components/section' },
+      { label: 'Separator', href: '/components/separator' },
+    ],
+  },
+  {
+    label: 'NAVIGATION',
+    items: [
+      { label: 'Nav', href: '/components/nav' },
+      { label: 'Mega Menu', href: '/components/mega' },
+      { label: 'Drawer', href: '/components/drawer' },
+      { label: 'Breadcrumbs', href: '/components/breadcrumbs' },
+      { label: 'Logo Menu', href: '/components/logo-menu' },
+    ],
+  },
+  {
+    label: 'GLOBAL',
+    items: [
+      { label: 'Button', href: '/components/btn' },
+      { label: 'Hero', href: '/components/hero' },
+      { label: 'Footer', href: '/components/footer' },
+      { label: 'CTA', href: '/components/cta' },
+      { label: 'Announcement Banner', href: '/components/announcement-banner' },
+      { label: 'Clawcon Banner', href: '/components/clawcon-banner' },
+      { label: 'Logos Marquee', href: '/components/logos' },
+      { label: 'Status Badge', href: '/components/status-badge' },
+      { label: 'Badge Inline', href: '/components/badge-inline' },
+    ],
+  },
+  {
+    label: 'CARDS',
+    items: [
+      { label: 'Blog Card', href: '/components/blog-card' },
+      { label: 'Pricing Card', href: '/components/pricing-card' },
+      { label: 'Agent Card', href: '/components/agent-card' },
+      { label: 'Provider Card', href: '/components/provider-card' },
+      { label: 'Provider Grid Card', href: '/components/provider-grid-card' },
+      { label: 'Related Card', href: '/components/related-card' },
+      { label: 'Canvas Card', href: '/components/canvas-card' },
+      { label: 'Bento', href: '/components/bento' },
+    ],
+  },
+  {
+    label: 'BLOG',
+    items: [
+      { label: 'Blog Post', href: '/components/blog-post' },
+      { label: 'Blog Grid', href: '/components/blog-grid' },
+      { label: 'Blog Index', href: '/components/blog-index' },
+      { label: 'Blog Tab', href: '/components/blog-tab' },
+    ],
+  },
+  {
+    label: 'TABLES',
+    items: [
+      { label: 'Model Table', href: '/components/model-table' },
+      { label: 'Model Listing', href: '/components/model-listing' },
+      { label: 'Pricing Compare', href: '/components/pricing-compare' },
+    ],
+  },
+  {
+    label: 'TABS & ACCORDIONS',
+    items: [
+      { label: 'Feature Tabs', href: '/components/feature-tabs' },
+      { label: 'Pricing Tabs', href: '/components/pricing-tabs' },
+      { label: 'FAQ', href: '/components/faq' },
+      { label: 'Usecases', href: '/components/usecases' },
+    ],
+  },
+  {
+    label: 'MODALS & OVERLAYS',
+    items: [
+      { label: 'Modal', href: '/components/modal' },
+      { label: 'Discovery Modal', href: '/components/discovery-modal' },
+      { label: 'Enterprise Modal', href: '/components/enterprise-modal' },
+      { label: 'Video Modal', href: '/components/video-modal' },
+      { label: 'Pricing Toast', href: '/components/pricing-toast' },
+    ],
+  },
+  {
+    label: 'FORMS',
+    items: [
+      { label: 'Waitlist', href: '/components/waitlist' },
+      { label: 'Selfhost Field', href: '/components/selfhost-field' },
+      { label: 'Setup Segment', href: '/components/setup-segment' },
+      { label: 'Setup Onboard Fields', href: '/components/setup-onboard-fields' },
+    ],
+  },
+  {
+    label: 'PROVIDERS',
+    items: [
+      { label: 'Provider Hero', href: '/components/provider-hero' },
+      { label: 'Provider Chart', href: '/components/provider-chart' },
+      { label: 'Provider Errors', href: '/components/provider-errors' },
+      { label: 'Provider Models', href: '/components/provider-models' },
+      { label: 'Providers Grid', href: '/components/providers-grid' },
+      { label: 'Providers Hero', href: '/components/providers-hero' },
+      { label: 'Providers Section', href: '/components/providers-section' },
+    ],
+  },
+  {
+    label: 'AGENTS',
+    items: [
+      { label: 'Agent Hero', href: '/components/agent-hero' },
+      { label: 'Agent Category Pill', href: '/components/agent-category-pill' },
+    ],
+  },
+  {
+    label: 'PRICING',
+    items: [
+      { label: 'Pricing OSS', href: '/components/pricing-oss' },
+      { label: 'Pricing Selfhosted', href: '/components/pricing-selfhosted' },
+      { label: 'Pricing Final CTA', href: '/components/pricing-final-cta' },
+      { label: 'Pricing Zero', href: '/components/pricing-zero' },
+    ],
+  },
+  {
+    label: 'SECTIONS',
+    items: [
+      { label: 'Autofix Band', href: '/components/autofix-band' },
+      { label: 'Trust', href: '/components/trust' },
+      { label: 'Opensource', href: '/components/opensource' },
+      { label: 'Modes', href: '/components/modes' },
+      { label: 'Why', href: '/components/why' },
+      { label: 'Key Number', href: '/components/key-number' },
+      { label: 'Prefooter Stat', href: '/components/prefooter-stat' },
+      { label: 'Opendata', href: '/components/opendata' },
+      { label: 'Harnesses Marquee', href: '/components/harnesses-marquee' },
+      { label: 'Solution', href: '/components/solution' },
+    ],
+  },
+  {
+    label: 'FREE MODELS',
+    items: [
+      { label: 'Free Models Hero', href: '/components/free-models-hero' },
+      { label: 'Free Models Steps', href: '/components/free-models-steps' },
+      { label: 'Free Models Why', href: '/components/free-models-why' },
+      { label: 'Free Models Callout', href: '/components/free-models-callout' },
+      { label: 'Free Models Providers', href: '/components/free-models-providers' },
+    ],
+  },
+  {
+    label: 'SELF-HOSTED',
+    items: [
+      { label: 'Selfhost Hero', href: '/components/selfhost-hero' },
+      { label: 'Selfhost Cmd', href: '/components/selfhost-cmd' },
+      { label: 'Selfhost Chip', href: '/components/selfhost-chip' },
+      { label: 'Selfhost Signup', href: '/components/selfhost-signup' },
+      { label: 'Selfhost Note', href: '/components/selfhost-note' },
+      { label: 'Selfhost Links', href: '/components/selfhost-links' },
+    ],
+  },
+  {
+    label: 'SETUP',
+    items: [
+      { label: 'Setup CLI Block', href: '/components/setup-cli-block' },
+      { label: 'Setup Method', href: '/components/setup-method' },
+      { label: 'Setup Step', href: '/components/setup-step' },
+      { label: 'Setup Model Hint', href: '/components/setup-model-hint' },
+      { label: 'Setup Agents Card', href: '/components/setup-agents-card' },
+    ],
+  },
+  {
+    label: 'OTHER',
+    items: [
+      { label: 'Changelog', href: '/components/changelog' },
+      { label: 'Coming Soon', href: '/components/coming-soon' },
+      { label: 'Err Crosslink', href: '/components/err-crosslink' },
+      { label: 'Related Links', href: '/components/related-links' },
+    ],
+  },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title} — Manifest UI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;700;800&family=DM+Sans:wght@400;500;600&family=Fira+Code&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles/docs.css" />
+</head>
+<body>
+  <div class="docs-shell">
+    <aside class="docs-sidebar">
+      <div class="docs-sidebar__brand">
+        <span class="docs-sidebar__name">manifest<span class="docs-sidebar__ui">/ui</span></span>
+      </div>
+      <nav class="docs-sidebar__nav">
+        {nav.map(group => (
+          <div class="docs-sidebar__group">
+            <div class="docs-sidebar__group-label">{group.label}</div>
+            <ul class="docs-sidebar__list">
+              {group.items.map(item => (
+                <li>
+                  <a
+                    href={item.href}
+                    class={`docs-sidebar__link ${currentPath === item.href ? 'docs-sidebar__link--active' : ''}`}
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </nav>
+    </aside>
+    <main class="docs-main">
+      <div class="docs-content">
+        <slot />
+      </div>
+    </main>
+  </div>
+</body>
+</html>

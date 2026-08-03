@@ -1,0 +1,32 @@
+---
+import DocsLayout from '../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Overview">
+  <h1>Manifest UI</h1>
+  <p class="docs-lead">
+    Design system for the Manifest website. All components are plain HTML + BEM CSS.<br />
+    Use the sidebar to browse tokens and components.
+  </p>
+
+  <h2>For agents</h2>
+  <p style="color: var(--docs-text-muted); margin-bottom: 1rem; font-size: 0.875rem;">
+    Read <code style="font-family: 'Fira Code', monospace; color: #a8c7fa;">registry/components.json</code> for the complete machine-readable index.
+    Each component entry contains its BEM classes, modifiers, elements, states, and an HTML snippet.
+  </p>
+
+  <h2>Quick stats</h2>
+  <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 2rem;">
+    <div style="background: #1a1a1a; border: 1px solid var(--docs-border); border-radius: 8px; padding: 1.25rem;">
+      <div style="font-size: 2rem; font-weight: 800; color: #fff; font-family: 'Bricolage Grotesque', serif;">78</div>
+      <div style="font-size: 0.8125rem; color: var(--docs-text-muted);">Components</div>
+    </div>
+    <div style="background: #1a1a1a; border: 1px solid var(--docs-border); border-radius: 8px; padding: 1.25rem;">
+      <div style="font-size: 2rem; font-weight: 800; color: #fff; font-family: 'Bricolage Grotesque', serif;">5</div>
+      <div style="font-size: 0.8125rem; color: var(--docs-text-muted);">Token categories</div>
+    </div>
+    <div style="background: #1a1a1a; border: 1px solid var(--docs-border); border-radius: 8px; padding: 1.25rem;">
+      <div style="font-size: 2rem; font-weight: 800; color: #fff; font-family: 'Bricolage Grotesque', serif;">BEM</div>
+      <div style="font-size: 0.8125rem; color: var(--docs-text-muted);">Methodology</div>
+    </div>
+  </div>
+</DocsLayout>

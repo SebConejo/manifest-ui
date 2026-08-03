@@ -1,0 +1,26 @@
+# Manifest UI — Design System
+
+This repository documents the Manifest website design system.
+All components are plain HTML + BEM CSS (no framework, no React).
+
+## Quick start for agents
+
+1. Read `registry/components.json` for a complete machine-readable index of all
+   components, their BEM classes, modifiers, elements, and required tokens.
+2. Read `src/pages/components/<name>.astro` for full documentation and HTML
+   snippets for any specific component.
+3. The design system CSS lives in `src/styles/manifest.css`. Copy it or link it
+   in any HTML page to apply all styles.
+
+## Rules when building a new page on the Manifest website
+- Always use BEM classes from the registry. Never invent new class names.
+- Always use CSS custom properties (--color-*, --space-*, --radius, etc.)
+  instead of hardcoded values.
+- Check the modifier list in components.json before adding a new variant.
+- The canonical source of truth is the mnfst/website repo CSS.
+
+## Repository structure
+- registry/components.json — machine-readable component index
+- src/pages/tokens/ — design tokens (colors, typography, spacing, etc.)
+- src/pages/components/ — one page per component with preview + code
+- src/styles/manifest.css — the complete design system CSS
