@@ -3,46 +3,69 @@ import DocsLayout from '../../layouts/DocsLayout.astro';
 ---
 <DocsLayout title="Blog Post">
   <h1>Blog Post <span class="docs-tag">Blog</span></h1>
-  <p class="docs-lead">Full article page layout. Rich typography for content, share button, hero image, and syntax-highlighted code blocks via highlight.js.</p>
+  <p class="docs-lead">Full article page layout. Back navigation, share buttons, title/meta header, hero image, and rich content area with syntax-highlighted code blocks.</p>
 
   <h2>Preview</h2>
   <div class="docs-preview">
-    
-    <article class="blog-post container--narrow">
-      <header class="blog-post__header">
-        <h1 class="blog-post__title">Article Title</h1>
-        <div class="blog-post__meta">
-          <span class="blog-post__avatar"></span>
-          Aug 3, 2026 · 5 min read
+    <article class="blog-post">
+      <div class="container--article">
+        <nav class="blog-post__back">
+          <a href="#">&#8592; Back to blog</a>
+        </nav>
+        <div class="blog-post__share">
+          <button class="blog-post__share-btn" aria-label="Share on X">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </button>
+          <button class="blog-post__share-btn" aria-label="Copy link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+          </button>
         </div>
-      </header>
-      <div class="blog-post__hero-wrap">
-        <img class="blog-post__hero" src="https://placehold.co/1200x628/fcfaf5/2c2418?text=Cover" alt="Cover" />
-      </div>
-      <div class="blog-post__content">
-        <p>Article content...</p>
-        <h2>Section heading</h2>
-        <pre><code class="hljs">code block</code></pre>
+        <header class="blog-post__header">
+          <h1 class="blog-post__title">Article Title</h1>
+          <div class="blog-post__meta">
+            <span>The Manifest Team</span>
+            <span aria-hidden="true">&middot;</span>
+            <time datetime="2026-08-03">Aug 3, 2026</time>
+            <span aria-hidden="true">&middot;</span>
+            <span>5 min read</span>
+          </div>
+        </header>
+        <div class="blog-post__hero-wrap"></div>
+        <div class="blog-post__content">
+          <p>Article body text renders here with full typography. Paragraphs use line-height 1.8 and margin-bottom var(--space-md).</p>
+          <h2>Section heading</h2>
+          <p>A follow-up paragraph with an <a href="#">inline link</a> and <strong>bold text</strong>.</p>
+          <pre><code>const result = await manifest.chat(prompt);</code></pre>
+        </div>
       </div>
     </article>
   </div>
 
   <h2>HTML</h2>
-  <div class="docs-code"><pre>&lt;article class="blog-post container--narrow"&gt;
-  &lt;header class="blog-post__header"&gt;
-    &lt;h1 class="blog-post__title"&gt;Article Title&lt;/h1&gt;
-    &lt;div class="blog-post__meta"&gt;
-      &lt;span class="blog-post__avatar"&gt;&lt;/span&gt;
-      Aug 3, 2026 · 5 min read
+  <div class="docs-code"><pre>&lt;article class="blog-post"&gt;
+  &lt;div class="container container--article"&gt;
+    &lt;nav class="blog-post__back"&gt;
+      &lt;a href="/blog/"&gt;&amp;larr; Back to blog&lt;/a&gt;
+    &lt;/nav&gt;
+    &lt;div class="blog-post__share"&gt;
+      &lt;a class="blog-post__share-btn" href="..."&gt;...&lt;/a&gt;
+      &lt;button class="blog-post__share-btn"&gt;...&lt;/button&gt;
     &lt;/div&gt;
-  &lt;/header&gt;
-  &lt;div class="blog-post__hero-wrap"&gt;
-    &lt;img class="blog-post__hero" src="cover.png" alt="Cover" /&gt;
-  &lt;/div&gt;
-  &lt;div class="blog-post__content"&gt;
-    &lt;p&gt;Article content...&lt;/p&gt;
-    &lt;h2&gt;Section heading&lt;/h2&gt;
-    &lt;pre&gt;&lt;code class="hljs"&gt;code block&lt;/code&gt;&lt;/pre&gt;
+    &lt;header class="blog-post__header"&gt;
+      &lt;h1 class="blog-post__title"&gt;Title&lt;/h1&gt;
+      &lt;div class="blog-post__meta"&gt;
+        &lt;img class="blog-post__avatar" src="..." /&gt;
+        &lt;span&gt;Author&lt;/span&gt; &amp;middot;
+        &lt;time datetime="2026-08-03"&gt;Aug 3, 2026&lt;/time&gt; &amp;middot;
+        &lt;span&gt;5 min read&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/header&gt;
+    &lt;div class="blog-post__hero-wrap"&gt;
+      &lt;img class="blog-post__hero" src="cover.png" alt="..." /&gt;
+    &lt;/div&gt;
+    &lt;div class="blog-post__content"&gt;
+      &lt;!-- rendered markdown --&gt;
+    &lt;/div&gt;
   &lt;/div&gt;
 &lt;/article&gt;</pre></div>
 
@@ -50,74 +73,25 @@ import DocsLayout from '../../layouts/DocsLayout.astro';
   <table class="docs-table">
     <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
     <tbody>
-      <tr><td>.blog-post</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Article root element</td></tr>
-      <tr><td>.blog-post__share</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Share action area</td></tr>
-      <tr><td>.blog-post__share-btn</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Share trigger button</td></tr>
-      <tr><td>.blog-post__share-btn:hover</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Share button hover highlight</td></tr>
-      <tr><td>.blog-post__avatar</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Author avatar placeholder circle</td></tr>
-      <tr><td>.blog-post__avatar--photo</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td style="color:var(--docs-text-muted)">Avatar with actual photo background</td></tr>
-      <tr><td>.blog-post__back</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Back navigation row</td></tr>
-      <tr><td>.blog-post__back a</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Back link inside the back row</td></tr>
-      <tr><td>.blog-post__header</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Article header containing title and meta</td></tr>
-      <tr><td>.blog-post__title</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Article main heading</td></tr>
-      <tr><td>.blog-post__meta</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Author, date, and read-time row</td></tr>
-      <tr><td>.blog-post__video</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Responsive video embed wrapper</td></tr>
-      <tr><td>.blog-post__video iframe</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Iframe inside the video wrapper</td></tr>
-      <tr><td>.blog-post__hero-wrap</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Hero image container</td></tr>
-      <tr><td>.blog-post__hero</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Full-width hero image</td></tr>
-      <tr><td>.blog-post__hero[src$=".svg"]</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">SVG hero variant (no stretch)</td></tr>
-      <tr><td>.blog-post__content</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Rich text content area</td></tr>
-      <tr><td>.blog-post__content h2</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Section heading inside content</td></tr>
-      <tr><td>.blog-post__content h3</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Sub-section heading inside content</td></tr>
-      <tr><td>.blog-post__content h4</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Minor heading inside content</td></tr>
-      <tr><td>.blog-post__content p</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Body paragraph</td></tr>
-      <tr><td>.blog-post__content a:not(.btn)</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Inline link; var(--color-accent), underline, text-underline-offset 2px</td></tr>
-      <tr><td>.blog-post__content a:not(.btn):hover</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Color shifts to var(--color-accent-dark)</td></tr>
-      <tr><td>.blog-post__content strong</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Bold inline text</td></tr>
-      <tr><td>.blog-post__content ul</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Unordered list</td></tr>
-      <tr><td>.blog-post__content ol</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Ordered list</td></tr>
-      <tr><td>.blog-post__content li</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">List item</td></tr>
-      <tr><td>.blog-post__content blockquote</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Pull quote block</td></tr>
-      <tr><td>.blog-post__content code</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Inline code span</td></tr>
-      <tr><td>.blog-post__content pre</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Code block container</td></tr>
-      <tr><td>.blog-post__content pre code</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Code inside a pre block</td></tr>
-      <tr><td>.blog-post__content img</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Inline content image</td></tr>
-      <tr><td>.blog-post__content video</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Inline video element</td></tr>
-      <tr><td>.blog-post__content figure</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Figure wrapper</td></tr>
-      <tr><td>.blog-post__content figure img</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Image inside a figure</td></tr>
-      <tr><td>.blog-post__content figcaption</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Caption below a figure</td></tr>
-      <tr><td>.blog-post__content hr</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Horizontal rule; borderless top 1px solid rgba(44,36,24,.08), margin var(--space-xl) 0</td></tr>
-      <tr><td>.blog-callout</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Callout box; padding var(--space-md) var(--space-lg), 3 px border-radius, margin-bottom var(--space-md)</td></tr>
-      <tr><td>.blog-callout--warning</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td style="color:var(--docs-text-muted)">Warning variant; background #fef9ec, border 1px solid #c89b3c</td></tr>
-      <tr><td>.container--article</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Article-width constraint; max-width 700px, margin-inline auto, padding-inline var(--space-md)</td></tr>
-      <tr><td>img.blog-img--wide</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td style="color:var(--docs-text-muted)">800 px wide image offset with left 50% / translateX(-50%); collapses to 100vw below 768 px</td></tr>
-      <tr><td>img.blog-img--badge</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td style="color:var(--docs-text-muted)">300 px wide badge image (max 65%), centered block, no border</td></tr>
-      <tr><td>.hljs-comment</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">highlight.js: comment token</td></tr>
-      <tr><td>.hljs-quote</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">highlight.js: quote token</td></tr>
-      <tr><td>.hljs-keyword</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">highlight.js: keyword token</td></tr>
-      <tr><td>.hljs-selector-tag</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">highlight.js: selector tag token</td></tr>
-      <tr><td>.hljs-built_in</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">highlight.js: built-in token</td></tr>
-      <tr><td>.hljs-type</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">highlight.js: type token</td></tr>
-      <tr><td>.hljs-literal</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">highlight.js: literal token</td></tr>
-      <tr><td>.hljs-meta</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">highlight.js: meta token</td></tr>
-      <tr><td>.hljs-string</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">highlight.js: string token</td></tr>
-      <tr><td>.hljs-regexp</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">highlight.js: regexp token</td></tr>
-      <tr><td>.hljs-char.escape_</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">highlight.js: escape character token</td></tr>
-      <tr><td>.hljs-subst</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">highlight.js: substitution token</td></tr>
-      <tr><td>.hljs-number</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">highlight.js: number token</td></tr>
-      <tr><td>.hljs-symbol</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">highlight.js: symbol token</td></tr>
-      <tr><td>.hljs-bullet</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">highlight.js: bullet token</td></tr>
-      <tr><td>.hljs-attr</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">highlight.js: attribute token</td></tr>
-      <tr><td>.hljs-attribute</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">highlight.js: attribute name token</td></tr>
-      <tr><td>.hljs-title</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">highlight.js: title token</td></tr>
-      <tr><td>.hljs-title.function_</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">highlight.js: function name token</td></tr>
-      <tr><td>.hljs-title.class_</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">highlight.js: class name token</td></tr>
-      <tr><td>.hljs-section</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">highlight.js: section token</td></tr>
-      <tr><td>.hljs-variable</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">highlight.js: variable token</td></tr>
-      <tr><td>.hljs-template-variable</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">highlight.js: template variable token</td></tr>
-      <tr><td>.hljs-params</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">highlight.js: params token</td></tr>
-      <tr><td>.hljs-emphasis</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">highlight.js: emphasis token</td></tr>
-      <tr><td>.hljs-strong</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">highlight.js: strong token</td></tr>
+      <tr><td>.blog-post</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Article root; padding var(--space-xl) 0 var(--space-3xl)</td></tr>
+      <tr><td>.container--article</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td style="color:var(--docs-text-muted)">max-width 700px; margin-inline auto; padding-inline var(--space-md)</td></tr>
+      <tr><td>.blog-post__back</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Back navigation row; margin-bottom var(--space-lg)</td></tr>
+      <tr><td>.blog-post__back a</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Muted color link; hover shifts to var(--color-accent)</td></tr>
+      <tr><td>.blog-post__share</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Share icon row; flex, gap 6px, margin-bottom var(--space-lg)</td></tr>
+      <tr><td>.blog-post__share-btn</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">36×36 circle icon button; border 1px rgba(44,36,24,.1)</td></tr>
+      <tr><td>.blog-post__header</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Title + meta container; margin-bottom var(--space-lg)</td></tr>
+      <tr><td>.blog-post__title</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">var(--size-4xl) heading; margin-bottom var(--space-sm)</td></tr>
+      <tr><td>.blog-post__meta</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Author · date · read-time row; flex, gap 8px, var(--size-sm), muted color</td></tr>
+      <tr><td>.blog-post__avatar</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">36×36 circle; object-fit contain; background #fff; padding 4px</td></tr>
+      <tr><td>.blog-post__avatar--photo</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td style="color:var(--docs-text-muted)">Photo variant: object-fit cover, no padding</td></tr>
+      <tr><td>.blog-post__hero-wrap</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">aspect-ratio 1.91/1; border-radius 3px; background var(--color-bg-alt); margin-bottom var(--space-xl)</td></tr>
+      <tr><td>.blog-post__hero</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Full-width hero; object-fit cover</td></tr>
+      <tr><td>.blog-post__content</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Rich text area — styles h2, h3, h4, p, a, strong, ul, ol, blockquote, code, pre</td></tr>
+      <tr><td>.blog-post__content h2</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">var(--size-2xl); weight 600; margin-top var(--space-xl)</td></tr>
+      <tr><td>.blog-post__content p</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">line-height 1.8; margin-bottom var(--space-md)</td></tr>
+      <tr><td>.blog-post__content pre</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Dark code block; background var(--color-text); color #e5e5e5; border-radius 3px</td></tr>
+      <tr><td>.blog-callout</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Callout box; border-radius 3px; padding var(--space-md) var(--space-lg)</td></tr>
+      <tr><td>.blog-callout--warning</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td style="color:var(--docs-text-muted)">Warning variant; background #fef9ec; border 1px solid #c89b3c</td></tr>
     </tbody>
   </table>
 </DocsLayout>

@@ -3,30 +3,77 @@ import DocsLayout from '../../layouts/DocsLayout.astro';
 ---
 <DocsLayout title="Blog Index">
   <h1>Blog Index <span class="docs-tag">Blog</span></h1>
-  <p class="docs-lead">Page-level wrapper for the blog listing page.</p>
+  <p class="docs-lead">Page-level wrapper for the blog listing. Contains the page title, filter tabs (blog-tab), and the blog-grid of cards.</p>
 
   <h2>Preview</h2>
   <div class="docs-preview">
-    
-    <div class="blog-index">
-      <h1 class="blog-index__title">Blog</h1>
-    </div>
+    <section class="blog-index" style="padding:1.5rem 0">
+      <div class="container">
+        <h1 class="blog-index__title">Blog</h1>
+        <div class="blog-tabs">
+          <button class="blog-tab blog-tab--active" data-filter="all">All</button>
+          <button class="blog-tab" data-filter="article">Articles</button>
+          <button class="blog-tab" data-filter="tutorial">Tutorials</button>
+          <button class="blog-tab" data-filter="announcement">Announcements</button>
+        </div>
+        <div class="blog-grid">
+          <a class="blog-card" href="#" style="text-decoration:none;color:inherit">
+            <div class="blog-card__img-wrap"></div>
+            <div class="blog-card__body">
+              <time class="blog-card__date" datetime="2026-08-03">Aug 3, 2026</time>
+              <h2 class="blog-card__title">First article title</h2>
+              <p class="blog-card__desc">Short description of this article.</p>
+            </div>
+          </a>
+          <a class="blog-card" href="#" style="text-decoration:none;color:inherit">
+            <div class="blog-card__img-wrap"></div>
+            <div class="blog-card__body">
+              <time class="blog-card__date" datetime="2026-07-28">Jul 28, 2026</time>
+              <h2 class="blog-card__title">Second article title</h2>
+              <p class="blog-card__desc">Short description of this article.</p>
+            </div>
+          </a>
+          <a class="blog-card" href="#" style="text-decoration:none;color:inherit">
+            <div class="blog-card__img-wrap"></div>
+            <div class="blog-card__body">
+              <time class="blog-card__date" datetime="2026-07-14">Jul 14, 2026</time>
+              <h2 class="blog-card__title">Third article title</h2>
+              <p class="blog-card__desc">Short description of this article.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
   </div>
 
   <h2>HTML</h2>
-  <div class="docs-code"><pre>&lt;div class="blog-index"&gt;
-  &lt;h1 class="blog-index__title"&gt;Blog&lt;/h1&gt;
-  &lt;!-- blog-grid here --&gt;
-&lt;/div&gt;</pre></div>
+  <div class="docs-code"><pre>&lt;section class="blog-index"&gt;
+  &lt;div class="container"&gt;
+    &lt;h1 class="blog-index__title"&gt;Blog&lt;/h1&gt;
+    &lt;div class="blog-tabs"&gt;
+      &lt;button class="blog-tab blog-tab--active" data-filter="all"&gt;All&lt;/button&gt;
+      &lt;button class="blog-tab" data-filter="article"&gt;Articles&lt;/button&gt;
+      &lt;button class="blog-tab" data-filter="tutorial"&gt;Tutorials&lt;/button&gt;
+      &lt;button class="blog-tab" data-filter="announcement"&gt;Announcements&lt;/button&gt;
+      &lt;button class="blog-tab" data-filter="weekly"&gt;Weekly&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class="blog-grid"&gt;
+      &lt;a class="blog-card" href="/blog/slug/" data-tag="article"&gt;...&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</pre></div>
 
   <h2>Class reference</h2>
   <table class="docs-table">
     <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
     <tbody>
-      <tr><td>.blog-index</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Page-level wrapper; padding var(--space-2xl) 0 var(--space-3xl)</td></tr>
-      <tr><td>.blog-index__title</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Page heading at var(--size-4xl); reduces to var(--size-3xl) below 768 px</td></tr>
-      <tr><td>.blog-index__empty</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Empty-state message; var(--size-lg), muted color, centered, tall vertical padding</td></tr>
-      <tr><td>.blog-tabs</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Flex row of filter tabs; gap var(--space-sm), margin-bottom var(--space-xl)</td></tr>
+      <tr><td>.blog-index</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Page wrapper; padding var(--space-2xl) 0 var(--space-3xl)</td></tr>
+      <tr><td>.blog-index__title</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">var(--size-4xl) heading; margin-bottom var(--space-xl)</td></tr>
+      <tr><td>.blog-index__empty</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Empty-state message; centered, muted, tall vertical padding</td></tr>
+      <tr><td>.blog-tabs</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Filter tab row; flex, gap var(--space-sm), margin-bottom var(--space-xl)</td></tr>
+      <tr><td>.blog-tab</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Pill button; border-radius 9999px; border 1px solid transparent; muted color</td></tr>
+      <tr><td>.blog-tab--active</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td style="color:var(--docs-text-muted)">Active filter; color var(--color-text); border-color var(--color-text)</td></tr>
+      <tr><td>.blog-grid</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">repeat(3, 1fr) grid; gap var(--space-md); collapses to 2 col below 1024px and 1 col below 768px</td></tr>
     </tbody>
   </table>
 </DocsLayout>

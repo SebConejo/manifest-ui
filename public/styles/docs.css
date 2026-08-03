@@ -125,8 +125,8 @@ body {
   line-height: 1.7;
 }
 
-/* Section headings */
-.docs-content h2 {
+/* Section headings — direct children only so nested h2s inside .docs-preview are unaffected */
+.docs-content > h2 {
   font-size: 1rem;
   font-weight: 600;
   color: var(--docs-text-active);
@@ -135,22 +135,15 @@ body {
   border-top: 1px solid var(--docs-border);
 }
 
-.docs-content h2:first-of-type {
+.docs-content > h2:first-of-type {
   border-top: none;
   padding-top: 0;
 }
 
-/* Reset h2/h3 color inside previews — .docs-content h2 [0,1,1] would otherwise override component colors */
-.docs-preview h1,
-.docs-preview h2,
-.docs-preview h3,
-.docs-preview h4 {
-  color: inherit;
-  font-size: revert;
-  font-weight: revert;
-  margin: revert;
-  padding-top: revert;
-  border-top: revert;
+/* Make image placeholder areas visible inside previews */
+.docs-preview .blog-card__img-wrap,
+.docs-preview .blog-post__hero-wrap {
+  background: #dbd7d0;
 }
 
 /* Preview box */

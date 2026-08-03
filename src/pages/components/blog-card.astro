@@ -3,32 +3,29 @@ import DocsLayout from '../../layouts/DocsLayout.astro';
 ---
 <DocsLayout title="Blog Card">
   <h1>Blog Card <span class="docs-tag">Blog</span></h1>
-  <p class="docs-lead">Article preview card used in the blog grid and homepage feed. Fixed 1.91:1 image ratio, 2-line title clamp, 3-line description clamp.</p>
+  <p class="docs-lead">Article preview card used in the blog grid. Fixed 1.91:1 image ratio, 2-line title clamp, 3-line description clamp.</p>
 
   <h2>Preview</h2>
   <div class="docs-preview">
-    
-    <a class="blog-card" href="#">
-      <div class="blog-card__img-wrap">
-        <img class="blog-card__img" src="https://placehold.co/600x314/fcfaf5/2c2418?text=Cover" alt="Cover" />
-      </div>
+    <a class="blog-card" href="#" style="max-width:300px;display:flex;flex-direction:column;text-decoration:none;color:inherit">
+      <div class="blog-card__img-wrap"></div>
       <div class="blog-card__body">
-        <span class="blog-card__date">Aug 3, 2026</span>
-        <h3 class="blog-card__title">Article title goes here on two lines max</h3>
+        <time class="blog-card__date" datetime="2026-08-03">Aug 3, 2026</time>
+        <h2 class="blog-card__title">Article title goes here on two lines max</h2>
         <p class="blog-card__desc">Short description of the article, clamped to three lines maximum in the UI.</p>
       </div>
     </a>
   </div>
 
   <h2>HTML</h2>
-  <div class="docs-code"><pre>&lt;a class="blog-card" href="#"&gt;
+  <div class="docs-code"><pre>&lt;a class="blog-card" href="/blog/slug/"&gt;
   &lt;div class="blog-card__img-wrap"&gt;
-    &lt;img class="blog-card__img" src="https://placehold.co/600x314/fcfaf5/2c2418?text=Cover" alt="Cover" /&gt;
+    &lt;img class="blog-card__img" src="cover.png" alt="Alt text" loading="lazy" width="1200" height="628" /&gt;
   &lt;/div&gt;
   &lt;div class="blog-card__body"&gt;
-    &lt;span class="blog-card__date"&gt;Aug 3, 2026&lt;/span&gt;
-    &lt;h3 class="blog-card__title"&gt;Article title goes here on two lines max&lt;/h3&gt;
-    &lt;p class="blog-card__desc"&gt;Short description of the article, clamped to three lines maximum in the UI.&lt;/p&gt;
+    &lt;time class="blog-card__date" datetime="2026-08-03"&gt;Aug 3, 2026&lt;/time&gt;
+    &lt;h2 class="blog-card__title"&gt;Article title&lt;/h2&gt;
+    &lt;p class="blog-card__desc"&gt;Short description.&lt;/p&gt;
   &lt;/div&gt;
 &lt;/a&gt;</pre></div>
 
@@ -36,15 +33,15 @@ import DocsLayout from '../../layouts/DocsLayout.astro';
   <table class="docs-table">
     <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
     <tbody>
-      <tr><td>.blog-card</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Flex column card; 1px border rgba(44,36,24,.06), 3 px border-radius, overflow hidden</td></tr>
+      <tr><td>.blog-card</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Flex column card; 1px border rgba(44,36,24,.06), border-radius 3px, overflow hidden</td></tr>
       <tr><td>.blog-card:hover</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">translateY(-2px) and box-shadow 0 8px 24px rgba(44,36,24,.08)</td></tr>
-      <tr><td>.blog-card__img-wrap</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">aspect-ratio 1.91/1 container with var(--color-bg-alt) background and overflow hidden</td></tr>
-      <tr><td>.blog-card__img</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Cover image; 100% width and height, object-fit cover</td></tr>
+      <tr><td>.blog-card__img-wrap</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">aspect-ratio 1.91/1; background var(--color-bg-alt); overflow hidden</td></tr>
+      <tr><td>.blog-card__img</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">100% width and height; object-fit cover</td></tr>
       <tr><td>.blog-card__img[src$=".svg"]</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">SVG images switch to object-fit contain</td></tr>
-      <tr><td>.blog-card__body</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Flex column; padding var(--space-md), gap var(--space-xs)</td></tr>
-      <tr><td>.blog-card__date</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Publication date; var(--size-sm), muted color, weight 500</td></tr>
-      <tr><td>.blog-card__title</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Display-font heading at var(--size-xl), weight 600, line-height 1.3, -webkit-line-clamp 2</td></tr>
-      <tr><td>.blog-card__desc</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">var(--size-sm), muted color, line-height 1.6, -webkit-line-clamp 3</td></tr>
+      <tr><td>.blog-card__body</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Flex column; padding var(--space-md); gap var(--space-xs)</td></tr>
+      <tr><td>.blog-card__date</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">var(--size-sm); muted color; weight 500</td></tr>
+      <tr><td>.blog-card__title</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">var(--font-display); var(--size-xl); weight 600; line-height 1.3; -webkit-line-clamp 2</td></tr>
+      <tr><td>.blog-card__desc</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">var(--size-sm); muted color; line-height 1.6; -webkit-line-clamp 3</td></tr>
     </tbody>
   </table>
 </DocsLayout>

@@ -3,40 +3,33 @@ import DocsLayout from '../../layouts/DocsLayout.astro';
 ---
 <DocsLayout title="Blog Grid">
   <h1>Blog Grid <span class="docs-tag">Blog</span></h1>
-  <p class="docs-lead">CSS grid container for blog cards. Responsive: 3 columns desktop, 2 tablet, 1 mobile.</p>
+  <p class="docs-lead">CSS grid container for blog cards. 3 columns on desktop, 2 on tablet, 1 on mobile.</p>
 
   <h2>Preview</h2>
   <div class="docs-preview">
-    
     <div class="blog-grid">
-      <a class="blog-card" href="#">
-        <div class="blog-card__img-wrap">
-          <img class="blog-card__img" src="https://placehold.co/600x314/fcfaf5/2c2418?text=Cover" alt="Cover" />
-        </div>
+      <a class="blog-card" href="#" style="text-decoration:none;color:inherit">
+        <div class="blog-card__img-wrap"></div>
         <div class="blog-card__body">
-          <span class="blog-card__date">Aug 3, 2026</span>
-          <h3 class="blog-card__title">First article title</h3>
-          <p class="blog-card__desc">Short description of the article.</p>
+          <time class="blog-card__date" datetime="2026-08-03">Aug 3, 2026</time>
+          <h2 class="blog-card__title">First article title goes here</h2>
+          <p class="blog-card__desc">Short description of this article.</p>
         </div>
       </a>
-      <a class="blog-card" href="#">
-        <div class="blog-card__img-wrap">
-          <img class="blog-card__img" src="https://placehold.co/600x314/fcfaf5/2c2418?text=Cover" alt="Cover" />
-        </div>
+      <a class="blog-card" href="#" style="text-decoration:none;color:inherit">
+        <div class="blog-card__img-wrap"></div>
         <div class="blog-card__body">
-          <span class="blog-card__date">Aug 3, 2026</span>
-          <h3 class="blog-card__title">Second article title</h3>
-          <p class="blog-card__desc">Short description of the article.</p>
+          <time class="blog-card__date" datetime="2026-07-28">Jul 28, 2026</time>
+          <h2 class="blog-card__title">Second article title goes here</h2>
+          <p class="blog-card__desc">Short description of this article.</p>
         </div>
       </a>
-      <a class="blog-card" href="#">
-        <div class="blog-card__img-wrap">
-          <img class="blog-card__img" src="https://placehold.co/600x314/fcfaf5/2c2418?text=Cover" alt="Cover" />
-        </div>
+      <a class="blog-card" href="#" style="text-decoration:none;color:inherit">
+        <div class="blog-card__img-wrap"></div>
         <div class="blog-card__body">
-          <span class="blog-card__date">Aug 3, 2026</span>
-          <h3 class="blog-card__title">Third article title</h3>
-          <p class="blog-card__desc">Short description of the article.</p>
+          <time class="blog-card__date" datetime="2026-07-14">Jul 14, 2026</time>
+          <h2 class="blog-card__title">Third article title goes here</h2>
+          <p class="blog-card__desc">Short description of this article.</p>
         </div>
       </a>
     </div>
@@ -44,16 +37,16 @@ import DocsLayout from '../../layouts/DocsLayout.astro';
 
   <h2>HTML</h2>
   <div class="docs-code"><pre>&lt;div class="blog-grid"&gt;
-  &lt;a class="blog-card" href="#"&gt;...&lt;/a&gt;
-  &lt;a class="blog-card" href="#"&gt;...&lt;/a&gt;
-  &lt;a class="blog-card" href="#"&gt;...&lt;/a&gt;
+  &lt;a class="blog-card" href="/blog/slug/" data-tag="article"&gt;...&lt;/a&gt;
+  &lt;a class="blog-card" href="/blog/slug/" data-tag="tutorial"&gt;...&lt;/a&gt;
+  &lt;a class="blog-card" href="/blog/slug/" data-tag="announcement"&gt;...&lt;/a&gt;
 &lt;/div&gt;</pre></div>
 
   <h2>Class reference</h2>
   <table class="docs-table">
     <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
     <tbody>
-      <tr><td>.blog-grid</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">CSS grid; repeat(3, 1fr) desktop, repeat(2, 1fr) below 1024 px, 1fr below 768 px, gap var(--space-md)</td></tr>
+      <tr><td>.blog-grid</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">repeat(3, 1fr) CSS grid; gap var(--space-md); collapses to 2 columns below 1024px and 1 column below 768px</td></tr>
     </tbody>
   </table>
 </DocsLayout>
