@@ -140,6 +140,19 @@ body {
   padding-top: 0;
 }
 
+/* Reset h2/h3 color inside previews — .docs-content h2 [0,1,1] would otherwise override component colors */
+.docs-preview h1,
+.docs-preview h2,
+.docs-preview h3,
+.docs-preview h4 {
+  color: inherit;
+  font-size: revert;
+  font-weight: revert;
+  margin: revert;
+  padding-top: revert;
+  border-top: revert;
+}
+
 /* Preview box */
 .docs-preview {
   background: #fcfaf5;
@@ -152,9 +165,6 @@ body {
   overflow: auto;
 }
 
-.docs-preview * {
-  color: inherit;
-}
 
 /* Code block */
 .docs-code {
