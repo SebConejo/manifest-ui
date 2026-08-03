@@ -14,8 +14,8 @@
 
 body {
   font-family: var(--docs-font);
-  background: var(--docs-bg);
-  color: var(--docs-text);
+  background: var(--docs-bg) !important;
+  color: var(--docs-text) !important;
   line-height: 1.6;
 }
 
@@ -138,14 +138,13 @@ body {
 /* Preview box */
 .docs-preview {
   background: #fcfaf5;
+  color: #2c2418;
+  font-family: 'DM Sans', sans-serif;
   border: 1px solid var(--docs-border);
   border-radius: 10px;
   padding: 2rem;
   margin-bottom: 0.5rem;
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  align-items: center;
+  overflow: auto;
 }
 
 /* Code block */

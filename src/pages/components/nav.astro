@@ -5,30 +5,8 @@ import DocsLayout from '../../layouts/DocsLayout.astro';
   <h1>Nav <span class="docs-tag">Navigation</span></h1>
   <p class="docs-lead">Sticky navigation bar at the top of every page. Height 68px with backdrop blur.</p>
 
-  <h2>Preview</h2>
-  <div class="docs-preview">
-    <link rel="stylesheet" href="/styles/manifest.css" />
-    <nav class="nav">
-      <div class="nav__inner">
-        <div class="nav__logo-wrap">
-          <a class="nav__logo" href="/">
-            <img class="nav__logo-img" src="/img/logo.svg" alt="Manifest" />
-          </a>
-        </div>
-        <ul class="nav__links">
-          <li class="nav__item"><a class="nav__link" href="#">Docs</a></li>
-          <li class="nav__item"><a class="nav__link" href="#">Pricing</a></li>
-          <li class="nav__item nav__trigger">
-            Solutions <span class="nav__chevron">&#8964;</span>
-          </li>
-        </ul>
-        <div class="nav__actions">
-          <a class="nav__signin" href="#">Sign in</a>
-          <a class="btn btn--primary" href="#">Get started</a>
-        </div>
-        <button class="nav__burger" aria-label="Open menu">&#9776;</button>
-      </div>
-    </nav>
+  <div class="docs-preview-note">
+    Ce composant est un élément structurel pleine-page. Il ne peut pas être prévisualisé hors du contexte du site complet. Consulte le site live : <a href="https://manifest.build" target="_blank">manifest.build</a>
   </div>
 
   <h2>HTML</h2>
