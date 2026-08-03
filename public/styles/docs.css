@@ -15,13 +15,7 @@
 body {
   font-family: var(--docs-font);
   background: var(--docs-bg) !important;
-  color: var(--docs-text);
   line-height: 1.6;
-}
-
-.docs-main,
-.docs-sidebar {
-  color: var(--docs-text);
 }
 
 .docs-shell {
@@ -29,7 +23,7 @@ body {
   min-height: 100vh;
 }
 
-/* Sidebar */
+/* Sidebar — stays dark */
 .docs-sidebar {
   width: var(--docs-sidebar-width);
   background: var(--docs-bg-sidebar);
@@ -40,6 +34,7 @@ body {
   height: 100vh;
   overflow-y: auto;
   padding-bottom: 2rem;
+  color: var(--docs-text);
 }
 
 .docs-sidebar__brand {
@@ -101,26 +96,28 @@ body {
   background: rgba(38,51,239,0.15);
 }
 
-/* Main content */
+/* Main content — light background, dark text */
 .docs-main {
   margin-left: var(--docs-sidebar-width);
   flex: 1;
   padding: 3rem;
   max-width: 900px;
+  background: #fff;
+  color: #2c2418;
 }
 
 .docs-content h1 {
   font-family: 'Bricolage Grotesque', serif;
   font-size: 2rem;
   font-weight: 800;
-  color: var(--docs-text-active);
+  color: #2c2418;
   letter-spacing: -0.02em;
   margin-bottom: 0.5rem;
 }
 
 .docs-content .docs-lead {
   font-size: 1rem;
-  color: var(--docs-text-muted);
+  color: #888;
   margin-bottom: 2.5rem;
   line-height: 1.7;
 }
@@ -129,10 +126,10 @@ body {
 .docs-content > h2 {
   font-size: 1rem;
   font-weight: 600;
-  color: var(--docs-text-active);
+  color: #2c2418;
   margin: 2rem 0 1rem;
   padding-top: 2rem;
-  border-top: 1px solid var(--docs-border);
+  border-top: 1px solid rgba(44,36,24,0.1);
 }
 
 .docs-content > h2:first-of-type {
@@ -151,18 +148,17 @@ body {
   background: #fcfaf5;
   color: #2c2418 !important;
   font-family: 'DM Sans', sans-serif;
-  border: 1px solid var(--docs-border);
+  border: 1px solid rgba(44,36,24,0.1);
   border-radius: 10px;
   padding: 2rem;
   margin-bottom: 0.5rem;
   overflow: auto;
 }
 
-
 /* Code block */
 .docs-code {
   background: #1a1a1a;
-  border: 1px solid var(--docs-border);
+  border: 1px solid rgba(44,36,24,0.1);
   border-radius: 8px;
   padding: 1rem 1.25rem;
   font-family: 'Fira Code', monospace;
@@ -180,7 +176,7 @@ body {
   background: rgba(255,255,255,0.08);
   border: none;
   border-radius: 4px;
-  color: var(--docs-text-muted);
+  color: #888;
   font-size: 0.75rem;
   padding: 0.25rem 0.5rem;
   cursor: pointer;
@@ -190,7 +186,7 @@ body {
 
 .docs-copy-btn:hover {
   background: rgba(255,255,255,0.12);
-  color: var(--docs-text-active);
+  color: #fff;
 }
 
 /* Class reference table */
@@ -205,23 +201,23 @@ body {
   text-align: left;
   padding: 0.5rem 0.75rem;
   font-weight: 600;
-  color: var(--docs-text-muted);
+  color: #888;
   font-size: 0.75rem;
   letter-spacing: 0.04em;
-  border-bottom: 1px solid var(--docs-border);
+  border-bottom: 1px solid rgba(44,36,24,0.1);
 }
 
 .docs-table td {
   padding: 0.5rem 0.75rem;
-  border-bottom: 1px solid rgba(255,255,255,0.04);
-  color: var(--docs-text);
+  border-bottom: 1px solid rgba(44,36,24,0.05);
+  color: #2c2418;
   vertical-align: top;
 }
 
 .docs-table td:first-child {
   font-family: 'Fira Code', monospace;
   font-size: 0.8rem;
-  color: #a8c7fa;
+  color: #2633ef;
   white-space: nowrap;
 }
 
@@ -240,7 +236,7 @@ body {
 .docs-swatch {
   border-radius: 8px;
   overflow: hidden;
-  border: 1px solid var(--docs-border);
+  border: 1px solid rgba(44,36,24,0.1);
 }
 
 .docs-swatch__color {
@@ -249,19 +245,19 @@ body {
 
 .docs-swatch__label {
   padding: 0.5rem;
-  background: #1a1a1a;
+  background: #f5f3ee;
 }
 
 .docs-swatch__name {
   font-family: 'Fira Code', monospace;
   font-size: 0.7rem;
-  color: var(--docs-text-muted);
+  color: #888;
   display: block;
 }
 
 .docs-swatch__value {
   font-size: 0.7rem;
-  color: var(--docs-text-active);
+  color: #2c2418;
 }
 
 /* Tag: type indicator */
@@ -272,15 +268,15 @@ body {
   letter-spacing: 0.05em;
   padding: 0.2em 0.5em;
   border-radius: 4px;
-  background: rgba(38,51,239,0.15);
-  color: #6b76f8;
+  background: rgba(38,51,239,0.1);
+  color: #2633ef;
   margin-left: 0.5rem;
   vertical-align: middle;
 }
 
-.docs-tag--modifier { background: rgba(22,163,74,0.15); color: #4ade80; }
-.docs-tag--element { background: rgba(234,179,8,0.15); color: #fbbf24; }
-.docs-tag--state { background: rgba(239,68,68,0.15); color: #f87171; }
+.docs-tag--modifier { background: rgba(22,163,74,0.12); color: #16a34a; }
+.docs-tag--element { background: rgba(180,130,0,0.12); color: #92680a; }
+.docs-tag--state { background: rgba(220,38,38,0.1); color: #dc2626; }
 
 /* Chip selected state: dark background (the real page uses --color-text, not accent) */
 .docs-preview .selfhost-chip.is-selected {
@@ -290,8 +286,8 @@ body {
 }
 
 .docs-preview-note {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(44,36,24,0.04);
+  border: 1px solid rgba(44,36,24,0.1);
   border-radius: 10px;
   padding: 1.25rem 1.5rem;
   color: #888;
@@ -299,6 +295,6 @@ body {
   margin-bottom: 1.5rem;
 }
 .docs-preview-note a {
-  color: #6b76f8;
+  color: #2633ef;
   text-decoration: underline;
 }
