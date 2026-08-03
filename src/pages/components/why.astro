@@ -1,0 +1,42 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Why">
+  <h1>Why <span class="docs-tag">Sections</span></h1>
+  <p class="docs-lead">Two-column text section explaining the value proposition.</p>
+
+  <h2>Preview</h2>
+  <div class="docs-preview">
+    <link rel="stylesheet" href="/styles/manifest.css" />
+    <div class="why__wrapper container">
+      <h2 class="why__title">Why Manifest?</h2>
+      <div class="why__columns">
+        <p class="why__text">First column of explanatory text about the product.</p>
+        <p class="why__text">Second column continuing the narrative.</p>
+      </div>
+    </div>
+  </div>
+
+  <h2>HTML</h2>
+  <div class="docs-code">
+    <pre>&lt;div class="why__wrapper container"&gt;
+  &lt;h2 class="why__title"&gt;Why Manifest?&lt;/h2&gt;
+  &lt;div class="why__columns"&gt;
+    &lt;p class="why__text"&gt;First column of explanatory text about the product.&lt;/p&gt;
+    &lt;p class="why__text"&gt;Second column continuing the narrative.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+  </div>
+
+  <h2>Class reference</h2>
+  <table class="docs-table">
+    <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>.why__wrapper</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Outer wrapper for the why section</td></tr>
+      <tr><td>.why__title</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Section heading</td></tr>
+      <tr><td>.why__columns</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Two-column layout container</td></tr>
+      <tr><td>.why__text</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Column text paragraph</td></tr>
+      <tr><td>.why__text:last-child</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Styles applied to the last text column</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>

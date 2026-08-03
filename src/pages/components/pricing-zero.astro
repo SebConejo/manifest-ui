@@ -1,0 +1,28 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Pricing Zero">
+  <h1>Pricing Zero <span class="docs-tag">Pricing</span></h1>
+  <p class="docs-lead">Centered text block used to highlight a zero-cost or free-tier message between pricing sections.</p>
+
+  <h2>Preview</h2>
+  <div class="docs-preview">
+    <link rel="stylesheet" href="/styles/manifest.css" />
+    <div class="pricing-zero">
+      <p style="font-family:var(--font-body);font-size:var(--size-sm);color:var(--color-text-muted)">No credit card required. Free tier always available.</p>
+    </div>
+  </div>
+
+  <h2>HTML</h2>
+  <div class="docs-code"><pre>&lt;div class="pricing-zero"&gt;
+  &lt;p&gt;No credit card required. Free tier always available.&lt;/p&gt;
+&lt;/div&gt;</pre></div>
+
+  <h2>Class reference</h2>
+  <table class="docs-table">
+    <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>.pricing-zero</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Centered text block; padding <code>--space-lg</code> top and bottom</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>

@@ -1,0 +1,53 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Selfhost Cmd">
+  <h1>Selfhost Cmd <span class="docs-tag">Code</span></h1>
+  <p class="docs-lead">Dark terminal block with a macOS-style dot bar, a scrollable code area, and a copy button that switches to a success state via <code>.is-copied</code>.</p>
+
+  <h2>Preview</h2>
+  <div class="docs-preview">
+    <link rel="stylesheet" href="/styles/manifest.css" />
+    <div class="selfhost-cmd">
+      <div class="selfhost-cmd__bar">
+        <div class="selfhost-cmd__dots">
+          <span></span><span></span><span></span>
+        </div>
+        <button class="selfhost-cmd__copy" type="button">Copy</button>
+      </div>
+      <pre class="selfhost-cmd__pre"><code>docker run -p 3333:3333 \
+  -e OPENAI_API_KEY=sk-... \
+  mnfst/manifest:latest</code></pre>
+    </div>
+  </div>
+
+  <h2>HTML</h2>
+  <div class="docs-code"><pre>&lt;div class="selfhost-cmd"&gt;
+  &lt;div class="selfhost-cmd__bar"&gt;
+    &lt;div class="selfhost-cmd__dots"&gt;
+      &lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;button class="selfhost-cmd__copy" type="button"&gt;Copy&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;pre class="selfhost-cmd__pre"&gt;&lt;code&gt;docker run -p 3333:3333 \
+  -e OPENAI_API_KEY=sk-... \
+  mnfst/manifest:latest&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</pre></div>
+
+  <h2>Class reference</h2>
+  <table class="docs-table">
+    <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>.selfhost-cmd</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Dark card container; rounded, overflow hidden</td></tr>
+      <tr><td>.selfhost-cmd__bar</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Top bar row holding dots and the copy button</td></tr>
+      <tr><td>.selfhost-cmd__dots</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Flex row of three decorative dot circles</td></tr>
+      <tr><td>.selfhost-cmd__dots span</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Individual circular dot, semi-transparent white</td></tr>
+      <tr><td>.selfhost-cmd__pre</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Scrollable pre block with padding</td></tr>
+      <tr><td>.selfhost-cmd__pre (max-width: 1023px)</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Horizontal scroll enabled on tablet and below</td></tr>
+      <tr><td>.selfhost-cmd__pre code</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Monospace code in light sand color</td></tr>
+      <tr><td>.selfhost-cmd__copy</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Ghost copy button with subtle border</td></tr>
+      <tr><td>.selfhost-cmd__copy:hover</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Full white text and brighter border</td></tr>
+      <tr><td>.selfhost-cmd__copy.is-copied</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Accent glow color to confirm copy success</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>

@@ -1,0 +1,87 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Free Models Steps">
+  <h1>Free Models Steps <span class="docs-tag">Steps</span></h1>
+  <p class="docs-lead">A numbered vertical step list explaining how to get started with free models. Steps are connected by a vertical line. The header area can include a video-link trigger alongside the section label.</p>
+
+  <h2>Preview</h2>
+  <div class="docs-preview">
+    <link rel="stylesheet" href="/styles/manifest.css" />
+    <div class="free-models-steps">
+      <div class="free-models-steps__header">
+        <p class="free-models-steps__label">How it works</p>
+        <button class="free-models-steps__video-link">
+          <i class="bx bx-play-circle"></i> Watch the video
+        </button>
+      </div>
+      <ol class="free-models-steps__list">
+        <li class="free-models-steps__item">
+          <span class="free-models-steps__number">1</span>
+          <div class="free-models-steps__content">
+            <p class="free-models-steps__title">Create a free account</p>
+            <p class="free-models-steps__text">Sign up at <a href="#">manifest.build</a> and get your API key in seconds.</p>
+          </div>
+        </li>
+        <li class="free-models-steps__item">
+          <span class="free-models-steps__number">2</span>
+          <div class="free-models-steps__content">
+            <p class="free-models-steps__title">Pick a free model</p>
+            <p class="free-models-steps__text">Browse the list below and copy the model ID you want to use.</p>
+          </div>
+        </li>
+        <li class="free-models-steps__item">
+          <span class="free-models-steps__number">3</span>
+          <div class="free-models-steps__content">
+            <p class="free-models-steps__title">Send your first request</p>
+            <p class="free-models-steps__text">Use the OpenAI-compatible endpoint with your Manifest key. No other changes needed.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <h2>HTML</h2>
+  <div class="docs-code"><pre>&lt;div class="free-models-steps"&gt;
+  &lt;div class="free-models-steps__header"&gt;
+    &lt;p class="free-models-steps__label"&gt;How it works&lt;/p&gt;
+    &lt;button class="free-models-steps__video-link"&gt;
+      &lt;i class="bx bx-play-circle"&gt;&lt;/i&gt; Watch the video
+    &lt;/button&gt;
+  &lt;/div&gt;
+  &lt;ol class="free-models-steps__list"&gt;
+    &lt;li class="free-models-steps__item"&gt;
+      &lt;span class="free-models-steps__number"&gt;1&lt;/span&gt;
+      &lt;div class="free-models-steps__content"&gt;
+        &lt;p class="free-models-steps__title"&gt;Create a free account&lt;/p&gt;
+        &lt;p class="free-models-steps__text"&gt;Sign up at &lt;a href="#"&gt;manifest.build&lt;/a&gt;.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;!-- repeat for each step --&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</pre></div>
+
+  <h2>Class reference</h2>
+  <table class="docs-table">
+    <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>.free-models-steps</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Root section with xl padding and a top border</td></tr>
+      <tr><td>.free-models-steps__header</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Flex row containing the label and optional video link</td></tr>
+      <tr><td>.free-models-steps__header .free-models-steps__label</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Removes bottom margin when the label is inside the header</td></tr>
+      <tr><td>.free-models-steps__label</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Uppercase sm section label with lg bottom margin</td></tr>
+      <tr><td>.free-models-steps__video-link</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Inline button-style link that opens a video modal</td></tr>
+      <tr><td>.free-models-steps__video-link:hover</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Muted text color on hover</td></tr>
+      <tr><td>.free-models-steps__video-link i</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Play icon inside the video link</td></tr>
+      <tr><td>.free-models-steps__list</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Flex column list of step items with no gap</td></tr>
+      <tr><td>.free-models-steps__item</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Flex row for number + content, with bottom padding</td></tr>
+      <tr><td>.free-models-steps__item:last-child</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Removes bottom padding from the final step</td></tr>
+      <tr><td>.free-models-steps__item:not(:last-child)::before</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Vertical connector line drawn between steps via pseudo-element</td></tr>
+      <tr><td>.free-models-steps__number</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Circular 32 px number badge above the connector line</td></tr>
+      <tr><td>.free-models-steps__content</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Flex-grow content column beside the number</td></tr>
+      <tr><td>.free-models-steps__title</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Bold step heading aligned to the number height</td></tr>
+      <tr><td>.free-models-steps__text</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Muted body text at base size with 1.6 line height</td></tr>
+      <tr><td>.free-models-steps__text a</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Underlined link inside the step text</td></tr>
+      <tr><td>.free-models-steps__text a:hover</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Accent color on hover</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>

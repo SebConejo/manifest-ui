@@ -1,0 +1,69 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Modes">
+  <h1>Modes <span class="docs-tag">Sections</span></h1>
+  <p class="docs-lead">Grid of product mode cards (cloud, self-hosted, etc.), each with icon, title, description, and feature checklist.</p>
+
+  <h2>Preview</h2>
+  <div class="docs-preview">
+    <link rel="stylesheet" href="/styles/manifest.css" />
+    <div class="modes__wrapper">
+      <div class="modes__grid">
+        <div class="modes__card">
+          <div class="modes__icon"><i class="bx bx-cloud"></i></div>
+          <h3 class="modes__card-title">Cloud</h3>
+          <p class="modes__card-text">Managed, always up to date.</p>
+          <ul class="modes__checks">
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> No infra to manage</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Auto-scaling</li>
+          </ul>
+        </div>
+        <div class="modes__card">
+          <div class="modes__icon"><i class="bx bx-server"></i></div>
+          <h3 class="modes__card-title">Self-hosted</h3>
+          <p class="modes__card-text">Full control over your data.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2>HTML</h2>
+  <div class="docs-code">
+    <pre>&lt;div class="modes__wrapper"&gt;
+  &lt;div class="modes__grid"&gt;
+    &lt;div class="modes__card"&gt;
+      &lt;div class="modes__icon"&gt;&lt;i class="bx bx-cloud"&gt;&lt;/i&gt;&lt;/div&gt;
+      &lt;h3 class="modes__card-title"&gt;Cloud&lt;/h3&gt;
+      &lt;p class="modes__card-text"&gt;Managed, always up to date.&lt;/p&gt;
+      &lt;ul class="modes__checks"&gt;
+        &lt;li&gt;&lt;svg&gt;...&lt;/svg&gt; No infra to manage&lt;/li&gt;
+        &lt;li&gt;&lt;svg&gt;...&lt;/svg&gt; Auto-scaling&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class="modes__card"&gt;
+      &lt;div class="modes__icon"&gt;&lt;i class="bx bx-server"&gt;&lt;/i&gt;&lt;/div&gt;
+      &lt;h3 class="modes__card-title"&gt;Self-hosted&lt;/h3&gt;
+      &lt;p class="modes__card-text"&gt;Full control over your data.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+  </div>
+
+  <h2>Class reference</h2>
+  <table class="docs-table">
+    <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>.modes__wrapper</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Outer wrapper for the modes section</td></tr>
+      <tr><td>.modes__grid</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Grid container for mode cards</td></tr>
+      <tr><td>.modes__card</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Individual mode card</td></tr>
+      <tr><td>.modes__card + .modes__card</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Spacing between adjacent cards</td></tr>
+      <tr><td>.modes__icon</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Icon wrapper inside the card</td></tr>
+      <tr><td>.modes__card-title</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Card heading</td></tr>
+      <tr><td>.modes__card-text</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Card description paragraph</td></tr>
+      <tr><td>.modes__checks</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Feature checklist inside a card</td></tr>
+      <tr><td>.modes__checks li</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Individual checklist item</td></tr>
+      <tr><td>.modes__checks svg</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Check icon inside a list item</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>

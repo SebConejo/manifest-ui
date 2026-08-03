@@ -1,0 +1,59 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="FAQ">
+  <h1>FAQ <span class="docs-tag">Tabs &amp; Accordions</span></h1>
+  <p class="docs-lead">Accordion FAQ using native HTML details/summary. Animated chevron, smooth content reveal.</p>
+
+  <h2>Preview</h2>
+  <div class="docs-preview">
+    <link rel="stylesheet" href="/styles/manifest.css" />
+    <div class="faq">
+      <h2 class="faq__title">Frequently asked questions</h2>
+      <ul class="faq__list">
+        <details class="faq__item">
+          <summary class="faq__question">What is Manifest?</summary>
+          <p class="faq__answer">Manifest is an LLM router that sits between your agent and providers.</p>
+        </details>
+        <details class="faq__item">
+          <summary class="faq__question">How does fallback work?</summary>
+          <p class="faq__answer">When a provider fails, Manifest automatically routes to the next one.</p>
+        </details>
+      </ul>
+    </div>
+  </div>
+
+  <h2>HTML</h2>
+  <div class="docs-code"><pre>&lt;div class="faq"&gt;
+  &lt;h2 class="faq__title"&gt;Frequently asked questions&lt;/h2&gt;
+  &lt;ul class="faq__list"&gt;
+    &lt;details class="faq__item"&gt;
+      &lt;summary class="faq__question"&gt;What is Manifest?&lt;/summary&gt;
+      &lt;p class="faq__answer"&gt;Manifest is an LLM router that sits between your agent and providers.&lt;/p&gt;
+    &lt;/details&gt;
+    &lt;details class="faq__item"&gt;
+      &lt;summary class="faq__question"&gt;How does fallback work?&lt;/summary&gt;
+      &lt;p class="faq__answer"&gt;When a provider fails, Manifest automatically routes to the next one.&lt;/p&gt;
+    &lt;/details&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</pre></div>
+
+  <h2>Class reference</h2>
+  <table class="docs-table">
+    <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>.faq</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">FAQ root element</td></tr>
+      <tr><td>.faq__title</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Section heading</td></tr>
+      <tr><td>.faq__list</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">List of accordion items</td></tr>
+      <tr><td>.faq__item</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Native details element for one FAQ entry</td></tr>
+      <tr><td>.faq__item:first-child</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">First item border adjustment</td></tr>
+      <tr><td>.faq__question</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Native summary element acting as the trigger</td></tr>
+      <tr><td>.faq__question::-webkit-details-marker</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Hides the native disclosure marker</td></tr>
+      <tr><td>.faq__question::after</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Custom chevron icon via pseudo-element</td></tr>
+      <tr><td>.faq__item[open] .faq__question::after</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Rotated chevron when item is open</td></tr>
+      <tr><td>.faq__answer</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Answer content paragraph</td></tr>
+      <tr><td>.faq__answer a</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Link inside an answer</td></tr>
+      <tr><td>.faq__answer a:hover</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Hover state for answer links</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>

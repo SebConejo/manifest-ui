@@ -1,0 +1,67 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="CTA">
+  <h1>CTA <span class="docs-tag">Global</span></h1>
+  <p class="docs-lead">Full-width call-to-action section with dark background, animated canvas, and action buttons.</p>
+
+  <h2>Preview</h2>
+  <div class="docs-preview">
+    <link rel="stylesheet" href="/styles/manifest.css" />
+    <section class="cta">
+      <div class="cta__outer">
+        <div class="cta__inner">
+          <canvas class="cta__canvas"></canvas>
+          <img class="cta__logo" src="..." alt="Manifest" />
+          <h2 class="cta__title">Start building today</h2>
+          <p class="cta__subtitle">Free tier, no credit card required.</p>
+          <ul class="cta__features">
+            <li>Feature one</li>
+            <li>Feature two</li>
+          </ul>
+          <div class="cta__actions">
+            <a class="btn btn--primary" href="#">Get started free</a>
+            <a class="btn btn--secondary" href="#">Talk to us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <h2>HTML</h2>
+  <div class="docs-code"><pre>&lt;section class="cta"&gt;
+  &lt;div class="cta__outer"&gt;
+    &lt;div class="cta__inner"&gt;
+      &lt;canvas class="cta__canvas"&gt;&lt;/canvas&gt;
+      &lt;img class="cta__logo" src="..." alt="Manifest" /&gt;
+      &lt;h2 class="cta__title"&gt;Start building today&lt;/h2&gt;
+      &lt;p class="cta__subtitle"&gt;Free tier, no credit card required.&lt;/p&gt;
+      &lt;ul class="cta__features"&gt;
+        &lt;li&gt;Feature one&lt;/li&gt;
+        &lt;li&gt;Feature two&lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;div class="cta__actions"&gt;
+        &lt;a class="btn btn--primary" href="#"&gt;Get started free&lt;/a&gt;
+        &lt;a class="btn btn--secondary" href="#"&gt;Talk to us&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</pre></div>
+
+  <h2>Class reference</h2>
+  <table class="docs-table">
+    <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>.cta</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Root section element with dark background</td></tr>
+      <tr><td>.cta__outer</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Outer wrapper for layout constraints</td></tr>
+      <tr><td>.cta__inner</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Inner content container, centered</td></tr>
+      <tr><td>.cta__title</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Main heading of the CTA</td></tr>
+      <tr><td>.cta__subtitle</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Supporting text below the title</td></tr>
+      <tr><td>.cta__card</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Optional card container inside the section</td></tr>
+      <tr><td>.cta__logo</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Brand logo image</td></tr>
+      <tr><td>.cta__canvas</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Animated canvas background</td></tr>
+      <tr><td>.cta__features</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Unordered list of feature highlights</td></tr>
+      <tr><td>.cta__actions</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Button group row</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>

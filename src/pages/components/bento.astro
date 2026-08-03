@@ -1,0 +1,67 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Bento">
+  <h1>Bento <span class="docs-tag">Global</span></h1>
+  <p class="docs-lead">Bento-style grid of feature cards. Each card has a text area and an optional visual.</p>
+
+  <h2>Preview</h2>
+  <div class="docs-preview">
+    <link rel="stylesheet" href="/styles/manifest.css" />
+    <div class="bento">
+      <div class="bento__card">
+        <div class="bento__text">
+          <h3 class="bento__title">Feature name</h3>
+          <p>Feature description text.</p>
+        </div>
+        <div class="bento__visual">
+          <img src="..." alt="Feature visual" />
+        </div>
+      </div>
+      <div class="bento__card">
+        <div class="bento__text">
+          <h3 class="bento__title">Another feature</h3>
+        </div>
+        <div class="bento__visual bento__visual--table">
+          <!-- table visual variant -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2>HTML</h2>
+  <div class="docs-code">
+    <pre>&lt;div class="bento"&gt;
+  &lt;div class="bento__card"&gt;
+    &lt;div class="bento__text"&gt;
+      &lt;h3 class="bento__title"&gt;Feature name&lt;/h3&gt;
+      &lt;p&gt;Feature description text.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="bento__visual"&gt;
+      &lt;img src="..." alt="Feature visual" /&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="bento__card"&gt;
+    &lt;div class="bento__text"&gt;
+      &lt;h3 class="bento__title"&gt;Another feature&lt;/h3&gt;
+    &lt;/div&gt;
+    &lt;div class="bento__visual bento__visual--table"&gt;
+      &lt;!-- table visual variant --&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+  </div>
+
+  <h2>Class reference</h2>
+  <table class="docs-table">
+    <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>.bento</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Base bento grid wrapper</td></tr>
+      <tr><td>.bento__card</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Individual feature card</td></tr>
+      <tr><td>.bento__text</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Text content area of the card</td></tr>
+      <tr><td>.bento__title</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Card heading</td></tr>
+      <tr><td>.bento__visual</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Optional visual area of the card</td></tr>
+      <tr><td>.bento__visual--table</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td style="color:var(--docs-text-muted)">Table-style visual variant</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>

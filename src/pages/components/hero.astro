@@ -1,0 +1,106 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Hero">
+  <h1>Hero <span class="docs-tag">Global</span></h1>
+  <p class="docs-lead">Main hero section. Rich component with many child elements covering stats, terminal, screenshots, backed-by logos, and decorative shadows.</p>
+
+  <h2>Preview</h2>
+  <div class="docs-preview">
+    <link rel="stylesheet" href="/styles/manifest.css" />
+    <section class="hero">
+      <div class="hero__top container">
+        <div class="hero__copy">
+          <p class="hero__eyebrow">Tag line</p>
+          <h1 class="hero__title">Title <span class="hero__title-accent">accent</span></h1>
+          <p class="hero__subtitle">Subtitle text</p>
+          <div class="hero__actions">
+            <button class="btn btn--primary">Get started</button>
+            <button class="btn btn--secondary">Learn more</button>
+          </div>
+        </div>
+        <div class="hero__diagram"><!-- visual --></div>
+      </div>
+    </section>
+  </div>
+
+  <h2>HTML</h2>
+  <div class="docs-code"><pre>&lt;section class="hero"&gt;
+  &lt;div class="hero__top container"&gt;
+    &lt;div class="hero__copy"&gt;
+      &lt;p class="hero__eyebrow"&gt;Tag line&lt;/p&gt;
+      &lt;h1 class="hero__title"&gt;Title &lt;span class="hero__title-accent"&gt;accent&lt;/span&gt;&lt;/h1&gt;
+      &lt;p class="hero__subtitle"&gt;Subtitle text&lt;/p&gt;
+      &lt;div class="hero__actions"&gt;
+        &lt;button class="btn btn--primary"&gt;Get started&lt;/button&gt;
+        &lt;button class="btn btn--secondary"&gt;Learn more&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="hero__diagram"&gt;&lt;!-- visual --&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</pre></div>
+
+  <h2>Class reference</h2>
+  <table class="docs-table">
+    <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>.hero</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Root hero section</td></tr>
+      <tr><td>.hero__top</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Top row with copy and diagram</td></tr>
+      <tr><td>.hero__copy</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Left-side text content block</td></tr>
+      <tr><td>.hero__title</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Main heading</td></tr>
+      <tr><td>.hero__title-accent</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Highlighted span inside the title</td></tr>
+      <tr><td>.hero__subtitle</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Supporting paragraph below the title</td></tr>
+      <tr><td>.hero__eyebrow</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Small label above the title</td></tr>
+      <tr><td>.hero__actions</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">CTA button row</td></tr>
+      <tr><td>.hero__diagram</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Right-side visual area</td></tr>
+      <tr><td>.hero__below</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Section below the top row</td></tr>
+      <tr><td>.hero__features</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Feature list wrapper</td></tr>
+      <tr><td>.hero__logo</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Logo mark inside the hero</td></tr>
+      <tr><td>.hero__logo-spinner</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Animated spinner around the logo</td></tr>
+      <tr><td>.hero__logo-spinner-track</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Track ring for the spinner</td></tr>
+      <tr><td>.hero__note</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Small footnote or disclaimer</td></tr>
+      <tr><td>.hero__or</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Divider row with "or" label</td></tr>
+      <tr><td>.hero__or-divider</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Line on each side of the "or" label</td></tr>
+      <tr><td>.hero__pillars</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Row of pillar stat blocks</td></tr>
+      <tr><td>.hero__pillar</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Individual pillar card</td></tr>
+      <tr><td>.hero__pillar.is-active</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Active/selected pillar</td></tr>
+      <tr><td>.hero__pillar-bar</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Progress bar track inside a pillar</td></tr>
+      <tr><td>.hero__pillar-bar-fill</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Filled portion of the pillar bar</td></tr>
+      <tr><td>.hero__pillar-body</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Body area of a pillar card</td></tr>
+      <tr><td>.hero__pillar-content</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Inner content wrapper of a pillar</td></tr>
+      <tr><td>.hero__pillar-num</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Large number displayed in a pillar</td></tr>
+      <tr><td>.hero__pillar-text</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Supporting text below the pillar number</td></tr>
+      <tr><td>.hero__pillar-title</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Title label of a pillar</td></tr>
+      <tr><td>.hero__screenshot</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Screenshot block</td></tr>
+      <tr><td>.hero__screenshot-img</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Screenshot image</td></tr>
+      <tr><td>.hero__screenshot-img--active</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td style="color:var(--docs-text-muted)">Currently visible screenshot image</td></tr>
+      <tr><td>.hero__screenshot-static</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Non-animated screenshot variant</td></tr>
+      <tr><td>.hero__screenshot-wrap</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Wrapper constraining the screenshot</td></tr>
+      <tr><td>.hero__shadow</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Decorative shadow layer</td></tr>
+      <tr><td>.hero__shadow--1 – --5</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td style="color:var(--docs-text-muted)">Numbered shadow variants for layering</td></tr>
+      <tr><td>.hero__stat</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Individual stat block</td></tr>
+      <tr><td>.hero__stat-icon</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Icon inside a stat block</td></tr>
+      <tr><td>.hero__stat-label</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Label below the stat number</td></tr>
+      <tr><td>.hero__stat-num</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Numeric value of a stat</td></tr>
+      <tr><td>.hero__stats</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Row of stat blocks</td></tr>
+      <tr><td>.hero__strike-svg</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">SVG strikethrough decoration</td></tr>
+      <tr><td>.hero__strikethrough</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Text with strikethrough treatment</td></tr>
+      <tr><td>.hero__terminal</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Terminal block UI</td></tr>
+      <tr><td>.hero__terminal-code</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Code content inside the terminal</td></tr>
+      <tr><td>.hero__terminal-copy</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Copy button for terminal code</td></tr>
+      <tr><td>.hero__terminal-copy.is-copied</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Confirmation state after copying</td></tr>
+      <tr><td>.hero__tile</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Individual feature tile</td></tr>
+      <tr><td>.hero__tiles</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Grid of feature tiles</td></tr>
+      <tr><td>.hero__backed-row</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Row of backer logos</td></tr>
+      <tr><td>.hero__backed-label</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Label before backer logos</td></tr>
+      <tr><td>.hero__backed-logo-link</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Anchor wrapping a backer logo</td></tr>
+      <tr><td>.hero__backed-logo</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Backer logo image</td></tr>
+      <tr><td>.hero__backed-logo--inria</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td style="color:var(--docs-text-muted)">Size adjustment for the Inria logo</td></tr>
+      <tr><td>.hero__backed-separator</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Vertical divider between backer logos</td></tr>
+      <tr><td>.hero__cloud-link</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Cloud deployment link</td></tr>
+      <tr><td>.hero__hotspot</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Interactive hotspot overlay on diagram</td></tr>
+      <tr><td>.hero__inner</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Inner layout wrapper</td></tr>
+      <tr><td>.hero__replacement</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Replacement slot for dynamic content</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>

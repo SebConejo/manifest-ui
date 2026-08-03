@@ -1,0 +1,35 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Pricing Final CTA">
+  <h1>Pricing Final CTA <span class="docs-tag">Pricing</span></h1>
+  <p class="docs-lead">Centered action block at the bottom of the pricing page. Wraps one or more buttons in a flex row that wraps on narrow viewports.</p>
+
+  <h2>Preview</h2>
+  <div class="docs-preview">
+    <link rel="stylesheet" href="/styles/manifest.css" />
+    <div class="pricing-final-cta">
+      <div class="pricing-final-cta__actions">
+        <a href="#" class="btn btn--primary">Get started for free</a>
+        <a href="#" class="btn btn--secondary">Talk to sales</a>
+      </div>
+    </div>
+  </div>
+
+  <h2>HTML</h2>
+  <div class="docs-code"><pre>&lt;div class="pricing-final-cta"&gt;
+  &lt;div class="pricing-final-cta__actions"&gt;
+    &lt;a href="#" class="btn btn--primary"&gt;Get started for free&lt;/a&gt;
+    &lt;a href="#" class="btn btn--secondary"&gt;Talk to sales&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre></div>
+
+  <h2>Class reference</h2>
+  <table class="docs-table">
+    <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>.pricing-final-cta</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Root section; padding <code>--space-2xl</code> top, <code>--space-3xl</code> bottom</td></tr>
+      <tr><td>.pricing-final-cta__actions</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Centered flex row of buttons; 12px gap, wraps on overflow</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>

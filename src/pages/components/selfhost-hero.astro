@@ -1,0 +1,33 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Selfhost Hero">
+  <h1>Selfhost Hero <span class="docs-tag">Hero</span></h1>
+  <p class="docs-lead">Page header for the self-hosting page. Wide title capped at 700px with a readable subtitle at 600px max-width.</p>
+
+  <h2>Preview</h2>
+  <div class="docs-preview">
+    <link rel="stylesheet" href="/styles/manifest.css" />
+    <div class="selfhost-hero">
+      <h1 class="selfhost-hero__title">Self-host Manifest on your infrastructure</h1>
+      <p class="selfhost-hero__subtitle">Run the full LLM router on your own servers. No vendor lock-in, no data leaving your environment.</p>
+    </div>
+  </div>
+
+  <h2>HTML</h2>
+  <div class="docs-code"><pre>&lt;div class="selfhost-hero"&gt;
+  &lt;h1 class="selfhost-hero__title"&gt;Self-host Manifest on your infrastructure&lt;/h1&gt;
+  &lt;p class="selfhost-hero__subtitle"&gt;Run the full LLM router on your own servers. No vendor lock-in, no data leaving your environment.&lt;/p&gt;
+&lt;/div&gt;</pre></div>
+
+  <h2>Class reference</h2>
+  <table class="docs-table">
+    <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>.selfhost-hero</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Root element; sets top and bottom padding</td></tr>
+      <tr><td>.selfhost-hero__title</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Display-font title capped at 700px</td></tr>
+      <tr><td>.selfhost-hero__title (max-width: 768px)</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Reduces title to --size-3xl on small screens</td></tr>
+      <tr><td>.selfhost-hero__subtitle</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Muted subtitle capped at 600px with 1.6 line-height</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>

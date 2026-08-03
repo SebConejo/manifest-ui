@@ -1,0 +1,69 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Footer">
+  <h1>Footer <span class="docs-tag">Global</span></h1>
+  <p class="docs-lead">Site-wide footer with column grid, social links, and copyright.</p>
+
+  <h2>Preview</h2>
+  <div class="docs-preview">
+    <link rel="stylesheet" href="/styles/manifest.css" />
+    <footer class="footer">
+      <div class="footer__main">
+        <div class="footer__columns">
+          <div class="footer__left footer__col">
+            <div class="footer__logo-area">
+              <span class="footer__logo">Manifest</span>
+            </div>
+            <div class="footer__socials">...</div>
+          </div>
+          <div class="footer__col">
+            <a class="footer__link" href="#">Link</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span class="footer__copy">© 2026 Manifest</span>
+      </div>
+    </footer>
+  </div>
+
+  <h2>HTML</h2>
+  <div class="docs-code"><pre>&lt;footer class="footer"&gt;
+  &lt;div class="footer__main"&gt;
+    &lt;div class="footer__columns"&gt;
+      &lt;div class="footer__left footer__col"&gt;
+        &lt;div class="footer__logo-area"&gt;
+          &lt;span class="footer__logo"&gt;Manifest&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class="footer__socials"&gt;...&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="footer__col"&gt;
+        &lt;a class="footer__link" href="#"&gt;Link&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="footer__bottom"&gt;
+    &lt;span class="footer__copy"&gt;© 2026 Manifest&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;</pre></div>
+
+  <h2>Class reference</h2>
+  <table class="docs-table">
+    <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>.footer</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Root footer element</td></tr>
+      <tr><td>.footer__main</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Upper section containing columns</td></tr>
+      <tr><td>.footer__bottom</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Lower bar with copyright</td></tr>
+      <tr><td>.footer__canvas</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Decorative background canvas</td></tr>
+      <tr><td>.footer__columns</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Column grid wrapper</td></tr>
+      <tr><td>.footer__col</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Individual column</td></tr>
+      <tr><td>.footer__left</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Left column with logo and socials</td></tr>
+      <tr><td>.footer__logo-area</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Wrapper for the logo mark</td></tr>
+      <tr><td>.footer__logo</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Logo text or image</td></tr>
+      <tr><td>.footer__link</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Navigation link inside a column</td></tr>
+      <tr><td>.footer__socials</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Social icon row</td></tr>
+      <tr><td>.footer__copy</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Copyright text</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>

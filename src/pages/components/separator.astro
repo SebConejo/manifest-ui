@@ -1,0 +1,25 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Separator">
+  <h1>Separator <span class="docs-tag">Layout</span></h1>
+  <p class="docs-lead">Horizontal divider. Base version is invisible spacing; --line adds a visible border.</p>
+
+  <h2>Preview</h2>
+  <div class="docs-preview">
+    <link rel="stylesheet" href="/styles/manifest.css" />
+    <div class="separator separator--line"></div>
+  </div>
+
+  <h2>HTML</h2>
+  <div class="docs-code"><pre>&lt;div class="separator separator--line"&gt;&lt;/div&gt;</pre></div>
+
+  <h2>Class reference</h2>
+  <table class="docs-table">
+    <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>.separator</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Invisible spacing block</td></tr>
+      <tr><td>.separator--line</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td style="color:var(--docs-text-muted)">Adds a visible horizontal border</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>

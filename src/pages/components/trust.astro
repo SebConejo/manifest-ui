@@ -1,0 +1,60 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Trust">
+  <h1>Trust <span class="docs-tag">Sections</span></h1>
+  <p class="docs-lead">Grid of trust/security feature items with icon, title, and description. Compact variant reduces title size.</p>
+
+  <h2>Preview</h2>
+  <div class="docs-preview">
+    <link rel="stylesheet" href="/styles/manifest.css" />
+    <section class="trust">
+      <div class="trust__grid">
+        <div class="trust__item">
+          <div class="trust__icon"><i class="bx bx-lock-alt"></i></div>
+          <h3 class="trust__title">SOC 2 Type II</h3>
+          <p class="trust__text">Certified and audited annually.</p>
+        </div>
+        <div class="trust__item">
+          <div class="trust__icon"><i class="bx bx-shield"></i></div>
+          <h3 class="trust__title">Data privacy</h3>
+          <p class="trust__text">No training on your data.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <h2>HTML</h2>
+  <div class="docs-code"><pre>&lt;section class="trust"&gt;
+  &lt;div class="trust__grid"&gt;
+    &lt;div class="trust__item"&gt;
+      &lt;div class="trust__icon"&gt;&lt;i class="bx bx-lock-alt"&gt;&lt;/i&gt;&lt;/div&gt;
+      &lt;h3 class="trust__title"&gt;SOC 2 Type II&lt;/h3&gt;
+      &lt;p class="trust__text"&gt;Certified and audited annually.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="trust__item"&gt;
+      &lt;div class="trust__icon"&gt;&lt;i class="bx bx-shield"&gt;&lt;/i&gt;&lt;/div&gt;
+      &lt;h3 class="trust__title"&gt;Data privacy&lt;/h3&gt;
+      &lt;p class="trust__text"&gt;No training on your data.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</pre></div>
+
+  <h2>Class reference</h2>
+  <table class="docs-table">
+    <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>.trust</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Root section element</td></tr>
+      <tr><td>.trust__grid</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">CSS grid wrapping all trust items</td></tr>
+      <tr><td>.trust__grid--compact</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td style="color:var(--docs-text-muted)">Reduces grid spacing and title size</td></tr>
+      <tr><td>.trust__grid--compact .trust__title</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Smaller title font size inside compact grid</td></tr>
+      <tr><td>.trust__item</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Individual trust card</td></tr>
+      <tr><td>.trust__icon</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Icon wrapper with decorative ring</td></tr>
+      <tr><td>.trust__icon::before</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Outer decorative ring pseudo-element</td></tr>
+      <tr><td>.trust__icon::after</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Inner decorative ring pseudo-element</td></tr>
+      <tr><td>.trust__icon i</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Boxicon inside the icon wrapper</td></tr>
+      <tr><td>.trust__title</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Feature heading</td></tr>
+      <tr><td>.trust__text</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Supporting description</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>

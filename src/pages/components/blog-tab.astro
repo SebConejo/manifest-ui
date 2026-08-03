@@ -1,0 +1,30 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Blog Tab">
+  <h1>Blog Tab <span class="docs-tag">Blog</span></h1>
+  <p class="docs-lead">Filter tab for blog categories. Pill style, toggles active state.</p>
+
+  <h2>Preview</h2>
+  <div class="docs-preview">
+    <link rel="stylesheet" href="/styles/manifest.css" />
+    <button class="blog-tab blog-tab--active">All</button>
+    <button class="blog-tab">Articles</button>
+    <button class="blog-tab">Updates</button>
+  </div>
+
+  <h2>HTML</h2>
+  <div class="docs-code"><pre>&lt;button class="blog-tab blog-tab--active"&gt;All&lt;/button&gt;
+&lt;button class="blog-tab"&gt;Articles&lt;/button&gt;
+&lt;button class="blog-tab"&gt;Updates&lt;/button&gt;</pre></div>
+
+  <h2>Class reference</h2>
+  <table class="docs-table">
+    <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>.blog-tab</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Pill-style filter tab button</td></tr>
+      <tr><td>.blog-tab--active</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td style="color:var(--docs-text-muted)">Selected state</td></tr>
+      <tr><td>:hover</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Hover highlight on inactive tabs</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>

@@ -1,0 +1,64 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Setup Onboard Fields">
+  <h1>Setup Onboard Fields <span class="docs-tag">Setup</span></h1>
+  <p class="docs-lead">Key-value table for displaying configuration values users need to copy during onboarding. Each row shows a label on the left and a copyable code value on the right.</p>
+
+  <h2>Preview</h2>
+  <div class="docs-preview">
+    <link rel="stylesheet" href="/styles/manifest.css" />
+    <div class="setup-onboard-fields" role="list" aria-label="Configuration values">
+      <div class="setup-onboard-fields__row" role="listitem">
+        <span class="setup-onboard-fields__label">OPENAI_BASE_URL</span>
+        <span class="setup-onboard-fields__value">
+          <code>https://api.manifest.build/v1</code>
+        </span>
+      </div>
+      <div class="setup-onboard-fields__row" role="listitem">
+        <span class="setup-onboard-fields__label">OPENAI_API_KEY</span>
+        <span class="setup-onboard-fields__value">
+          <code>mnfst_YOUR_KEY</code>
+        </span>
+      </div>
+      <div class="setup-onboard-fields__row" role="listitem">
+        <span class="setup-onboard-fields__label">model</span>
+        <span class="setup-onboard-fields__value">
+          <code>auto</code>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <h2>HTML</h2>
+  <div class="docs-code"><pre>&lt;div class="setup-onboard-fields" role="list" aria-label="Configuration values"&gt;
+  &lt;div class="setup-onboard-fields__row" role="listitem"&gt;
+    &lt;span class="setup-onboard-fields__label"&gt;OPENAI_BASE_URL&lt;/span&gt;
+    &lt;span class="setup-onboard-fields__value"&gt;
+      &lt;code id="base-url"&gt;https://api.manifest.build/v1&lt;/code&gt;
+      &lt;button class="copy-btn" data-copy-target="#base-url" type="button"&gt;&lt;/button&gt;
+    &lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class="setup-onboard-fields__row" role="listitem"&gt;
+    &lt;span class="setup-onboard-fields__label"&gt;OPENAI_API_KEY&lt;/span&gt;
+    &lt;span class="setup-onboard-fields__value"&gt;
+      &lt;code id="api-key"&gt;mnfst_YOUR_KEY&lt;/code&gt;
+      &lt;button class="copy-btn" data-copy-target="#api-key" type="button"&gt;&lt;/button&gt;
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre></div>
+
+  <h2>Class reference</h2>
+  <table class="docs-table">
+    <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>.setup-onboard-fields</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Root container; small font size, top margin</td></tr>
+      <tr><td>.setup-onboard-fields__row</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Flex row, space-between, border-bottom separator</td></tr>
+      <tr><td>.setup-onboard-fields__row:last-child</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Removes bottom border from the final row</td></tr>
+      <tr><td>.setup-onboard-fields__row (≤768px)</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Stacks label and value vertically on mobile</td></tr>
+      <tr><td>.setup-onboard-fields__label</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Muted medium-weight key name</td></tr>
+      <tr><td>.setup-onboard-fields__value</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Monospace flex container for the value and copy button</td></tr>
+      <tr><td>.setup-onboard-fields__value code</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Pill-background inline code badge inside the value cell</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>

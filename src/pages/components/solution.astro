@@ -1,0 +1,80 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Solution">
+  <h1>Solution <span class="docs-tag">Cards</span></h1>
+  <p class="docs-lead">A three-column grid of feature cards with optional image, video, title, description, and a quiet text link. Collapses to a single column on mobile.</p>
+
+  <h2>Preview</h2>
+  <div class="docs-preview">
+    <link rel="stylesheet" href="/styles/manifest.css" />
+    <div class="solution__cards">
+      <div class="solution__card">
+        <p class="solution__card-title">Route any model</p>
+        <p class="solution__card-text">Send requests to the best provider for each job, automatically.</p>
+        <a href="#" class="solution__card-link"><span>Learn more</span> <i class="bx bx-right-arrow-alt"></i></a>
+      </div>
+      <div class="solution__card">
+        <p class="solution__card-title">Instant fallback</p>
+        <p class="solution__card-text">When a provider is down, traffic shifts to the next one with no code change.</p>
+        <a href="#" class="solution__card-link"><span>Learn more</span> <i class="bx bx-right-arrow-alt"></i></a>
+      </div>
+      <div class="solution__card">
+        <p class="solution__card-title">Full observability</p>
+        <p class="solution__card-text">Every call is logged with latency, cost, and model metadata.</p>
+        <a href="#" class="solution__card-link"><span>Learn more</span> <i class="bx bx-right-arrow-alt"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <h2>HTML</h2>
+  <div class="docs-code"><pre>&lt;div class="solution__image-placeholder"&gt;
+  &lt;img src="..." alt="..." /&gt;
+&lt;/div&gt;
+
+&lt;div class="solution__cards"&gt;
+  &lt;div class="solution__card"&gt;
+    &lt;div class="solution__card-video-wrap"&gt;
+      &lt;video src="..." autoplay muted loop playsinline&gt;&lt;/video&gt;
+    &lt;/div&gt;
+    &lt;p class="solution__card-title"&gt;Route any model&lt;/p&gt;
+    &lt;p class="solution__card-text"&gt;Send requests to the best provider for each job, automatically.&lt;/p&gt;
+    &lt;a href="#" class="solution__card-link"&gt;
+      &lt;span&gt;Learn more&lt;/span&gt; &lt;i class="bx bx-right-arrow-alt"&gt;&lt;/i&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  &lt;!-- repeat for each card --&gt;
+&lt;/div&gt;
+
+&lt;div class="solution__cta"&gt;
+  &lt;a href="#" class="btn"&gt;Get started&lt;/a&gt;
+&lt;/div&gt;</pre></div>
+
+  <h2>Class reference</h2>
+  <table class="docs-table">
+    <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>.solution__image-placeholder</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Full-width image container above the cards</td></tr>
+      <tr><td>.solution__image-placeholder img</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Hero image, max 1200 px wide with rounded corners</td></tr>
+      <tr><td>.solution__cards</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Three-column grid wrapper for the cards</td></tr>
+      <tr><td>.solution__card</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Individual feature card with a right border divider</td></tr>
+      <tr><td>.solution__card .mega__icon</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Icon badge inside a card, reset to square style</td></tr>
+      <tr><td>.solution__card:nth-child(3n)</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Removes right border from every third card</td></tr>
+      <tr><td>.solution__card img</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Full-width image inside a card</td></tr>
+      <tr><td>.solution__card-video-wrap</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Bordered wrapper for an in-card video</td></tr>
+      <tr><td>.solution__card-video-wrap video</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Block video that fills the wrapper width</td></tr>
+      <tr><td>.solution__card-title</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Bold card heading at lg size</td></tr>
+      <tr><td>.solution__card-text</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Muted body text below the title</td></tr>
+      <tr><td>.solution__card-link</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Quiet inline text link with an arrow icon</td></tr>
+      <tr><td>.solution__card-link span</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Underlined label text inside the link</td></tr>
+      <tr><td>.solution__card-link i</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Arrow icon that shifts right on hover</td></tr>
+      <tr><td>.solution__card-link:hover</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Hover state for the link</td></tr>
+      <tr><td>.solution__card-link:hover i</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Translates the arrow 3 px right on hover</td></tr>
+      <tr><td>.solution__step-number</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Numbered circular badge for ordered steps</td></tr>
+      <tr><td>.solution__cta</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Centered call-to-action area below the cards</td></tr>
+      <tr><td>.solution__cards (mobile)</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Single-column layout below 768 px</td></tr>
+      <tr><td>.solution__card (mobile)</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Bottom border replaces right border on mobile</td></tr>
+      <tr><td>.solution__card:last-child (mobile)</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Removes bottom border from the last mobile card</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>

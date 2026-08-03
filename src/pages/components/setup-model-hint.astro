@@ -1,0 +1,34 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Setup Model Hint">
+  <h1>Setup Model Hint <span class="docs-tag">Setup</span></h1>
+  <p class="docs-lead">Inline code badge used inside prose to highlight config keys, model names, and file paths. Renders with a monospace font and a subtle background pill.</p>
+
+  <h2>Preview</h2>
+  <div class="docs-preview">
+    <link rel="stylesheet" href="/styles/manifest.css" />
+    <p>
+      Add a single block to <code class="setup-model-hint__code">~/.claude/settings.json</code> and
+      every <code class="setup-model-hint__code">claude</code> run picks up the new endpoint.
+      Point the model at <code class="setup-model-hint__code">manifest/auto</code> to let Manifest
+      pick for you.
+    </p>
+  </div>
+
+  <h2>HTML</h2>
+  <div class="docs-code"><pre>&lt;p&gt;
+  Add a block to
+  &lt;code class="setup-model-hint__code"&gt;~/.claude/settings.json&lt;/code&gt;
+  and every &lt;code class="setup-model-hint__code"&gt;claude&lt;/code&gt; run picks
+  up the new endpoint.
+&lt;/p&gt;</pre></div>
+
+  <h2>Class reference</h2>
+  <table class="docs-table">
+    <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>.setup-model-hint__code</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Inline code badge; Fira Code font, small size, warm background pill</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>

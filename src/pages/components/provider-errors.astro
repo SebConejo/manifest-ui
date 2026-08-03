@@ -1,0 +1,43 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Provider Errors">
+  <h1>Provider Errors <span class="docs-tag">Providers</span></h1>
+  <p class="docs-lead">List of known errors for a provider, with metadata per error.</p>
+
+  <h2>Preview</h2>
+  <div class="docs-preview">
+    <link rel="stylesheet" href="/styles/manifest.css" />
+    <ul class="provider-errors__list">
+      <li class="provider-errors__item">
+        <div class="provider-errors__meta">
+          <span>400</span> · Context length exceeded
+        </div>
+      </li>
+      <li class="provider-errors__item">
+        <div class="provider-errors__meta">
+          <span>429</span> · Rate limit reached
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <h2>HTML</h2>
+  <div class="docs-code"><pre>&lt;ul class="provider-errors__list"&gt;
+  &lt;li class="provider-errors__item"&gt;
+    &lt;div class="provider-errors__meta"&gt;
+      &lt;span&gt;400&lt;/span&gt; &middot; Context length exceeded
+    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</pre></div>
+
+  <h2>Class reference</h2>
+  <table class="docs-table">
+    <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>.provider-errors__list</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Unstyled list of provider error entries</td></tr>
+      <tr><td>.provider-errors__item</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Single error list item</td></tr>
+      <tr><td>.provider-errors__meta</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Error code and description row</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>

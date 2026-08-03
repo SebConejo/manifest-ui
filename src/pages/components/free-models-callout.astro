@@ -1,0 +1,34 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Free Models Callout">
+  <h1>Free Models Callout <span class="docs-tag">Callout</span></h1>
+  <p class="docs-lead">A left-bordered informational callout box for rate-limit notices or contextual warnings on the free models page.</p>
+
+  <h2>Preview</h2>
+  <div class="docs-preview">
+    <link rel="stylesheet" href="/styles/manifest.css" />
+    <div class="free-models-callout">
+      <p class="free-models-callout__box">
+        Free tiers are subject to provider rate limits. Manifest retries automatically, but sustained high-volume workloads should use a paid plan.
+      </p>
+    </div>
+  </div>
+
+  <h2>HTML</h2>
+  <div class="docs-code"><pre>&lt;div class="free-models-callout"&gt;
+  &lt;p class="free-models-callout__box"&gt;
+    Free tiers are subject to provider rate limits. Manifest retries automatically,
+    but sustained high-volume workloads should use a paid plan.
+  &lt;/p&gt;
+&lt;/div&gt;</pre></div>
+
+  <h2>Class reference</h2>
+  <table class="docs-table">
+    <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>.free-models-callout</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Root wrapper with bottom xl padding</td></tr>
+      <tr><td>.free-models-callout__box</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Alt-background box with a 3 px left border and rounded right corners, base font size</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>

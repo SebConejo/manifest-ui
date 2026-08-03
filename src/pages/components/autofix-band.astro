@@ -1,0 +1,101 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Autofix Band">
+  <h1>Autofix Band <span class="docs-tag">Sections</span></h1>
+  <p class="docs-lead">Promotional band for the Auto-fix feature. Two-column grid with source/flow diagram, feature list, and footer perks row.</p>
+
+  <h2>Preview</h2>
+  <div class="docs-preview">
+    <link rel="stylesheet" href="/styles/manifest.css" />
+    <section class="autofix-band">
+      <div class="autofix-band__main container">
+        <div class="autofix-band__grid">
+          <div class="autofix-band__left">
+            <h2 class="section__title">Auto-fix</h2>
+            <ul class="autofix-band__points">
+              <li><i class="bx bx-check"></i> <strong>Patches bad requests</strong> automatically</li>
+              <li><i class="bx bx-check"></i> <strong>Retries</strong> with corrected payload</li>
+            </ul>
+            <div class="autofix-band__cta">
+              <a class="autofix-band__cta-start btn btn--primary" href="#">Get started</a>
+              <a class="autofix-band__cta-discover btn btn--secondary" href="#">Learn more</a>
+            </div>
+          </div>
+          <div class="autofix-band__right">
+            <div class="autofix-band__source"><!-- diagram --></div>
+            <div class="autofix-band__flow"><!-- flow --></div>
+          </div>
+        </div>
+      </div>
+      <div class="autofix-band__footer">
+        <div class="autofix-band__footer-inner container">
+          <ul class="autofix-band__perks">
+            <li class="autofix-band__perk"><i class="bx bx-bolt"></i> <strong>Zero config</strong></li>
+            <li class="autofix-band__perk"><i class="bx bx-shield"></i> <strong>Automatic</strong></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <h2>HTML</h2>
+  <div class="docs-code"><pre>&lt;section class="autofix-band"&gt;
+  &lt;div class="autofix-band__main container"&gt;
+    &lt;div class="autofix-band__grid"&gt;
+      &lt;div class="autofix-band__left"&gt;
+        &lt;h2 class="section__title"&gt;Auto-fix&lt;/h2&gt;
+        &lt;ul class="autofix-band__points"&gt;
+          &lt;li&gt;&lt;i class="bx bx-check"&gt;&lt;/i&gt; &lt;strong&gt;Patches bad requests&lt;/strong&gt; automatically&lt;/li&gt;
+          &lt;li&gt;&lt;i class="bx bx-check"&gt;&lt;/i&gt; &lt;strong&gt;Retries&lt;/strong&gt; with corrected payload&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;div class="autofix-band__cta"&gt;
+          &lt;a class="autofix-band__cta-start btn btn--primary" href="#"&gt;Get started&lt;/a&gt;
+          &lt;a class="autofix-band__cta-discover btn btn--secondary" href="#"&gt;Learn more&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="autofix-band__right"&gt;
+        &lt;div class="autofix-band__source"&gt;&lt;!-- diagram --&gt;&lt;/div&gt;
+        &lt;div class="autofix-band__flow"&gt;&lt;!-- flow --&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="autofix-band__footer"&gt;
+    &lt;div class="autofix-band__footer-inner container"&gt;
+      &lt;ul class="autofix-band__perks"&gt;
+        &lt;li class="autofix-band__perk"&gt;&lt;i class="bx bx-bolt"&gt;&lt;/i&gt; &lt;strong&gt;Zero config&lt;/strong&gt;&lt;/li&gt;
+        &lt;li class="autofix-band__perk"&gt;&lt;i class="bx bx-shield"&gt;&lt;/i&gt; &lt;strong&gt;Automatic&lt;/strong&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</pre></div>
+
+  <h2>Class reference</h2>
+  <table class="docs-table">
+    <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>.autofix-band</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Root section element</td></tr>
+      <tr><td>.autofix-band__main</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Main content area with container width</td></tr>
+      <tr><td>.autofix-band__grid</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Two-column CSS grid</td></tr>
+      <tr><td>.autofix-band__left</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Left column: text and CTA</td></tr>
+      <tr><td>.autofix-band__right</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Right column: diagram and flow</td></tr>
+      <tr><td>.autofix-band__source</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Source diagram slot</td></tr>
+      <tr><td>.autofix-band__flow</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Flow diagram slot</td></tr>
+      <tr><td>.autofix-band__points</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Feature list</td></tr>
+      <tr><td>.autofix-band__points li</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Individual feature list item</td></tr>
+      <tr><td>.autofix-band__points li + li</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Adds top spacing between consecutive items</td></tr>
+      <tr><td>.autofix-band__points i</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Icon inside list item</td></tr>
+      <tr><td>.autofix-band__points strong</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Bold label inside list item</td></tr>
+      <tr><td>.autofix-band__cta</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Button group wrapper</td></tr>
+      <tr><td>.autofix-band__cta-start</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Primary CTA button</td></tr>
+      <tr><td>.autofix-band__cta-discover</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Secondary CTA button</td></tr>
+      <tr><td>.autofix-band__footer</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Footer band below the main grid</td></tr>
+      <tr><td>.autofix-band__footer-inner</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Container-width inner wrapper for footer</td></tr>
+      <tr><td>.autofix-band__perks</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Horizontal list of perk items</td></tr>
+      <tr><td>.autofix-band__perk</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Individual perk with icon and label</td></tr>
+      <tr><td>.autofix-band__perk:last-child</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Removes trailing separator on last perk</td></tr>
+      <tr><td>.autofix-band__perk i</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Icon inside perk</td></tr>
+      <tr><td>.autofix-band__perk strong</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Bold label inside perk</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>

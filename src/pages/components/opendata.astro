@@ -1,0 +1,52 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Open Data">
+  <h1>Open Data <span class="docs-tag">Sections</span></h1>
+  <p class="docs-lead">Open data section with title and a list of downloadable data links.</p>
+
+  <h2>Preview</h2>
+  <div class="docs-preview">
+    <link rel="stylesheet" href="/styles/manifest.css" />
+    <section class="opendata">
+      <h2 class="opendata__title">Open data</h2>
+      <div class="opendata__links">
+        <a class="opendata__link" href="#">
+          Provider uptime stats <i class="bx bx-chevron-right"></i>
+        </a>
+        <a class="opendata__link" href="#">
+          Model pricing data <i class="bx bx-chevron-right"></i>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <h2>HTML</h2>
+  <div class="docs-code">
+    <pre>&lt;section class="opendata"&gt;
+  &lt;h2 class="opendata__title"&gt;Open data&lt;/h2&gt;
+  &lt;div class="opendata__links"&gt;
+    &lt;a class="opendata__link" href="#"&gt;
+      Provider uptime stats &lt;i class="bx bx-chevron-right"&gt;&lt;/i&gt;
+    &lt;/a&gt;
+    &lt;a class="opendata__link" href="#"&gt;
+      Model pricing data &lt;i class="bx bx-chevron-right"&gt;&lt;/i&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</pre>
+  </div>
+
+  <h2>Class reference</h2>
+  <table class="docs-table">
+    <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>.opendata</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Section wrapper</td></tr>
+      <tr><td>.opendata__title</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Section heading</td></tr>
+      <tr><td>.opendata__links</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Container for the list of links</td></tr>
+      <tr><td>.opendata__link</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Individual downloadable data link</td></tr>
+      <tr><td>.opendata__link:hover</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Hover state of the link</td></tr>
+      <tr><td>.opendata__link .bx-chevron-right</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Chevron icon inside the link</td></tr>
+      <tr><td>.opendata__link:hover .bx-chevron-right</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Chevron icon shift on link hover</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>

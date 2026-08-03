@@ -1,0 +1,118 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Blog Post">
+  <h1>Blog Post <span class="docs-tag">Blog</span></h1>
+  <p class="docs-lead">Full article page layout. Rich typography for content, share button, hero image, and syntax-highlighted code blocks via highlight.js.</p>
+
+  <h2>Preview</h2>
+  <div class="docs-preview">
+    <link rel="stylesheet" href="/styles/manifest.css" />
+    <article class="blog-post container--narrow">
+      <header class="blog-post__header">
+        <h1 class="blog-post__title">Article Title</h1>
+        <div class="blog-post__meta">
+          <span class="blog-post__avatar"></span>
+          Aug 3, 2026 · 5 min read
+        </div>
+      </header>
+      <div class="blog-post__hero-wrap">
+        <img class="blog-post__hero" src="https://placehold.co/1200x628/fcfaf5/2c2418?text=Cover" alt="Cover" />
+      </div>
+      <div class="blog-post__content">
+        <p>Article content...</p>
+        <h2>Section heading</h2>
+        <pre><code class="hljs">code block</code></pre>
+      </div>
+    </article>
+  </div>
+
+  <h2>HTML</h2>
+  <div class="docs-code"><pre>&lt;article class="blog-post container--narrow"&gt;
+  &lt;header class="blog-post__header"&gt;
+    &lt;h1 class="blog-post__title"&gt;Article Title&lt;/h1&gt;
+    &lt;div class="blog-post__meta"&gt;
+      &lt;span class="blog-post__avatar"&gt;&lt;/span&gt;
+      Aug 3, 2026 · 5 min read
+    &lt;/div&gt;
+  &lt;/header&gt;
+  &lt;div class="blog-post__hero-wrap"&gt;
+    &lt;img class="blog-post__hero" src="cover.png" alt="Cover" /&gt;
+  &lt;/div&gt;
+  &lt;div class="blog-post__content"&gt;
+    &lt;p&gt;Article content...&lt;/p&gt;
+    &lt;h2&gt;Section heading&lt;/h2&gt;
+    &lt;pre&gt;&lt;code class="hljs"&gt;code block&lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+&lt;/article&gt;</pre></div>
+
+  <h2>Class reference</h2>
+  <table class="docs-table">
+    <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>.blog-post</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Article root element</td></tr>
+      <tr><td>.blog-post__share</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Share action area</td></tr>
+      <tr><td>.blog-post__share-btn</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Share trigger button</td></tr>
+      <tr><td>.blog-post__share-btn:hover</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Share button hover highlight</td></tr>
+      <tr><td>.blog-post__avatar</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Author avatar placeholder circle</td></tr>
+      <tr><td>.blog-post__avatar--photo</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td style="color:var(--docs-text-muted)">Avatar with actual photo background</td></tr>
+      <tr><td>.blog-post__back</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Back navigation row</td></tr>
+      <tr><td>.blog-post__back a</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Back link inside the back row</td></tr>
+      <tr><td>.blog-post__header</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Article header containing title and meta</td></tr>
+      <tr><td>.blog-post__title</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Article main heading</td></tr>
+      <tr><td>.blog-post__meta</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Author, date, and read-time row</td></tr>
+      <tr><td>.blog-post__video</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Responsive video embed wrapper</td></tr>
+      <tr><td>.blog-post__video iframe</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Iframe inside the video wrapper</td></tr>
+      <tr><td>.blog-post__hero-wrap</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Hero image container</td></tr>
+      <tr><td>.blog-post__hero</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Full-width hero image</td></tr>
+      <tr><td>.blog-post__hero[src$=".svg"]</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">SVG hero variant (no stretch)</td></tr>
+      <tr><td>.blog-post__content</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Rich text content area</td></tr>
+      <tr><td>.blog-post__content h2</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Section heading inside content</td></tr>
+      <tr><td>.blog-post__content h3</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Sub-section heading inside content</td></tr>
+      <tr><td>.blog-post__content h4</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Minor heading inside content</td></tr>
+      <tr><td>.blog-post__content p</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Body paragraph</td></tr>
+      <tr><td>.blog-post__content a:not(.btn)</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Inline link in prose</td></tr>
+      <tr><td>.blog-post__content strong</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Bold inline text</td></tr>
+      <tr><td>.blog-post__content ul</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Unordered list</td></tr>
+      <tr><td>.blog-post__content ol</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Ordered list</td></tr>
+      <tr><td>.blog-post__content li</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">List item</td></tr>
+      <tr><td>.blog-post__content blockquote</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Pull quote block</td></tr>
+      <tr><td>.blog-post__content code</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Inline code span</td></tr>
+      <tr><td>.blog-post__content pre</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Code block container</td></tr>
+      <tr><td>.blog-post__content pre code</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Code inside a pre block</td></tr>
+      <tr><td>.blog-post__content img</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Inline content image</td></tr>
+      <tr><td>.blog-post__content video</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Inline video element</td></tr>
+      <tr><td>.blog-post__content figure</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Figure wrapper</td></tr>
+      <tr><td>.blog-post__content figure img</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Image inside a figure</td></tr>
+      <tr><td>.blog-post__content figcaption</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Caption below a figure</td></tr>
+      <tr><td>img.blog-img--wide</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td style="color:var(--docs-text-muted)">Full-bleed image wider than the column</td></tr>
+      <tr><td>img.blog-img--badge</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td style="color:var(--docs-text-muted)">Small badge-sized image</td></tr>
+      <tr><td>.hljs-comment</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">highlight.js: comment token</td></tr>
+      <tr><td>.hljs-quote</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">highlight.js: quote token</td></tr>
+      <tr><td>.hljs-keyword</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">highlight.js: keyword token</td></tr>
+      <tr><td>.hljs-selector-tag</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">highlight.js: selector tag token</td></tr>
+      <tr><td>.hljs-built_in</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">highlight.js: built-in token</td></tr>
+      <tr><td>.hljs-type</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">highlight.js: type token</td></tr>
+      <tr><td>.hljs-literal</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">highlight.js: literal token</td></tr>
+      <tr><td>.hljs-meta</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">highlight.js: meta token</td></tr>
+      <tr><td>.hljs-string</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">highlight.js: string token</td></tr>
+      <tr><td>.hljs-regexp</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">highlight.js: regexp token</td></tr>
+      <tr><td>.hljs-char.escape_</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">highlight.js: escape character token</td></tr>
+      <tr><td>.hljs-subst</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">highlight.js: substitution token</td></tr>
+      <tr><td>.hljs-number</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">highlight.js: number token</td></tr>
+      <tr><td>.hljs-symbol</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">highlight.js: symbol token</td></tr>
+      <tr><td>.hljs-bullet</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">highlight.js: bullet token</td></tr>
+      <tr><td>.hljs-attr</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">highlight.js: attribute token</td></tr>
+      <tr><td>.hljs-attribute</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">highlight.js: attribute name token</td></tr>
+      <tr><td>.hljs-title</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">highlight.js: title token</td></tr>
+      <tr><td>.hljs-title.function_</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">highlight.js: function name token</td></tr>
+      <tr><td>.hljs-title.class_</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">highlight.js: class name token</td></tr>
+      <tr><td>.hljs-section</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">highlight.js: section token</td></tr>
+      <tr><td>.hljs-variable</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">highlight.js: variable token</td></tr>
+      <tr><td>.hljs-template-variable</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">highlight.js: template variable token</td></tr>
+      <tr><td>.hljs-params</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">highlight.js: params token</td></tr>
+      <tr><td>.hljs-emphasis</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">highlight.js: emphasis token</td></tr>
+      <tr><td>.hljs-strong</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">highlight.js: strong token</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>

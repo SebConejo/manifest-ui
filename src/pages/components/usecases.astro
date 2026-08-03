@@ -1,0 +1,102 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Use Cases">
+  <h1>Use Cases <span class="docs-tag">Sections</span></h1>
+  <p class="docs-lead">Accordion-style use case switcher with animated canvas background and visual panel per case.</p>
+
+  <h2>Preview</h2>
+  <div class="docs-preview">
+    <link rel="stylesheet" href="/styles/manifest.css" />
+    <section class="usecases">
+      <div class="usecases__outer container">
+        <canvas class="usecases__canvas"></canvas>
+        <div class="usecases__card">
+          <div class="usecases__card-header"><!-- title --></div>
+          <div class="usecases__accordion">
+            <div class="usecases__item usecases__item--active">
+              <button class="usecases__header">
+                <span class="usecases__title">AI Customer Support</span>
+                <span class="usecases__chevron"></span>
+              </button>
+              <div class="usecases__body">
+                <p class="usecases__text">Description</p>
+                <ul class="usecases__list">
+                  <li>Feature one</li>
+                </ul>
+                <div class="usecases__harness-icons">
+                  <img src="..." alt="" />
+                  <span class="usecases__harness-badge">+12</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="usecases__visual">
+            <img src="..." alt="Visual" />
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <h2>HTML</h2>
+  <div class="docs-code"><pre>&lt;section class="usecases"&gt;
+  &lt;div class="usecases__outer container"&gt;
+    &lt;canvas class="usecases__canvas"&gt;&lt;/canvas&gt;
+    &lt;div class="usecases__card"&gt;
+      &lt;div class="usecases__card-header"&gt;&lt;!-- title --&gt;&lt;/div&gt;
+      &lt;div class="usecases__accordion"&gt;
+        &lt;div class="usecases__item usecases__item--active"&gt;
+          &lt;button class="usecases__header"&gt;
+            &lt;span class="usecases__title"&gt;AI Customer Support&lt;/span&gt;
+            &lt;span class="usecases__chevron"&gt;&lt;/span&gt;
+          &lt;/button&gt;
+          &lt;div class="usecases__body"&gt;
+            &lt;p class="usecases__text"&gt;Description&lt;/p&gt;
+            &lt;ul class="usecases__list"&gt;
+              &lt;li&gt;Feature one&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;div class="usecases__harness-icons"&gt;
+              &lt;img src="..." alt="" /&gt;
+              &lt;span class="usecases__harness-badge"&gt;+12&lt;/span&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="usecases__visual"&gt;
+        &lt;img src="..." alt="Visual" /&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</pre></div>
+
+  <h2>Class reference</h2>
+  <table class="docs-table">
+    <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>.usecases</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Root section element</td></tr>
+      <tr><td>.usecases__outer</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Container-width outer wrapper</td></tr>
+      <tr><td>.usecases__canvas</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Animated canvas background</td></tr>
+      <tr><td>.usecases__card</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Card containing accordion and visual</td></tr>
+      <tr><td>.usecases__card-header</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Header area above the accordion</td></tr>
+      <tr><td>.usecases__accordion</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Accordion list wrapper</td></tr>
+      <tr><td>.usecases__item</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Single accordion entry</td></tr>
+      <tr><td>.usecases__item--active</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td style="color:var(--docs-text-muted)">Expands the accordion item and reveals the body</td></tr>
+      <tr><td>.usecases__header</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Clickable trigger row of an accordion item</td></tr>
+      <tr><td>.usecases__chevron</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Chevron icon inside the trigger</td></tr>
+      <tr><td>.usecases__item--active .usecases__chevron</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Rotates chevron when item is active</td></tr>
+      <tr><td>.usecases__title</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Label text inside the trigger</td></tr>
+      <tr><td>.usecases__item--active .usecases__title</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Applies active color to title</td></tr>
+      <tr><td>.usecases__body</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Collapsible content area</td></tr>
+      <tr><td>.usecases__text</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Description paragraph inside the body</td></tr>
+      <tr><td>.usecases__list</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Feature list inside the body</td></tr>
+      <tr><td>.usecases__list li</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Individual feature item</td></tr>
+      <tr><td>.usecases__list li::before</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Decorative bullet pseudo-element</td></tr>
+      <tr><td>.usecases__harness-icons</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Row of integration icons at the bottom of the body</td></tr>
+      <tr><td>.usecases__harness-icons img</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Individual integration logo</td></tr>
+      <tr><td>.usecases__harness-badge</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Count badge (e.g. "+12") appended to the icon row</td></tr>
+      <tr><td>.usecases__visual</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Visual panel displayed alongside the accordion</td></tr>
+      <tr><td>.usecases__visual img</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Image inside the visual panel</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>

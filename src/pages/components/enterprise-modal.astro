@@ -1,0 +1,112 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Enterprise Modal">
+  <h1>Enterprise Modal <span class="docs-tag">Modals &amp; Overlays</span></h1>
+  <p class="docs-lead">Enterprise contact form modal with two-column layout: left perks list, right form fields.</p>
+  <h2>Preview</h2>
+  <div class="docs-preview">
+    <link rel="stylesheet" href="/styles/manifest.css" />
+    <div class="modal enterprise-modal" role="dialog">
+      <div class="enterprise-modal__grid">
+        <div class="enterprise-modal__left">
+          <p class="enterprise-modal__desc">Enterprise plan benefits</p>
+          <ul class="enterprise-modal__perks">
+            <li><i class="bx bx-check"></i> SSO &amp; SAML</li>
+            <li><i class="bx bx-check"></i> SLA guarantee</li>
+          </ul>
+        </div>
+        <div class="enterprise-modal__right">
+          <form>
+            <div class="enterprise-modal__field">
+              <label>Email</label>
+              <input type="email" placeholder="you@company.com" />
+            </div>
+            <div class="enterprise-modal__field enterprise-modal__field--error">
+              <label>Company</label>
+              <input type="text" />
+              <span class="enterprise-modal__field-error">Required</span>
+            </div>
+            <div class="enterprise-modal__hp" aria-hidden="true">
+              <input type="text" tabindex="-1" />
+            </div>
+            <div class="enterprise-modal__submit-wrap">
+              <button class="btn btn--primary">Submit</button>
+            </div>
+            <p class="enterprise-modal__form-error enterprise-modal__form-error--visible">
+              Please fix the errors above.
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h2>HTML</h2>
+  <div class="docs-code"><pre>{`<div class="modal enterprise-modal" role="dialog">
+  <div class="enterprise-modal__grid">
+    <div class="enterprise-modal__left">
+      <p class="enterprise-modal__desc">Enterprise plan benefits</p>
+      <ul class="enterprise-modal__perks">
+        <li><i class="bx bx-check"></i> SSO & SAML</li>
+        <li><i class="bx bx-check"></i> SLA guarantee</li>
+      </ul>
+    </div>
+    <div class="enterprise-modal__right">
+      <form>
+        <div class="enterprise-modal__field">
+          <label>Email</label>
+          <input type="email" placeholder="you@company.com" />
+        </div>
+        <div class="enterprise-modal__field enterprise-modal__field--error">
+          <label>Company</label>
+          <input type="text" />
+          <span class="enterprise-modal__field-error">Required</span>
+        </div>
+        <div class="enterprise-modal__hp" aria-hidden="true">
+          <input type="text" tabindex="-1" />
+        </div>
+        <div class="enterprise-modal__submit-wrap">
+          <button class="btn btn--primary">Submit</button>
+        </div>
+        <p class="enterprise-modal__form-error enterprise-modal__form-error--visible">
+          Please fix the errors above.
+        </p>
+      </form>
+    </div>
+  </div>
+</div>`}</pre></div>
+  <h2>Class reference</h2>
+  <table class="docs-table">
+    <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>.enterprise-modal</td><td><span class="docs-tag">base</span></td><td>Root enterprise modal container. Used alongside .modal.</td></tr>
+      <tr><td>.enterprise-modal__grid</td><td><span class="docs-tag docs-tag--element">element</span></td><td>Two-column grid layout wrapper.</td></tr>
+      <tr><td>.enterprise-modal__left</td><td><span class="docs-tag docs-tag--element">element</span></td><td>Left column with perks list.</td></tr>
+      <tr><td>.enterprise-modal__desc</td><td><span class="docs-tag docs-tag--element">element</span></td><td>Introductory description in the left column.</td></tr>
+      <tr><td>.enterprise-modal__perks</td><td><span class="docs-tag docs-tag--element">element</span></td><td>Perks list in the left column.</td></tr>
+      <tr><td>.enterprise-modal__perks li</td><td><span class="docs-tag docs-tag--element">element</span></td><td>Individual perk item.</td></tr>
+      <tr><td>.enterprise-modal__perks .bx</td><td><span class="docs-tag docs-tag--element">element</span></td><td>Boxicon check icon inside a perk item.</td></tr>
+      <tr><td>.enterprise-modal__right</td><td><span class="docs-tag docs-tag--element">element</span></td><td>Right column containing the form.</td></tr>
+      <tr><td>.enterprise-modal__field</td><td><span class="docs-tag docs-tag--element">element</span></td><td>Field wrapper for label and input.</td></tr>
+      <tr><td>.enterprise-modal__field label</td><td><span class="docs-tag docs-tag--element">element</span></td><td>Field label.</td></tr>
+      <tr><td>.enterprise-modal__field input</td><td><span class="docs-tag docs-tag--element">element</span></td><td>Text or email input.</td></tr>
+      <tr><td>.enterprise-modal__field select</td><td><span class="docs-tag docs-tag--element">element</span></td><td>Select dropdown.</td></tr>
+      <tr><td>.enterprise-modal__field textarea</td><td><span class="docs-tag docs-tag--element">element</span></td><td>Textarea input.</td></tr>
+      <tr><td>.enterprise-modal__field input::placeholder</td><td><span class="docs-tag docs-tag--state">state</span></td><td>Placeholder text style for inputs.</td></tr>
+      <tr><td>.enterprise-modal__field textarea::placeholder</td><td><span class="docs-tag docs-tag--state">state</span></td><td>Placeholder text style for textarea.</td></tr>
+      <tr><td>.enterprise-modal__field input:focus</td><td><span class="docs-tag docs-tag--state">state</span></td><td>Focus state for inputs.</td></tr>
+      <tr><td>.enterprise-modal__field select:focus</td><td><span class="docs-tag docs-tag--state">state</span></td><td>Focus state for select.</td></tr>
+      <tr><td>.enterprise-modal__field textarea:focus</td><td><span class="docs-tag docs-tag--state">state</span></td><td>Focus state for textarea.</td></tr>
+      <tr><td>.enterprise-modal__hp</td><td><span class="docs-tag docs-tag--element">element</span></td><td>Honeypot field wrapper for spam protection.</td></tr>
+      <tr><td>.enterprise-modal__field--error</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td>Error state on a field wrapper.</td></tr>
+      <tr><td>.enterprise-modal__field--error input</td><td><span class="docs-tag docs-tag--state">state</span></td><td>Input styling inside an error field.</td></tr>
+      <tr><td>.enterprise-modal__field--error select</td><td><span class="docs-tag docs-tag--state">state</span></td><td>Select styling inside an error field.</td></tr>
+      <tr><td>.enterprise-modal__field--error textarea</td><td><span class="docs-tag docs-tag--state">state</span></td><td>Textarea styling inside an error field.</td></tr>
+      <tr><td>.enterprise-modal__field-error</td><td><span class="docs-tag docs-tag--element">element</span></td><td>Inline error message below a field.</td></tr>
+      <tr><td>.enterprise-modal__field--error .enterprise-modal__field-error</td><td><span class="docs-tag docs-tag--state">state</span></td><td>Makes the inline error visible when the field is in error state.</td></tr>
+      <tr><td>.enterprise-modal__submit-wrap</td><td><span class="docs-tag docs-tag--element">element</span></td><td>Submit button wrapper.</td></tr>
+      <tr><td>.enterprise-modal__form-error</td><td><span class="docs-tag docs-tag--element">element</span></td><td>Form-level error message.</td></tr>
+      <tr><td>.enterprise-modal__form-error--visible</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td>Makes the form-level error message visible.</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>

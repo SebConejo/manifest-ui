@@ -1,0 +1,54 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Breadcrumbs">
+  <h1>Breadcrumbs <span class="docs-tag">Navigation</span></h1>
+  <p class="docs-lead">Page breadcrumb trail. Current item gets aria-current and a visual distinction.</p>
+
+  <h2>Preview</h2>
+  <div class="docs-preview">
+    <link rel="stylesheet" href="/styles/manifest.css" />
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol class="breadcrumbs__list">
+        <li class="breadcrumbs__item">
+          <a class="breadcrumbs__link" href="/">Home</a>
+        </li>
+        <li class="breadcrumbs__item">
+          <a class="breadcrumbs__link" href="/providers">Providers</a>
+        </li>
+        <li class="breadcrumbs__item breadcrumbs__item--current" aria-current="page">
+          <span class="breadcrumbs__link">OpenAI</span>
+        </li>
+      </ol>
+    </nav>
+  </div>
+
+  <h2>HTML</h2>
+  <div class="docs-code">
+    <pre>&lt;nav class="breadcrumbs" aria-label="Breadcrumb"&gt;
+  &lt;ol class="breadcrumbs__list"&gt;
+    &lt;li class="breadcrumbs__item"&gt;
+      &lt;a class="breadcrumbs__link" href="/"&gt;Home&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="breadcrumbs__item"&gt;
+      &lt;a class="breadcrumbs__link" href="/providers"&gt;Providers&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="breadcrumbs__item breadcrumbs__item--current" aria-current="page"&gt;
+      &lt;span class="breadcrumbs__link"&gt;OpenAI&lt;/span&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/nav&gt;</pre>
+  </div>
+
+  <h2>Class reference</h2>
+  <table class="docs-table">
+    <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>.breadcrumbs</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Base breadcrumb nav wrapper</td></tr>
+      <tr><td>.breadcrumbs__list</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Ordered list of breadcrumb items</td></tr>
+      <tr><td>.breadcrumbs__item</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Individual breadcrumb list item</td></tr>
+      <tr><td>.breadcrumbs__item--current</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td style="color:var(--docs-text-muted)">Marks the current page in the trail</td></tr>
+      <tr><td>.breadcrumbs__link</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Link or span inside each breadcrumb item</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>

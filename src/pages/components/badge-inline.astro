@@ -1,0 +1,32 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Badge Inline">
+  <h1>Badge Inline <span class="docs-tag">Global</span></h1>
+  <p class="docs-lead">Inline text badge for highlighting keywords in body copy. Two color variants.</p>
+
+  <h2>Preview</h2>
+  <div class="docs-preview">
+    <link rel="stylesheet" href="/styles/manifest.css" />
+    <span class="badge-inline">Default</span>
+    <span class="badge-inline badge-inline--blue">Blue</span>
+    <span class="badge-inline badge-inline--red">Red</span>
+  </div>
+
+  <h2>HTML</h2>
+  <div class="docs-code">
+    <pre>&lt;span class="badge-inline"&gt;Default&lt;/span&gt;
+&lt;span class="badge-inline badge-inline--blue"&gt;Blue&lt;/span&gt;
+&lt;span class="badge-inline badge-inline--red"&gt;Red&lt;/span&gt;</pre>
+  </div>
+
+  <h2>Class reference</h2>
+  <table class="docs-table">
+    <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>.badge-inline</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Base inline badge styles</td></tr>
+      <tr><td>.badge-inline--blue</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td style="color:var(--docs-text-muted)">Blue color variant</td></tr>
+      <tr><td>.badge-inline--red</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td style="color:var(--docs-text-muted)">Red color variant</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>

@@ -1,0 +1,95 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Provider Models">
+  <h1>Provider Models <span class="docs-tag">Provider</span></h1>
+  <p class="docs-lead">Model listing section on a provider detail page. Includes a section title, an optional empty state, a footer note, and a companion data table.</p>
+
+  <h2>Preview</h2>
+  <div class="docs-preview">
+    <link rel="stylesheet" href="/styles/manifest.css" />
+    <div class="provider-models">
+      <h2 class="provider-models__title">Available models</h2>
+      <table class="provider-models-table">
+        <thead>
+          <tr>
+            <th>Model</th>
+            <th>Context</th>
+            <th>Input</th>
+            <th>Output</th>
+            <th>Latency</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>gpt-4o</td>
+            <td>128k</td>
+            <td>$2.50</td>
+            <td>$10.00</td>
+            <td>450ms</td>
+          </tr>
+          <tr>
+            <td>gpt-4o-mini</td>
+            <td>128k</td>
+            <td>$0.15</td>
+            <td>$0.60</td>
+            <td>320ms</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="provider-models__note">Prices per million tokens. Updated daily.</p>
+    </div>
+  </div>
+
+  <h2>HTML</h2>
+  <div class="docs-code"><pre>&lt;div class="provider-models"&gt;
+  &lt;h2 class="provider-models__title"&gt;Available models&lt;/h2&gt;
+
+  &lt;!-- Empty state (shown when no models are available) --&gt;
+  &lt;p class="provider-models__empty"&gt;No models available.&lt;/p&gt;
+
+  &lt;table class="provider-models-table"&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;Model&lt;/th&gt;
+        &lt;th&gt;Context&lt;/th&gt;
+        &lt;th&gt;Input&lt;/th&gt;
+        &lt;th&gt;Output&lt;/th&gt;
+        &lt;th&gt;Latency&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;gpt-4o&lt;/td&gt;
+        &lt;td&gt;128k&lt;/td&gt;
+        &lt;td&gt;$2.50&lt;/td&gt;
+        &lt;td&gt;$10.00&lt;/td&gt;
+        &lt;td&gt;450ms&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+
+  &lt;p class="provider-models__note"&gt;Prices per million tokens. Updated daily.&lt;/p&gt;
+&lt;/div&gt;</pre></div>
+
+  <h2>Class reference</h2>
+  <table class="docs-table">
+    <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>.provider-models</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Root section wrapper; zero bottom padding</td></tr>
+      <tr><td>.provider-models .model-table__model-cell</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Overrides model cell alignment to center</td></tr>
+      <tr><td>.provider-models__title</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Display-font heading; 18px, weight 600, margin-bottom <code>--space-md</code></td></tr>
+      <tr><td>.provider-models__empty</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Centered muted text for empty state; padding <code>--space-xl</code> top and bottom</td></tr>
+      <tr><td>.provider-models__note</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Small muted footnote; <code>--size-sm</code>, margin-top <code>--space-md</code></td></tr>
+      <tr><td>.provider-models-table</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Full-width table; separate border-spacing, fixed layout</td></tr>
+      <tr><td>.provider-models-table thead th</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Muted uppercase headers; <code>--size-xs</code>, bottom border</td></tr>
+      <tr><td>.provider-models-table thead th:nth-child(1)</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Model name column: 35% width</td></tr>
+      <tr><td>.provider-models-table thead th:nth-child(2)</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Context column: 13% width</td></tr>
+      <tr><td>.provider-models-table thead th:nth-child(3)</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Input price column: 15% width</td></tr>
+      <tr><td>.provider-models-table thead th:nth-child(4)</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Output price column: 20% width</td></tr>
+      <tr><td>.provider-models-table thead th:nth-child(5)</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Latency column: 17% width</td></tr>
+      <tr><td>.provider-models-table td</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Body cells; <code>--size-sm</code>, 1rem vertical padding, bottom border</td></tr>
+      <tr><td>.provider-models-table tbody tr:last-child td</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Removes bottom border on the last row</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>

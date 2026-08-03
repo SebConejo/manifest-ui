@@ -1,0 +1,55 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Setup Agents Card">
+  <h1>Setup Agents Card <span class="docs-tag">Setup</span></h1>
+  <p class="docs-lead">Container card for agent setup flows. Provides a warm background, border, and padding to group setup steps, code blocks, and configuration fields.</p>
+
+  <h2>Preview</h2>
+  <div class="docs-preview">
+    <link rel="stylesheet" href="/styles/manifest.css" />
+    <div class="setup-agents-card">
+      <p class="setup-method__hint">
+        Add this block to <code class="setup-model-hint__code">~/.agent/settings.json</code> and
+        every run will route through Manifest.
+      </p>
+      <div class="setup-onboard-fields" role="list" aria-label="Configuration values">
+        <div class="setup-onboard-fields__row" role="listitem">
+          <span class="setup-onboard-fields__label">API_BASE_URL</span>
+          <span class="setup-onboard-fields__value">
+            <code>https://api.manifest.build/v1</code>
+          </span>
+        </div>
+        <div class="setup-onboard-fields__row" role="listitem">
+          <span class="setup-onboard-fields__label">API_KEY</span>
+          <span class="setup-onboard-fields__value">
+            <code>mnfst_YOUR_KEY</code>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2>HTML</h2>
+  <div class="docs-code"><pre>&lt;div class="setup-agents-card"&gt;
+  &lt;!-- Hint text, code blocks, onboard fields, or segment tabs go here --&gt;
+  &lt;p class="setup-method__hint"&gt;Add this block to your config file.&lt;/p&gt;
+  &lt;div class="setup-onboard-fields" role="list" aria-label="Configuration values"&gt;
+    &lt;div class="setup-onboard-fields__row" role="listitem"&gt;
+      &lt;span class="setup-onboard-fields__label"&gt;API_BASE_URL&lt;/span&gt;
+      &lt;span class="setup-onboard-fields__value"&gt;
+        &lt;code&gt;https://api.manifest.build/v1&lt;/code&gt;
+      &lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre></div>
+
+  <h2>Class reference</h2>
+  <table class="docs-table">
+    <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>.setup-agents-card</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Wrapper card for setup content; warm background, rounded border, max-width 760px</td></tr>
+      <tr><td>.setup-agents-card (≤768px)</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Padding reduces from lg to md at mobile breakpoint</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>

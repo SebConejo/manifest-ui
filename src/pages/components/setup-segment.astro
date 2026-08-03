@@ -1,0 +1,66 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Setup Segment">
+  <h1>Setup Segment <span class="docs-tag">Navigation</span></h1>
+  <p class="docs-lead">Pill-style segmented tab control for switching between setup methods (e.g. CLI vs wizard, Python vs TypeScript). Tabs drive panel visibility via a data attribute; the active tab gets a card shadow.</p>
+
+  <h2>Preview — default</h2>
+  <div class="docs-preview">
+    <link rel="stylesheet" href="/styles/manifest.css" />
+    <div class="setup-segment" role="tablist" aria-label="Configuration method">
+      <button class="setup-segment__btn setup-segment__btn--active" role="tab" aria-selected="true">CLI configuration</button>
+      <button class="setup-segment__btn" role="tab" aria-selected="false">Onboard wizard</button>
+    </div>
+  </div>
+
+  <h2>Preview — full-width modifier</h2>
+  <div class="docs-preview">
+    <link rel="stylesheet" href="/styles/manifest.css" />
+    <div class="setup-segment setup-segment--full" role="tablist" aria-label="Language">
+      <button class="setup-segment__btn setup-segment__btn--active" role="tab" aria-selected="true">Python</button>
+      <button class="setup-segment__btn" role="tab" aria-selected="false">TypeScript</button>
+    </div>
+  </div>
+
+  <h2>HTML</h2>
+  <div class="docs-code"><pre>&lt;!-- Default --&gt;
+&lt;div
+  class="setup-segment"
+  data-segment
+  data-panel-group="#my-panels"
+  role="tablist"
+  aria-label="Configuration method"
+&gt;
+  &lt;button
+    class="setup-segment__btn setup-segment__btn--active"
+    data-tab-id="cli"
+    role="tab"
+    aria-selected="true"
+  &gt;CLI configuration&lt;/button&gt;
+  &lt;button
+    class="setup-segment__btn"
+    data-tab-id="wizard"
+    role="tab"
+    aria-selected="false"
+  &gt;Onboard wizard&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- Full-width modifier: each button stretches equally --&gt;
+&lt;div class="setup-segment setup-segment--full" ...&gt;
+  ...
+&lt;/div&gt;</pre></div>
+
+  <h2>Class reference</h2>
+  <table class="docs-table">
+    <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>.setup-segment</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Flex pill container with alt background and inner padding</td></tr>
+      <tr><td>.setup-segment--full</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td style="color:var(--docs-text-muted)">Makes every child button stretch to equal width</td></tr>
+      <tr><td>.setup-segment__btn</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Individual tab button; borderless, muted text, rounded</td></tr>
+      <tr><td>.setup-segment__btn:hover</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Text color darkens to default on hover</td></tr>
+      <tr><td>.setup-segment__btn--active</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td style="color:var(--docs-text-muted)">Card background with soft box-shadow; full text color</td></tr>
+      <tr><td>.setup-segment__btn:focus-visible</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Accent outline for keyboard navigation</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>

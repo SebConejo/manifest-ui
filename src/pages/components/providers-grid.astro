@@ -1,0 +1,102 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Providers Grid">
+  <h1>Providers Grid <span class="docs-tag">Provider</span></h1>
+  <p class="docs-lead">Three-column card grid for the providers listing page. Includes a section wrapper, group headings, and individual provider cards with logo, name, and stats.</p>
+
+  <h2>Preview</h2>
+  <div class="docs-preview">
+    <link rel="stylesheet" href="/styles/manifest.css" />
+    <div class="providers-grid-section">
+      <div class="providers-groups">
+        <div>
+          <div class="providers-section__head">
+            <h2 class="providers-section__title">Major providers</h2>
+            <p class="providers-section__subtitle">The most widely used LLM providers, available through Manifest.</p>
+          </div>
+          <div class="providers-grid">
+            <a href="#" class="provider-grid-card">
+              <div class="provider-grid-card__head">
+                <span class="provider-grid-card__logo provider-grid-card__logo--letter" style="width:28px;height:28px;border-radius:8px;">O</span>
+                <span class="provider-grid-card__name">OpenAI</span>
+              </div>
+              <div class="provider-grid-card__stats">
+                <span class="provider-grid-card__stat">Models</span>
+                <span class="provider-grid-card__stat-value">14</span>
+              </div>
+            </a>
+            <a href="#" class="provider-grid-card">
+              <div class="provider-grid-card__head">
+                <span class="provider-grid-card__logo provider-grid-card__logo--letter" style="width:28px;height:28px;border-radius:8px;">A</span>
+                <span class="provider-grid-card__name">Anthropic</span>
+              </div>
+              <div class="provider-grid-card__stats">
+                <span class="provider-grid-card__stat">Models</span>
+                <span class="provider-grid-card__stat-value">6</span>
+              </div>
+            </a>
+            <a href="#" class="provider-grid-card provider-grid-card--skeleton">
+              <div class="provider-grid-card__head">
+                <span class="provider-grid-card__logo provider-grid-card__logo--letter" style="width:28px;height:28px;border-radius:8px;background:#e2dbd0;">&nbsp;</span>
+                <span class="provider-grid-card__name" style="color:transparent;background:#e2dbd0;border-radius:4px;">Loading</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2>HTML</h2>
+  <div class="docs-code"><pre>&lt;div class="providers-grid-section"&gt;
+  &lt;div class="providers-groups"&gt;
+    &lt;div&gt;
+      &lt;div class="providers-section__head"&gt;
+        &lt;h2 class="providers-section__title"&gt;Major providers&lt;/h2&gt;
+        &lt;p class="providers-section__subtitle"&gt;The most widely used LLM providers.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="providers-grid"&gt;
+        &lt;a href="/providers/openai" class="provider-grid-card"&gt;
+          &lt;div class="provider-grid-card__head"&gt;
+            &lt;img class="provider-grid-card__logo" src="/icons/openai.svg" alt="OpenAI" /&gt;
+            &lt;!-- or letter fallback --&gt;
+            &lt;span class="provider-grid-card__logo provider-grid-card__logo--letter"&gt;O&lt;/span&gt;
+            &lt;span class="provider-grid-card__name"&gt;OpenAI&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div class="provider-grid-card__stats"&gt;
+            &lt;span class="provider-grid-card__stat"&gt;Models&lt;/span&gt;
+            &lt;span class="provider-grid-card__stat-value"&gt;14&lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre></div>
+
+  <h2>Class reference</h2>
+  <table class="docs-table">
+    <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>.providers-grid-section</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Outermost page section; padding-bottom <code>--space-3xl</code></td></tr>
+      <tr><td>.providers-groups</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Flex column grouping provider categories; gap <code>--space-2xl</code></td></tr>
+      <tr><td>.providers-section__head</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Group heading container; margin-bottom <code>--space-md</code></td></tr>
+      <tr><td>.providers-section__title</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Display-font group title; <code>--size-2xl</code>, weight 800, line-height 1.2</td></tr>
+      <tr><td>.providers-section__subtitle</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Muted subtitle; <code>--size-base</code>, max-width 62ch</td></tr>
+      <tr><td>.providers-grid</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Three-column card grid; gap <code>--space-md</code></td></tr>
+      <tr><td>.providers-grid (tablet)</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">769px–1024px: two-column layout</td></tr>
+      <tr><td>.providers-grid (mobile)</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">&lt;768px: single-column layout</td></tr>
+      <tr><td>.provider-grid-card</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Block link card; bg, border, radius, padding, no underline</td></tr>
+      <tr><td>.provider-grid-card:hover</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Darker border and subtle box shadow on hover</td></tr>
+      <tr><td>.provider-grid-card__head</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Flex row for logo and name; 0.75rem gap, margin-bottom <code>--space-md</code></td></tr>
+      <tr><td>.provider-grid-card__logo</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">28x28 provider logo image; rounded 8px, object-fit contain</td></tr>
+      <tr><td>.provider-grid-card__logo--letter</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td style="color:var(--docs-text-muted)">Fallback: flex-centered letter on a slate-400 background</td></tr>
+      <tr><td>.provider-grid-card__name</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Display-font provider name; 18px, weight 700</td></tr>
+      <tr><td>.provider-grid-card__stats</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Baseline-aligned flex row; space-between</td></tr>
+      <tr><td>.provider-grid-card__stat</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Muted stat label; body font, <code>--size-sm</code></td></tr>
+      <tr><td>.provider-grid-card__stat-value</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Bold stat value; body font, <code>--size-sm</code>, weight 600</td></tr>
+      <tr><td>.provider-grid-card__stat-value .model-table__tokens-unit</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Token unit inside stat value; inherits size and weight</td></tr>
+      <tr><td>.provider-grid-card--skeleton</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td style="color:var(--docs-text-muted)">Loading skeleton state; pointer-events disabled</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>

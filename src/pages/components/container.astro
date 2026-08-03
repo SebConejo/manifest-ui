@@ -1,0 +1,40 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Container">
+  <h1>Container <span class="docs-tag">Layout</span></h1>
+  <p class="docs-lead">Page-width containers. Three widths for different content types.</p>
+
+  <h2>Preview</h2>
+  <div class="docs-preview">
+    <link rel="stylesheet" href="/styles/manifest.css" />
+    <div style="display:flex;flex-direction:column;gap:12px;padding:16px;background:#f5f5f5;">
+      <div class="container" style="background:#dde8ff;padding:12px;text-align:center;font-size:13px;">
+        .container — 1080px max
+      </div>
+      <div class="container container--narrow" style="background:#d4edda;padding:12px;text-align:center;font-size:13px;">
+        .container--narrow — 720px max
+      </div>
+      <div class="container container--wide" style="background:#fff3cd;padding:12px;text-align:center;font-size:13px;">
+        .container--wide — 1240px max
+      </div>
+    </div>
+  </div>
+
+  <h2>HTML</h2>
+  <div class="docs-code">
+    <pre>&lt;div class="container"&gt;&lt;!-- 1080px max --&gt;&lt;/div&gt;
+&lt;div class="container container--narrow"&gt;&lt;!-- 720px max --&gt;&lt;/div&gt;
+&lt;div class="container container--wide"&gt;&lt;!-- 1240px max --&gt;&lt;/div&gt;</pre>
+  </div>
+
+  <h2>Class reference</h2>
+  <table class="docs-table">
+    <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>.container</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Centered block, max-width 1080px with horizontal padding</td></tr>
+      <tr><td>.container--narrow</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td style="color:var(--docs-text-muted)">Narrows max-width to 720px for prose or focused layouts</td></tr>
+      <tr><td>.container--wide</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td style="color:var(--docs-text-muted)">Expands max-width to 1240px for full-bleed grid layouts</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>

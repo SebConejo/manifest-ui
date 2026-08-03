@@ -1,0 +1,44 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Status Badge">
+  <h1>Status Badge <span class="docs-tag">Global</span></h1>
+  <p class="docs-lead">Small animated status indicator with a pulsing dot. Used in the nav and footer to show system status.</p>
+
+  <h2>Preview</h2>
+  <div class="docs-preview">
+    <link rel="stylesheet" href="/styles/manifest.css" />
+    <a class="status-badge" href="#">
+      <span class="status-badge__dot"></span>
+      All systems operational
+    </a>
+
+    <a class="status-badge status-badge--nav" href="#">
+      <span class="status-badge__dot"></span>
+      Operational
+    </a>
+  </div>
+
+  <h2>HTML</h2>
+  <div class="docs-code">
+    <pre>&lt;a class="status-badge" href="#"&gt;
+  &lt;span class="status-badge__dot"&gt;&lt;/span&gt;
+  All systems operational
+&lt;/a&gt;
+
+&lt;a class="status-badge status-badge--nav" href="#"&gt;
+  &lt;span class="status-badge__dot"&gt;&lt;/span&gt;
+  Operational
+&lt;/a&gt;</pre>
+  </div>
+
+  <h2>Class reference</h2>
+  <table class="docs-table">
+    <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>.status-badge</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Base status badge styles</td></tr>
+      <tr><td>.status-badge--nav</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td style="color:var(--docs-text-muted)">Compact variant for use in navigation</td></tr>
+      <tr><td>.status-badge__dot</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Animated pulsing dot indicator</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>

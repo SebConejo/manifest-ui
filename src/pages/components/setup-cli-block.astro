@@ -1,0 +1,42 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Setup CLI Block">
+  <h1>Setup CLI Block <span class="docs-tag">Setup</span></h1>
+  <p class="docs-lead">Relative wrapper for a code block that positions an actions overlay (copy button) in the top-right corner. Used with <code>.setup-method__code</code> for shell and config snippets.</p>
+
+  <h2>Preview</h2>
+  <div class="docs-preview">
+    <link rel="stylesheet" href="/styles/manifest.css" />
+    <div class="setup-cli-block">
+      <div class="setup-cli-block__actions">
+        <button class="copy-btn" type="button" aria-label="Copy">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+        </button>
+      </div>
+      <div class="setup-method__code">
+        <pre><code>export OPENAI_BASE_URL="https://api.manifest.build/v1"
+export OPENAI_API_KEY="mnfst_YOUR_KEY"</code></pre>
+      </div>
+    </div>
+  </div>
+
+  <h2>HTML</h2>
+  <div class="docs-code"><pre>&lt;div class="setup-cli-block"&gt;
+  &lt;div class="setup-cli-block__actions"&gt;
+    &lt;button class="copy-btn" data-copy-target="#snippet-id" type="button"&gt;&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class="setup-method__code"&gt;
+    &lt;pre&gt;&lt;code id="snippet-id" data-lang="bash"&gt;export API_KEY="mnfst_YOUR_KEY"&lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre></div>
+
+  <h2>Class reference</h2>
+  <table class="docs-table">
+    <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>.setup-cli-block</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Relative-positioned wrapper for a code block; provides bottom margin</td></tr>
+      <tr><td>.setup-cli-block__actions</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Absolutely positioned overlay at top-right for copy/action buttons; z-index 2</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>

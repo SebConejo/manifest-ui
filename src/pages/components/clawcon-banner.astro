@@ -1,0 +1,58 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Clawcon Banner">
+  <h1>Clawcon Banner <span class="docs-tag">Global</span></h1>
+  <p class="docs-lead">Event/conference promotional banner with background image, logo, and CTA.</p>
+
+  <h2>Preview</h2>
+  <div class="docs-preview">
+    <link rel="stylesheet" href="/styles/manifest.css" />
+    <div class="clawcon-banner">
+      <div class="clawcon-banner__bg"></div>
+      <div class="clawcon-banner__inner">
+        <img class="clawcon-banner__logo" src="" alt="" />
+        <div class="clawcon-banner__text">
+          <h3 class="clawcon-banner__title">Event Name</h3>
+          <p class="clawcon-banner__subtitle">Subtitle</p>
+        </div>
+        <a class="clawcon-banner__cta" href="#">
+          Register <i class="bx bx-right-arrow-alt"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <h2>HTML</h2>
+  <div class="docs-code"><pre>&lt;div class="clawcon-banner"&gt;
+  &lt;div class="clawcon-banner__bg"&gt;&lt;/div&gt;
+  &lt;div class="clawcon-banner__inner"&gt;
+    &lt;img class="clawcon-banner__logo" src="..." alt="" /&gt;
+    &lt;div class="clawcon-banner__text"&gt;
+      &lt;h3 class="clawcon-banner__title"&gt;Event Name&lt;/h3&gt;
+      &lt;p class="clawcon-banner__subtitle"&gt;Subtitle&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;a class="clawcon-banner__cta" href="#"&gt;
+      Register &lt;i class="bx bx-right-arrow-alt"&gt;&lt;/i&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre></div>
+
+  <h2>Class reference</h2>
+  <table class="docs-table">
+    <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>.clawcon-banner</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Root banner element</td></tr>
+      <tr><td>.clawcon-banner__bg</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Background image layer</td></tr>
+      <tr><td>.clawcon-banner__img</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Static background image</td></tr>
+      <tr><td>.clawcon-banner__gif</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Animated GIF overlay</td></tr>
+      <tr><td>.clawcon-banner__inner</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Centered content row</td></tr>
+      <tr><td>.clawcon-banner__logo</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Event logo image</td></tr>
+      <tr><td>.clawcon-banner__text</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Title and subtitle wrapper</td></tr>
+      <tr><td>.clawcon-banner__title</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Event name heading</td></tr>
+      <tr><td>.clawcon-banner__subtitle</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Supporting event detail</td></tr>
+      <tr><td>.clawcon-banner__cta</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Registration CTA link</td></tr>
+      <tr><td>.clawcon-banner__cta:hover i</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Arrow shift on CTA hover</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>

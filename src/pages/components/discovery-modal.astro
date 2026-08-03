@@ -1,0 +1,76 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Discovery Modal">
+  <h1>Discovery Modal <span class="docs-tag">Modals &amp; Overlays</span></h1>
+  <p class="docs-lead">Discovery/offer modal with banner image, feature list, and CTA. Extends base modal.</p>
+  <h2>Preview</h2>
+  <div class="docs-preview">
+    <link rel="stylesheet" href="/styles/manifest.css" />
+    <div class="modal discovery-modal" role="dialog">
+      <div class="discovery-modal__banner">
+        <img class="discovery-modal__banner-img" src="..." alt="" />
+      </div>
+      <button class="discovery-modal__close">×</button>
+      <div class="discovery-modal__body">
+        <p class="discovery-modal__eyebrow">Limited offer</p>
+        <h2 class="discovery-modal__title">
+          Get <span class="discovery-modal__highlight">$25</span> of credit
+          <img class="discovery-modal__title-logo" src="..." alt="" />
+        </h2>
+        <p class="discovery-modal__subtitle">Book a 15-min call.</p>
+        <ul class="discovery-modal__features">
+          <li><svg></svg> Feature one</li>
+        </ul>
+        <a class="discovery-modal__cta btn btn--primary" href="#">Book a slot</a>
+        <a class="discovery-modal__terms" href="#">Terms apply</a>
+      </div>
+    </div>
+  </div>
+  <h2>HTML</h2>
+  <div class="docs-code"><pre>{`<div class="modal discovery-modal" role="dialog">
+  <div class="discovery-modal__banner">
+    <img class="discovery-modal__banner-img" src="..." alt="" />
+  </div>
+  <button class="discovery-modal__close">×</button>
+  <div class="discovery-modal__body">
+    <p class="discovery-modal__eyebrow">Limited offer</p>
+    <h2 class="discovery-modal__title">
+      Get <span class="discovery-modal__highlight">$25</span> of credit
+      <img class="discovery-modal__title-logo" src="..." alt="" />
+    </h2>
+    <p class="discovery-modal__subtitle">Book a 15-min call.</p>
+    <ul class="discovery-modal__features">
+      <li><svg>...</svg> Feature one</li>
+    </ul>
+    <a class="discovery-modal__cta btn btn--primary" href="#">Book a slot</a>
+    <a class="discovery-modal__terms" href="#">Terms apply</a>
+  </div>
+</div>`}</pre></div>
+  <h2>Class reference</h2>
+  <table class="docs-table">
+    <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>.discovery-modal</td><td><span class="docs-tag">base</span></td><td>Root discovery modal container. Used alongside .modal.</td></tr>
+      <tr><td>.discovery-modal__banner</td><td><span class="docs-tag docs-tag--element">element</span></td><td>Banner image wrapper at the top of the modal.</td></tr>
+      <tr><td>.discovery-modal__banner-img</td><td><span class="docs-tag docs-tag--element">element</span></td><td>Banner image.</td></tr>
+      <tr><td>.discovery-modal__close</td><td><span class="docs-tag docs-tag--element">element</span></td><td>Close button.</td></tr>
+      <tr><td>.discovery-modal__close:hover</td><td><span class="docs-tag docs-tag--state">state</span></td><td>Hover state for the close button.</td></tr>
+      <tr><td>.discovery-modal__close:focus-visible</td><td><span class="docs-tag docs-tag--state">state</span></td><td>Focus state for the close button.</td></tr>
+      <tr><td>.discovery-modal__body</td><td><span class="docs-tag docs-tag--element">element</span></td><td>Content area below the banner.</td></tr>
+      <tr><td>.discovery-modal__eyebrow</td><td><span class="docs-tag docs-tag--element">element</span></td><td>Small label above the title.</td></tr>
+      <tr><td>.discovery-modal__eyebrow[hidden]</td><td><span class="docs-tag docs-tag--state">state</span></td><td>Hides the eyebrow label.</td></tr>
+      <tr><td>.discovery-modal__title</td><td><span class="docs-tag docs-tag--element">element</span></td><td>Main modal heading.</td></tr>
+      <tr><td>.discovery-modal__highlight</td><td><span class="docs-tag docs-tag--element">element</span></td><td>Highlighted text span inside the title.</td></tr>
+      <tr><td>.discovery-modal__title-logo</td><td><span class="docs-tag docs-tag--element">element</span></td><td>Inline logo image inside the title.</td></tr>
+      <tr><td>.discovery-modal__subtitle</td><td><span class="docs-tag docs-tag--element">element</span></td><td>Subtitle below the title.</td></tr>
+      <tr><td>.discovery-modal__features</td><td><span class="docs-tag docs-tag--element">element</span></td><td>Feature list.</td></tr>
+      <tr><td>.discovery-modal__features li</td><td><span class="docs-tag docs-tag--element">element</span></td><td>Individual feature list item.</td></tr>
+      <tr><td>.discovery-modal__features svg</td><td><span class="docs-tag docs-tag--element">element</span></td><td>Icon inside a feature list item.</td></tr>
+      <tr><td>.discovery-modal__cta</td><td><span class="docs-tag docs-tag--element">element</span></td><td>Primary call-to-action link.</td></tr>
+      <tr><td>.discovery-modal__terms</td><td><span class="docs-tag docs-tag--element">element</span></td><td>Terms link below the CTA.</td></tr>
+      <tr><td>.discovery-modal__terms:hover</td><td><span class="docs-tag docs-tag--state">state</span></td><td>Hover state for the terms link.</td></tr>
+      <tr><td>.discovery-modal__terms:focus-visible</td><td><span class="docs-tag docs-tag--state">state</span></td><td>Focus state for the terms link.</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>

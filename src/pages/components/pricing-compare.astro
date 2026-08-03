@@ -1,0 +1,78 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Pricing Compare">
+  <h1>Pricing Compare <span class="docs-tag">Pricing</span></h1>
+  <p class="docs-lead">Feature comparison table between plans. Uses checkmarks and X marks in cells.</p>
+
+  <h2>Preview</h2>
+  <div class="docs-preview">
+    <link rel="stylesheet" href="/styles/manifest.css" />
+    <div class="pricing-compare">
+      <div class="pricing-compare__table-wrap">
+        <table class="pricing-compare__table">
+          <thead>
+            <tr>
+              <th class="pricing-compare__feature-col">Feature</th>
+              <th>Free</th>
+              <th class="pricing-compare__th--pro">Pro</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Request routing</td>
+              <td><span class="pricing-compare__check">✓</span></td>
+              <td><span class="pricing-compare__check">✓</span></td>
+            </tr>
+            <tr>
+              <td>Request logs</td>
+              <td><span class="pricing-compare__x">✕</span></td>
+              <td><span class="pricing-compare__check">✓</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <h2>HTML</h2>
+  <div class="docs-code"><pre>&lt;div class="pricing-compare"&gt;
+  &lt;div class="pricing-compare__table-wrap"&gt;
+    &lt;table class="pricing-compare__table"&gt;
+      &lt;thead&gt;
+        &lt;tr&gt;
+          &lt;th class="pricing-compare__feature-col"&gt;Feature&lt;/th&gt;
+          &lt;th&gt;Free&lt;/th&gt;
+          &lt;th class="pricing-compare__th--pro"&gt;Pro&lt;/th&gt;
+        &lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Request routing&lt;/td&gt;
+          &lt;td&gt;&lt;span class="pricing-compare__check"&gt;✓&lt;/span&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;span class="pricing-compare__check"&gt;✓&lt;/span&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Request logs&lt;/td&gt;
+          &lt;td&gt;&lt;span class="pricing-compare__x"&gt;✕&lt;/span&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;span class="pricing-compare__check"&gt;✓&lt;/span&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre></div>
+
+  <h2>Class reference</h2>
+  <table class="docs-table">
+    <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>.pricing-compare</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Comparison section wrapper</td></tr>
+      <tr><td>.pricing-compare__table-wrap</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Scrollable overflow container for the table</td></tr>
+      <tr><td>.pricing-compare__table</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">The comparison table element</td></tr>
+      <tr><td>.pricing-compare__feature-col</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Left-hand feature label column header</td></tr>
+      <tr><td>.pricing-compare__th--pro</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td style="color:var(--docs-text-muted)">Column header styled for the Pro plan</td></tr>
+      <tr><td>.pricing-compare__check</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Checkmark cell indicating feature availability</td></tr>
+      <tr><td>.pricing-compare__x</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">X mark cell indicating feature unavailability</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>

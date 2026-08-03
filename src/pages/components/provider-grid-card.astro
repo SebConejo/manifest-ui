@@ -1,0 +1,63 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Provider Grid Card">
+  <h1>Provider Grid Card <span class="docs-tag">Providers</span></h1>
+  <p class="docs-lead">Compact provider card for the providers hub grid. Shows logo, name, and key stats. Includes skeleton loading state.</p>
+
+  <h2>Preview</h2>
+  <div class="docs-preview">
+    <link rel="stylesheet" href="/styles/manifest.css" />
+    <a class="provider-grid-card" href="#">
+      <div class="provider-grid-card__head">
+        <div class="provider-grid-card__logo">
+          <img src="https://placehold.co/40x40/fcfaf5/2c2418?text=AN" alt="Anthropic" />
+        </div>
+        <span class="provider-grid-card__name">Anthropic</span>
+      </div>
+      <div class="provider-grid-card__stats">
+        <div class="provider-grid-card__stat">
+          <span class="provider-grid-card__stat-value">12</span>
+          models
+        </div>
+      </div>
+    </a>
+    <div class="provider-grid-card provider-grid-card--skeleton"></div>
+  </div>
+
+  <h2>HTML</h2>
+  <div class="docs-code"><pre>&lt;a class="provider-grid-card" href="#"&gt;
+  &lt;div class="provider-grid-card__head"&gt;
+    &lt;div class="provider-grid-card__logo"&gt;
+      &lt;img src="..." alt="Anthropic" /&gt;
+    &lt;/div&gt;
+    &lt;span class="provider-grid-card__name"&gt;Anthropic&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class="provider-grid-card__stats"&gt;
+    &lt;div class="provider-grid-card__stat"&gt;
+      &lt;span class="provider-grid-card__stat-value"&gt;12&lt;/span&gt;
+      models
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/a&gt;
+
+&lt;!-- Skeleton --&gt;
+&lt;div class="provider-grid-card provider-grid-card--skeleton"&gt;&lt;/div&gt;</pre></div>
+
+  <h2>Class reference</h2>
+  <table class="docs-table">
+    <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>.provider-grid-card</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Card root anchor element</td></tr>
+      <tr><td>.provider-grid-card:hover</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Hover elevation and border highlight</td></tr>
+      <tr><td>.provider-grid-card--skeleton</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td style="color:var(--docs-text-muted)">Animated loading placeholder with no content</td></tr>
+      <tr><td>.provider-grid-card__head</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Top row with logo and name</td></tr>
+      <tr><td>.provider-grid-card__logo</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Provider logo container</td></tr>
+      <tr><td>.provider-grid-card__logo--letter</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td style="color:var(--docs-text-muted)">Letter-based fallback logo</td></tr>
+      <tr><td>.provider-grid-card__name</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Provider display name</td></tr>
+      <tr><td>.provider-grid-card__stats</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Container for stat items</td></tr>
+      <tr><td>.provider-grid-card__stat</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Single stat item with value and label</td></tr>
+      <tr><td>.provider-grid-card__stat-value</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Prominent numeric value within a stat</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>

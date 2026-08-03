@@ -1,0 +1,66 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Agent Hero">
+  <h1>Agent Hero <span class="docs-tag">Agents</span></h1>
+  <p class="docs-lead">Hero section for individual agent pages. Shows logo, title, stats, and full description.</p>
+
+  <h2>Preview</h2>
+  <div class="docs-preview">
+    <link rel="stylesheet" href="/styles/manifest.css" />
+    <div class="agent-hero">
+      <div class="agent-hero__top">
+        <nav class="agent-hero__breadcrumb"><!-- breadcrumbs --></nav>
+        <div class="agent-hero__header">
+          <img class="agent-hero__logo" src="https://placehold.co/64x64/fcfaf5/2c2418?text=A" alt="Agent" />
+          <div>
+            <h1 class="agent-hero__title">Agent Name</h1>
+            <p class="agent-hero__subtitle">Short tagline</p>
+          </div>
+        </div>
+        <div class="agent-hero__stat">
+          <span class="agent-hero__stat-value">1.2M</span>
+          <span class="agent-hero__stat-label">messages</span>
+        </div>
+      </div>
+      <p class="agent-hero__description">Full description of the agent.</p>
+    </div>
+  </div>
+
+  <h2>HTML</h2>
+  <div class="docs-code"><pre>&lt;div class="agent-hero"&gt;
+  &lt;div class="agent-hero__top"&gt;
+    &lt;nav class="agent-hero__breadcrumb"&gt;&lt;!-- breadcrumbs --&gt;&lt;/nav&gt;
+    &lt;div class="agent-hero__header"&gt;
+      &lt;img class="agent-hero__logo" src="..." alt="Agent" /&gt;
+      &lt;div&gt;
+        &lt;h1 class="agent-hero__title"&gt;Agent Name&lt;/h1&gt;
+        &lt;p class="agent-hero__subtitle"&gt;Short tagline&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="agent-hero__stat"&gt;
+      &lt;span class="agent-hero__stat-value"&gt;1.2M&lt;/span&gt;
+      &lt;span class="agent-hero__stat-label"&gt;messages&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;p class="agent-hero__description"&gt;Full description of the agent.&lt;/p&gt;
+&lt;/div&gt;</pre></div>
+
+  <h2>Class reference</h2>
+  <table class="docs-table">
+    <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>.agent-hero</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Hero root element</td></tr>
+      <tr><td>.agent-hero__top</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Top block containing header and stats</td></tr>
+      <tr><td>.agent-hero__header</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Row with logo and title group</td></tr>
+      <tr><td>.agent-hero__logo</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Agent logo image</td></tr>
+      <tr><td>.agent-hero__title</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Agent name heading</td></tr>
+      <tr><td>.agent-hero__subtitle</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Short tagline below the title</td></tr>
+      <tr><td>.agent-hero__description</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Full agent description paragraph</td></tr>
+      <tr><td>.agent-hero__breadcrumb</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Breadcrumb navigation</td></tr>
+      <tr><td>.agent-hero__stat</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Single stat block</td></tr>
+      <tr><td>.agent-hero__stat-label</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Stat label text</td></tr>
+      <tr><td>.agent-hero__stat-value</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Stat numeric value</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>

@@ -1,0 +1,45 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Free Models Why">
+  <h1>Free Models Why <span class="docs-tag">Content</span></h1>
+  <p class="docs-lead">An explanatory section describing why free models are available through Manifest. Includes an uppercase label, a wide intro paragraph, and a checkmark-prefixed feature list.</p>
+
+  <h2>Preview</h2>
+  <div class="docs-preview">
+    <link rel="stylesheet" href="/styles/manifest.css" />
+    <div class="free-models-why">
+      <p class="free-models-why__label">Why free?</p>
+      <p class="free-models-why__intro">Providers offer free tiers to attract developers. Manifest aggregates them so you access every one from a single endpoint, without managing multiple accounts.</p>
+      <ul class="free-models-why__list">
+        <li>No credit card needed for any listed model</li>
+        <li>Automatic fallback when a provider is rate-limited</li>
+        <li>Same OpenAI-compatible API for all providers</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>HTML</h2>
+  <div class="docs-code"><pre>&lt;div class="free-models-why"&gt;
+  &lt;p class="free-models-why__label"&gt;Why free?&lt;/p&gt;
+  &lt;p class="free-models-why__intro"&gt;Providers offer free tiers&hellip;&lt;/p&gt;
+  &lt;ul class="free-models-why__list"&gt;
+    &lt;li&gt;No credit card needed for any listed model&lt;/li&gt;
+    &lt;li&gt;Automatic fallback when a provider is rate-limited&lt;/li&gt;
+    &lt;li&gt;Same OpenAI-compatible API for all providers&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</pre></div>
+
+  <h2>Class reference</h2>
+  <table class="docs-table">
+    <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>.free-models-why</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Root section with xl padding and a top border</td></tr>
+      <tr><td>.free-models-why__label</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Uppercase sm section label, muted color</td></tr>
+      <tr><td>.free-models-why__intro</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">lg intro paragraph capped at 720 px, 1.7 line height</td></tr>
+      <tr><td>.free-models-why__list</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Unstyled flex-column list with xs gap between items</td></tr>
+      <tr><td>.free-models-why__list li</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Flex row with bold base-size text and sm gap</td></tr>
+      <tr><td>.free-models-why__list li::before</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Inline SVG checkmark rendered via pseudo-element</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>

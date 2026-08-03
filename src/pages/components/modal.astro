@@ -1,0 +1,39 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Modal">
+  <h1>Modal <span class="docs-tag">Modals &amp; Overlays</span></h1>
+  <p class="docs-lead">Base modal component with overlay backdrop. Use [hidden] to show/hide. Specific modals (discovery, enterprise, video) extend this base.</p>
+  <h2>Preview</h2>
+  <div class="docs-preview">
+    <link rel="stylesheet" href="/styles/manifest.css" />
+    <div class="modal-overlay" hidden></div>
+    <div class="modal" role="dialog" aria-modal="true">
+      <button class="modal__close" aria-label="Close">×</button>
+      <h2 class="modal__title">Modal title</h2>
+      <!-- content -->
+      <p class="modal__small-print">Terms and conditions apply.</p>
+    </div>
+  </div>
+  <h2>HTML</h2>
+  <div class="docs-code"><pre>{`<div class="modal-overlay" hidden></div>
+<div class="modal" role="dialog" aria-modal="true">
+  <button class="modal__close" aria-label="Close">×</button>
+  <h2 class="modal__title">Modal title</h2>
+  <!-- content -->
+  <p class="modal__small-print">Terms and conditions apply.</p>
+</div>`}</pre></div>
+  <h2>Class reference</h2>
+  <table class="docs-table">
+    <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>.modal</td><td><span class="docs-tag">base</span></td><td>Root modal container.</td></tr>
+      <tr><td>.modal[hidden]</td><td><span class="docs-tag docs-tag--state">state</span></td><td>Hides the modal.</td></tr>
+      <tr><td>.modal__title</td><td><span class="docs-tag docs-tag--element">element</span></td><td>Modal heading.</td></tr>
+      <tr><td>.modal__close</td><td><span class="docs-tag docs-tag--element">element</span></td><td>Close button.</td></tr>
+      <tr><td>.modal__small-print</td><td><span class="docs-tag docs-tag--element">element</span></td><td>Fine print text at the bottom of the modal.</td></tr>
+      <tr><td>.modal-overlay</td><td><span class="docs-tag">base</span></td><td>Backdrop overlay behind the modal.</td></tr>
+      <tr><td>.modal-overlay[hidden]</td><td><span class="docs-tag docs-tag--state">state</span></td><td>Hides the overlay.</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>

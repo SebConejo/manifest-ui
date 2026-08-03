@@ -1,0 +1,57 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Pricing Self-hosted">
+  <h1>Pricing Self-hosted <span class="docs-tag">Pricing</span></h1>
+  <p class="docs-lead">Two-column subgrid layout for the self-hosted pricing tier cards. Uses CSS subgrid to align rows across cards. Collapses to a single column on mobile.</p>
+
+  <h2>Preview</h2>
+  <div class="docs-preview">
+    <link rel="stylesheet" href="/styles/manifest.css" />
+    <div class="pricing-selfhosted__grid">
+      <div class="pricing-selfhosted__card">
+        <div style="font-family:var(--font-display);font-weight:700;font-size:var(--size-lg)">Community</div>
+        <div style="font-size:var(--size-sm);color:var(--color-text-muted)">Free forever</div>
+        <div style="font-size:var(--size-2xl);font-weight:800">$0</div>
+        <ul style="list-style:none;padding:0;margin:0;font-size:var(--size-sm);color:var(--color-text-muted)"><li>Unlimited requests</li><li>Open source</li></ul>
+        <div><a href="#" class="btn btn--secondary">Get started</a></div>
+      </div>
+      <div class="pricing-selfhosted__card">
+        <div style="font-family:var(--font-display);font-weight:700;font-size:var(--size-lg)">Enterprise</div>
+        <div style="font-size:var(--size-sm);color:var(--color-text-muted)">Custom pricing</div>
+        <div style="font-size:var(--size-2xl);font-weight:800">Custom</div>
+        <ul style="list-style:none;padding:0;margin:0;font-size:var(--size-sm);color:var(--color-text-muted)"><li>SSO &amp; audit logs</li><li>SLA</li></ul>
+        <div><a href="#" class="btn btn--primary">Contact sales</a></div>
+      </div>
+    </div>
+  </div>
+
+  <h2>HTML</h2>
+  <div class="docs-code"><pre>&lt;div class="pricing-selfhosted__grid"&gt;
+  &lt;div class="pricing-selfhosted__card"&gt;
+    &lt;!-- row 1: plan name --&gt;
+    &lt;!-- row 2: tagline --&gt;
+    &lt;!-- row 3: price --&gt;
+    &lt;!-- row 4: features --&gt;
+    &lt;!-- row 5: CTA --&gt;
+  &lt;/div&gt;
+  &lt;div class="pricing-selfhosted__card"&gt;
+    …
+  &lt;/div&gt;
+&lt;/div&gt;</pre></div>
+
+  <h2>Class reference</h2>
+  <table class="docs-table">
+    <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>.pricing-selfhosted__grid</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Two-column grid with 5-row subgrid template for row alignment</td></tr>
+      <tr><td>.pricing-selfhosted__card</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Subgrid card spanning 5 rows; border on left removed, overflow hidden</td></tr>
+      <tr><td>.pricing-selfhosted__card:first-child</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Adds right border to separate the two cards</td></tr>
+      <tr><td>.pricing-selfhosted__card:last-child</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Removes right border on the last card</td></tr>
+      <tr><td>.pricing-selfhosted__card .pricing-card__cta</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">CTA button constrained to <code>fit-content</code> width</td></tr>
+      <tr><td>.pricing-selfhosted__grid (mobile)</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">&lt;768px: single-column layout</td></tr>
+      <tr><td>.pricing-selfhosted__card (mobile)</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">&lt;768px: bottom border only; no left/right borders</td></tr>
+      <tr><td>.pricing-selfhosted__card:first-child (mobile)</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">&lt;768px: adds top border, removes right border</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>

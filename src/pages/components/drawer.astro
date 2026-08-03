@@ -1,0 +1,76 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Drawer">
+  <h1>Drawer <span class="docs-tag">Navigation</span></h1>
+  <p class="docs-lead">Mobile navigation drawer. Opens from the right on screens &lt; 1024px.</p>
+
+  <h2>Preview</h2>
+  <div class="docs-preview">
+    <link rel="stylesheet" href="/styles/manifest.css" />
+    <div style="position:relative;height:280px;overflow:hidden;">
+      <div class="drawer is-open" style="position:absolute;">
+        <div class="drawer__inner">
+          <div class="drawer__summary">
+            <a class="drawer__top-link" href="#">Home</a>
+          </div>
+          <div class="drawer__panel">
+            <a class="drawer__link" href="#">Docs</a>
+            <a class="drawer__link" href="#">Pricing</a>
+            <a class="drawer__link" href="#">Blog</a>
+          </div>
+          <div class="drawer__actions">
+            <a class="btn btn--primary" href="#">Get started</a>
+          </div>
+          <div class="drawer__socials">
+            <a href="#">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2>HTML</h2>
+  <div class="docs-code">
+    <pre>&lt;!-- Trigger --&gt;
+&lt;button class="nav__burger" aria-label="Open menu"&gt;&amp;#9776;&lt;/button&gt;
+
+&lt;!-- Drawer panel --&gt;
+&lt;div class="drawer is-open"&gt;
+  &lt;div class="drawer__inner"&gt;
+    &lt;div class="drawer__summary"&gt;
+      &lt;a class="drawer__top-link" href="#"&gt;Home&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class="drawer__panel"&gt;
+      &lt;a class="drawer__link" href="#"&gt;Docs&lt;/a&gt;
+      &lt;a class="drawer__link" href="#"&gt;Pricing&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class="drawer__actions"&gt;
+      &lt;a class="btn btn--primary" href="#"&gt;Get started&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class="drawer__socials"&gt;
+      &lt;a href="#"&gt;GitHub&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+  </div>
+
+  <h2>Class reference</h2>
+  <table class="docs-table">
+    <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>.drawer</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Root drawer panel, off-screen by default on mobile</td></tr>
+      <tr><td>.drawer.is-open</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Slides the drawer into view from the right</td></tr>
+      <tr><td>body.has-drawer-open</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Locks body scroll while the drawer is open</td></tr>
+      <tr><td>.drawer__inner</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Inner flex column holding all drawer sections</td></tr>
+      <tr><td>.drawer__summary</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Top section showing the home or brand link</td></tr>
+      <tr><td>.drawer__top-link</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Prominent link at the top of the drawer</td></tr>
+      <tr><td>.drawer__panel</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Scrollable list of navigation links</td></tr>
+      <tr><td>.drawer__link</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Individual navigation link row</td></tr>
+      <tr><td>.drawer__link:hover</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Highlight background on hover</td></tr>
+      <tr><td>.drawer__actions</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Bottom slot for CTA buttons</td></tr>
+      <tr><td>.drawer__socials</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Social links row at the bottom of the drawer</td></tr>
+      <tr><td>.nav__burger</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Hamburger button in the nav that triggers the drawer</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>

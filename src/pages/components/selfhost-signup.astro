@@ -1,0 +1,125 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Selfhost Signup">
+  <h1>Selfhost Signup <span class="docs-tag">Forms</span></h1>
+  <p class="docs-lead">Sidebar signup panel for self-hosted users. Collects email and segment data with a form, fineprint link, and optional chip group for multi-select.</p>
+
+  <h2>Preview</h2>
+  <div class="docs-preview">
+    <link rel="stylesheet" href="/styles/manifest.css" />
+    <div class="selfhost-signup">
+      <span class="selfhost-signup__eyebrow">Self-hosted</span>
+      <h2 class="selfhost-signup__title">Get security &amp; update alerts</h2>
+      <p class="selfhost-signup__text">
+        When you self-host, you own updates. Drop your email and we will tell you
+        about new releases, provider support, and security fixes.
+      </p>
+      <form class="selfhost-signup__form" novalidate>
+        <div class="selfhost-field">
+          <label class="selfhost-field__label" for="demo-segment">What are you building with Manifest?</label>
+          <select id="demo-segment" name="segment" class="selfhost-field__select">
+            <option value="">Select an option</option>
+            <option value="personal">Personal project</option>
+            <option value="startup">Startup</option>
+            <option value="enterprise">Enterprise</option>
+            <option value="agency">Agency / Consultancy</option>
+          </select>
+        </div>
+        <label class="selfhost-field__label" for="demo-email">Email address</label>
+        <div class="waitlist waitlist__row">
+          <input type="email" id="demo-email" name="email" class="waitlist__input" placeholder="you@company.com" autocomplete="email" />
+          <button type="button" class="btn btn--primary">Notify me</button>
+        </div>
+      </form>
+      <p class="selfhost-signup__fineprint">
+        We only use this for release &amp; security notes.
+        See our <a href="/privacy/">privacy policy</a>.
+      </p>
+    </div>
+  </div>
+
+  <h2>Chip group variant</h2>
+  <div class="docs-preview">
+    <link rel="stylesheet" href="/styles/manifest.css" />
+    <div class="selfhost-signup">
+      <h2 class="selfhost-signup__title">How do you plan to deploy?</h2>
+      <fieldset class="selfhost-chips-group">
+        <legend class="selfhost-chips-legend">
+          Deployment target
+          <span class="selfhost-chips-legend__hint">(pick all that apply)</span>
+        </legend>
+        <div class="selfhost-chips">
+          <button type="button" class="selfhost-chip is-selected">Docker</button>
+          <button type="button" class="selfhost-chip">Kubernetes</button>
+          <button type="button" class="selfhost-chip">Bare metal</button>
+          <button type="button" class="selfhost-chip">Cloud run</button>
+        </div>
+      </fieldset>
+    </div>
+  </div>
+
+  <h2>HTML</h2>
+  <div class="docs-code"><pre>&lt;div class="selfhost-signup"&gt;
+  &lt;span class="selfhost-signup__eyebrow"&gt;Self-hosted&lt;/span&gt;
+  &lt;h2 class="selfhost-signup__title"&gt;Get security &amp;amp; update alerts&lt;/h2&gt;
+  &lt;p class="selfhost-signup__text"&gt;...&lt;/p&gt;
+
+  &lt;form class="selfhost-signup__form" novalidate&gt;
+    &lt;div class="selfhost-field"&gt;
+      &lt;label class="selfhost-field__label" for="segment"&gt;What are you building?&lt;/label&gt;
+      &lt;select id="segment" name="segment" class="selfhost-field__select"&gt;
+        &lt;option value=""&gt;Select an option&lt;/option&gt;
+        &lt;option value="startup"&gt;Startup&lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/div&gt;
+    &lt;label class="selfhost-field__label" for="email"&gt;Email address&lt;/label&gt;
+    &lt;div class="waitlist waitlist__row"&gt;
+      &lt;input type="email" id="email" name="email" class="waitlist__input" placeholder="you@company.com" /&gt;
+      &lt;button type="submit" class="btn btn--primary"&gt;Notify me&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/form&gt;
+
+  &lt;p class="selfhost-signup__fineprint"&gt;
+    We only use this for release &amp;amp; security notes.
+    See our &lt;a href="/privacy/"&gt;privacy policy&lt;/a&gt;.
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;!-- Chip group variant --&gt;
+&lt;fieldset class="selfhost-chips-group"&gt;
+  &lt;legend class="selfhost-chips-legend"&gt;
+    Deployment target
+    &lt;span class="selfhost-chips-legend__hint"&gt;(pick all that apply)&lt;/span&gt;
+  &lt;/legend&gt;
+  &lt;div class="selfhost-chips"&gt;
+    &lt;button type="button" class="selfhost-chip is-selected"&gt;Docker&lt;/button&gt;
+    &lt;button type="button" class="selfhost-chip"&gt;Kubernetes&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/fieldset&gt;</pre></div>
+
+  <h2>Class reference</h2>
+  <table class="docs-table">
+    <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>.selfhost-signup</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Signup panel root with warm background and border</td></tr>
+      <tr><td>.selfhost-signup__eyebrow</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Small all-caps label above the title</td></tr>
+      <tr><td>.selfhost-signup__title</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Display-font heading</td></tr>
+      <tr><td>.selfhost-signup__text</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Body copy below the title</td></tr>
+      <tr><td>.selfhost-signup__form</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Form wrapper; constrains the waitlist input to 460px</td></tr>
+      <tr><td>.selfhost-signup__fineprint</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Small legal/privacy note below the form</td></tr>
+      <tr><td>.selfhost-signup__fineprint a</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Underlined link inside the fineprint</td></tr>
+      <tr><td>.selfhost-field</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Form field wrapper with bottom margin</td></tr>
+      <tr><td>.selfhost-field__label</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Field label in medium weight</td></tr>
+      <tr><td>.selfhost-field__select</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Full-width styled select with custom chevron</td></tr>
+      <tr><td>.selfhost-field__select:focus</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Focus border darkens to text color</td></tr>
+      <tr><td>.selfhost-chips-group</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Borderless fieldset wrapping a chip row</td></tr>
+      <tr><td>.selfhost-chips-legend</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Legend label above the chip row</td></tr>
+      <tr><td>.selfhost-chips-legend__hint</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Muted parenthetical hint inside the legend</td></tr>
+      <tr><td>.selfhost-chips</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Flex row of pill chips with wrap</td></tr>
+      <tr><td>.selfhost-chip</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Individual pill toggle button</td></tr>
+      <tr><td>.selfhost-chip:hover</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Border shifts to accent color on hover</td></tr>
+      <tr><td>.selfhost-chip.is-selected</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Filled accent background when chip is active</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>

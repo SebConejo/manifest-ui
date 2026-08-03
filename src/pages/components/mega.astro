@@ -1,0 +1,103 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Mega menu">
+  <h1>Mega menu <span class="docs-tag">Navigation</span></h1>
+  <p class="docs-lead">Desktop mega menu panel. Slides open below the nav trigger. Two layout variants: product and solutions.</p>
+
+  <h2>Preview</h2>
+  <div class="docs-preview">
+    <link rel="stylesheet" href="/styles/manifest.css" />
+    <div class="mega mega--product is-open" style="position:relative;">
+      <div class="mega__inner">
+        <div class="mega__grid">
+          <a class="mega__item" href="#">
+            <span class="mega__icon">&#9632;</span>
+            <div class="mega__body">
+              <p class="mega__title">Feature one</p>
+              <p class="mega__desc">Short description of the feature.</p>
+            </div>
+          </a>
+          <a class="mega__item" href="#">
+            <span class="mega__icon">&#9650;</span>
+            <div class="mega__body">
+              <p class="mega__title">Feature two</p>
+              <p class="mega__desc">Short description of the feature.</p>
+            </div>
+          </a>
+        </div>
+        <div class="mega__rail">
+          <p class="mega__rail-eyebrow">Highlight</p>
+          <p class="mega__rail-title">Rail title</p>
+          <p class="mega__rail-desc">A short rail description.</p>
+          <p class="mega__rail-stat">1.2k stars</p>
+          <a class="mega__rail-cta" href="#">Learn more</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2>HTML</h2>
+  <div class="docs-code">
+    <pre>&lt;!-- Product variant --&gt;
+&lt;div class="mega mega--product is-open"&gt;
+  &lt;div class="mega__inner"&gt;
+    &lt;div class="mega__grid"&gt;
+      &lt;a class="mega__item" href="#"&gt;
+        &lt;span class="mega__icon"&gt;&lt;!-- icon --&gt;&lt;/span&gt;
+        &lt;div class="mega__body"&gt;
+          &lt;p class="mega__title"&gt;Feature&lt;/p&gt;
+          &lt;p class="mega__desc"&gt;Description&lt;/p&gt;
+          &lt;span class="mega__external"&gt;&amp;#8599;&lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class="mega__rail"&gt;
+      &lt;p class="mega__rail-eyebrow"&gt;Eyebrow&lt;/p&gt;
+      &lt;p class="mega__rail-title"&gt;Title&lt;/p&gt;
+      &lt;p class="mega__rail-desc"&gt;Description&lt;/p&gt;
+      &lt;p class="mega__rail-stat"&gt;Stat&lt;/p&gt;
+      &lt;a class="mega__rail-cta" href="#"&gt;CTA&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Solutions variant --&gt;
+&lt;div class="mega mega--solutions is-open"&gt;
+  &lt;div class="mega__inner"&gt;
+    &lt;div class="mega__grid"&gt;
+      &lt;a class="mega__item" href="#"&gt;&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+  </div>
+
+  <h2>Class reference</h2>
+  <table class="docs-table">
+    <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>.mega</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Root mega menu panel, hidden by default</td></tr>
+      <tr><td>.mega.is-open</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Slides the panel into view</td></tr>
+      <tr><td>.mega--product</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td style="color:var(--docs-text-muted)">Product layout: grid of features with a side rail</td></tr>
+      <tr><td>.mega--solutions</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td style="color:var(--docs-text-muted)">Solutions layout: wider grid without a rail</td></tr>
+      <tr><td>.mega--from-right</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td style="color:var(--docs-text-muted)">Panel slides in from the right edge</td></tr>
+      <tr><td>.mega--from-left</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td style="color:var(--docs-text-muted)">Panel slides in from the left edge</td></tr>
+      <tr><td>.mega__inner</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Inner flex row holding grid and rail</td></tr>
+      <tr><td>.mega__grid</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">CSS grid of .mega__item cards</td></tr>
+      <tr><td>.mega__item</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Single card link inside the grid</td></tr>
+      <tr><td>.mega__item:hover</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Highlight background on hover</td></tr>
+      <tr><td>.mega__icon</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Icon slot on the left of a card</td></tr>
+      <tr><td>.mega__body</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Text content area of a card</td></tr>
+      <tr><td>.mega__title</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Card title text</td></tr>
+      <tr><td>.mega__desc</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Card description text</td></tr>
+      <tr><td>.mega__external</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">External link indicator icon inside a card</td></tr>
+      <tr><td>.mega__rail</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Side rail with featured content</td></tr>
+      <tr><td>.mega__rail:hover</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Highlight on rail hover</td></tr>
+      <tr><td>.mega__rail-eyebrow</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Small label above the rail title</td></tr>
+      <tr><td>.mega__rail-title</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Rail heading</td></tr>
+      <tr><td>.mega__rail-desc</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Rail supporting text</td></tr>
+      <tr><td>.mega__rail-cta</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Call-to-action link in the rail</td></tr>
+      <tr><td>.mega__rail-stat</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Highlighted statistic displayed in the rail</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>

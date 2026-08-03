@@ -1,0 +1,48 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Selfhost Chip">
+  <h1>Selfhost Chip <span class="docs-tag">Form</span></h1>
+  <p class="docs-lead">Pill-shaped toggle button used inside a chip group. Supports hover and a selected state via <code>.is-selected</code>.</p>
+
+  <h2>Preview</h2>
+  <div class="docs-preview">
+    <link rel="stylesheet" href="/styles/manifest.css" />
+    <fieldset class="selfhost-chips-group">
+      <legend class="selfhost-chips-legend">
+        Deployment target <span class="selfhost-chips-legend__hint">(choose one)</span>
+      </legend>
+      <div class="selfhost-chips">
+        <button class="selfhost-chip is-selected" type="button">Docker</button>
+        <button class="selfhost-chip" type="button">Kubernetes</button>
+        <button class="selfhost-chip" type="button">Bare metal</button>
+      </div>
+    </fieldset>
+  </div>
+
+  <h2>HTML</h2>
+  <div class="docs-code"><pre>&lt;fieldset class="selfhost-chips-group"&gt;
+  &lt;legend class="selfhost-chips-legend"&gt;
+    Deployment target &lt;span class="selfhost-chips-legend__hint"&gt;(choose one)&lt;/span&gt;
+  &lt;/legend&gt;
+  &lt;div class="selfhost-chips"&gt;
+    &lt;button class="selfhost-chip is-selected" type="button"&gt;Docker&lt;/button&gt;
+    &lt;button class="selfhost-chip" type="button"&gt;Kubernetes&lt;/button&gt;
+    &lt;button class="selfhost-chip" type="button"&gt;Bare metal&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/fieldset&gt;</pre></div>
+
+  <h2>Class reference</h2>
+  <table class="docs-table">
+    <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>.selfhost-chips-group</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Fieldset wrapper; resets border and padding</td></tr>
+      <tr><td>.selfhost-chips-legend</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Legend label above the chip row</td></tr>
+      <tr><td>.selfhost-chips-legend__hint</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Light-weight hint text within the legend</td></tr>
+      <tr><td>.selfhost-chips</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Flex row wrapping all chip buttons</td></tr>
+      <tr><td>.selfhost-chip</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Pill button; white background, subtle border</td></tr>
+      <tr><td>.selfhost-chip:hover</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Accent-colored border on hover</td></tr>
+      <tr><td>.selfhost-chip.is-selected</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Filled accent background when selected</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>

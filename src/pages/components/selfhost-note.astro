@@ -1,0 +1,32 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Selfhost Note">
+  <h1>Selfhost Note <span class="docs-tag">Typography</span></h1>
+  <p class="docs-lead">Muted inline note paragraph. Supports inline <code>code</code> snippets with a light background and a distinct accent-colored link element.</p>
+
+  <h2>Preview</h2>
+  <div class="docs-preview">
+    <link rel="stylesheet" href="/styles/manifest.css" />
+    <p class="selfhost-note">
+      Requires Docker 24+ or a Kubernetes cluster running version <code>1.27</code> or above.
+      See the <a class="selfhost-note__link" href="#">installation guide</a> for full prerequisites.
+    </p>
+  </div>
+
+  <h2>HTML</h2>
+  <div class="docs-code"><pre>&lt;p class="selfhost-note"&gt;
+  Requires Docker 24+ or a Kubernetes cluster running version &lt;code&gt;1.27&lt;/code&gt; or above.
+  See the &lt;a class="selfhost-note__link" href="#"&gt;installation guide&lt;/a&gt; for full prerequisites.
+&lt;/p&gt;</pre></div>
+
+  <h2>Class reference</h2>
+  <table class="docs-table">
+    <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>.selfhost-note</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Muted base-size paragraph with 1.6 line-height</td></tr>
+      <tr><td>.selfhost-note code</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Inline monospace snippet with light pill background</td></tr>
+      <tr><td>.selfhost-note__link</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Accent-colored hyperlink within the note</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>

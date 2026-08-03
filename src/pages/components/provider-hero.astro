@@ -1,0 +1,59 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Provider Hero">
+  <h1>Provider Hero <span class="docs-tag">Providers</span></h1>
+  <p class="docs-lead">Hero section for individual provider pages. Shows logo, title, stats row, and subtitle.</p>
+
+  <h2>Preview</h2>
+  <div class="docs-preview">
+    <link rel="stylesheet" href="/styles/manifest.css" />
+    <div class="provider-hero">
+      <div class="provider-hero__top">
+        <div class="provider-hero__header">
+          <img class="provider-hero__logo" src="https://placehold.co/48x48/fcfaf5/2c2418?text=OA" alt="OpenAI" />
+          <h1 class="provider-hero__title">OpenAI</h1>
+        </div>
+        <div class="provider-hero__stat">
+          <span class="provider-hero__stat-value">32</span>
+          <span class="provider-hero__stat-label">models</span>
+        </div>
+      </div>
+      <p class="provider-hero__subtitle">Leading AI research lab.</p>
+      <p class="provider-hero__blurb">Detailed description of the provider.</p>
+    </div>
+  </div>
+
+  <h2>HTML</h2>
+  <div class="docs-code"><pre>&lt;div class="provider-hero"&gt;
+  &lt;div class="provider-hero__top"&gt;
+    &lt;div class="provider-hero__header"&gt;
+      &lt;img class="provider-hero__logo" src="..." alt="OpenAI" /&gt;
+      &lt;h1 class="provider-hero__title"&gt;OpenAI&lt;/h1&gt;
+    &lt;/div&gt;
+    &lt;div class="provider-hero__stat"&gt;
+      &lt;span class="provider-hero__stat-value"&gt;32&lt;/span&gt;
+      &lt;span class="provider-hero__stat-label"&gt;models&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;p class="provider-hero__subtitle"&gt;Leading AI research lab.&lt;/p&gt;
+  &lt;p class="provider-hero__blurb"&gt;Detailed description of the provider.&lt;/p&gt;
+&lt;/div&gt;</pre></div>
+
+  <h2>Class reference</h2>
+  <table class="docs-table">
+    <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>.provider-hero</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Hero section root element</td></tr>
+      <tr><td>.provider-hero__header</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Logo and title grouped horizontally</td></tr>
+      <tr><td>.provider-hero__logo</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Provider logo image</td></tr>
+      <tr><td>.provider-hero__title</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Provider name as the page h1</td></tr>
+      <tr><td>.provider-hero__top</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Top row containing header and stats</td></tr>
+      <tr><td>.provider-hero__stat</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Single stat item with value and label</td></tr>
+      <tr><td>.provider-hero__stat-value</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Prominent numeric or text stat value</td></tr>
+      <tr><td>.provider-hero__stat-label</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Muted label below the stat value</td></tr>
+      <tr><td>.provider-hero__subtitle</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Short one-line provider tagline</td></tr>
+      <tr><td>.provider-hero__blurb</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Longer description paragraph</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>

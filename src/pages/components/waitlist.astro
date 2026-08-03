@@ -1,0 +1,58 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Waitlist">
+  <h1>Waitlist <span class="docs-tag">Forms</span></h1>
+  <p class="docs-lead">Email capture form used for signups and waitlists. Includes status messages and a honeypot field for spam protection.</p>
+  <h2>Preview</h2>
+  <div class="docs-preview">
+    <link rel="stylesheet" href="/styles/manifest.css" />
+    <form class="waitlist">
+      <div class="waitlist__group">
+        <div class="waitlist__row">
+          <label class="waitlist__label" for="email">Email</label>
+          <input class="waitlist__input" id="email" type="email" placeholder="you@company.com" />
+        </div>
+        <button class="btn btn--primary waitlist__btn-short">Get started</button>
+      </div>
+      <p class="waitlist__status waitlist__status--success" hidden>You're on the list!</p>
+      <p class="waitlist__status waitlist__status--error" hidden>Something went wrong.</p>
+      <div class="waitlist__hp" aria-hidden="true">
+        <input type="text" tabindex="-1" autocomplete="off" />
+      </div>
+    </form>
+  </div>
+  <h2>HTML</h2>
+  <div class="docs-code"><pre>{`<form class="waitlist">
+  <div class="waitlist__group">
+    <div class="waitlist__row">
+      <label class="waitlist__label" for="email">Email</label>
+      <input class="waitlist__input" id="email" type="email" placeholder="you@company.com" />
+    </div>
+    <button class="btn btn--primary waitlist__btn-short">Get started</button>
+  </div>
+  <p class="waitlist__status waitlist__status--success" hidden>You're on the list!</p>
+  <p class="waitlist__status waitlist__status--error" hidden>Something went wrong.</p>
+  <div class="waitlist__hp" aria-hidden="true">
+    <input type="text" tabindex="-1" autocomplete="off" />
+  </div>
+</form>`}</pre></div>
+  <h2>Class reference</h2>
+  <table class="docs-table">
+    <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>.waitlist</td><td><span class="docs-tag">base</span></td><td>Root form element.</td></tr>
+      <tr><td>.waitlist__group</td><td><span class="docs-tag docs-tag--element">element</span></td><td>Groups the input row and submit button.</td></tr>
+      <tr><td>.waitlist__row</td><td><span class="docs-tag docs-tag--element">element</span></td><td>Wrapper for the label and input pair.</td></tr>
+      <tr><td>.waitlist__label</td><td><span class="docs-tag docs-tag--element">element</span></td><td>Label for the email input.</td></tr>
+      <tr><td>.waitlist__input</td><td><span class="docs-tag docs-tag--element">element</span></td><td>Email text input.</td></tr>
+      <tr><td>.waitlist__input::placeholder</td><td><span class="docs-tag docs-tag--state">state</span></td><td>Placeholder text style.</td></tr>
+      <tr><td>.waitlist__cta-text</td><td><span class="docs-tag docs-tag--element">element</span></td><td>Optional CTA label text.</td></tr>
+      <tr><td>.waitlist__btn-short</td><td><span class="docs-tag docs-tag--element">element</span></td><td>Submit button with compact sizing.</td></tr>
+      <tr><td>.waitlist__status</td><td><span class="docs-tag docs-tag--element">element</span></td><td>Status message shown after submission.</td></tr>
+      <tr><td>.waitlist__status--error</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td>Error variant of the status message.</td></tr>
+      <tr><td>.waitlist__status--success</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td>Success variant of the status message.</td></tr>
+      <tr><td>.waitlist__hp</td><td><span class="docs-tag docs-tag--element">element</span></td><td>Honeypot wrapper, hidden from real users to catch bots.</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>

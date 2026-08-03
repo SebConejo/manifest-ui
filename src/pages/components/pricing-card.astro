@@ -1,0 +1,96 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Pricing Card">
+  <h1>Pricing Card <span class="docs-tag">Pricing</span></h1>
+  <p class="docs-lead">Subscription plan card. The --pro modifier adds a decorative gradient highlight via ::before pseudo-element.</p>
+
+  <h2>Preview</h2>
+  <div class="docs-preview">
+    <link rel="stylesheet" href="/styles/manifest.css" />
+    <div class="pricing-cards">
+      <div class="pricing-cards__grid">
+        <div class="pricing-card">
+          <div class="pricing-card__header">
+            <span class="pricing-card__name">Free</span>
+            <div class="pricing-card__price">
+              <span class="pricing-card__amount">$0</span>
+              <span class="pricing-card__period">/month</span>
+            </div>
+            <p class="pricing-card__desc">Get started for free.</p>
+          </div>
+          <ul class="pricing-card__features">
+            <li>Feature one</li>
+            <li>Feature two</li>
+          </ul>
+          <a class="pricing-card__cta btn btn--secondary" href="#">Get started</a>
+        </div>
+        <div class="pricing-card pricing-card--pro">
+          <span class="pricing-card__popular">Most popular</span>
+          <div class="pricing-card__header">
+            <span class="pricing-card__name">Pro</span>
+            <div class="pricing-card__price">
+              <span class="pricing-card__amount">$29</span>
+              <span class="pricing-card__period">/month</span>
+            </div>
+          </div>
+          <a class="pricing-card__cta btn btn--primary" href="#">Get started</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2>HTML</h2>
+  <div class="docs-code"><pre>&lt;div class="pricing-cards"&gt;
+  &lt;div class="pricing-cards__grid"&gt;
+    &lt;div class="pricing-card"&gt;
+      &lt;div class="pricing-card__header"&gt;
+        &lt;span class="pricing-card__name"&gt;Free&lt;/span&gt;
+        &lt;div class="pricing-card__price"&gt;
+          &lt;span class="pricing-card__amount"&gt;$0&lt;/span&gt;
+          &lt;span class="pricing-card__period"&gt;/month&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;p class="pricing-card__desc"&gt;Get started for free.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;ul class="pricing-card__features"&gt;
+        &lt;li&gt;Feature one&lt;/li&gt;
+        &lt;li&gt;Feature two&lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;a class="pricing-card__cta btn btn--secondary" href="#"&gt;Get started&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class="pricing-card pricing-card--pro"&gt;
+      &lt;span class="pricing-card__popular"&gt;Most popular&lt;/span&gt;
+      &lt;div class="pricing-card__header"&gt;
+        &lt;span class="pricing-card__name"&gt;Pro&lt;/span&gt;
+        &lt;div class="pricing-card__price"&gt;
+          &lt;span class="pricing-card__amount"&gt;$29&lt;/span&gt;
+          &lt;span class="pricing-card__period"&gt;/month&lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;a class="pricing-card__cta btn btn--primary" href="#"&gt;Get started&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre></div>
+
+  <h2>Class reference</h2>
+  <table class="docs-table">
+    <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>.pricing-card</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Individual plan card</td></tr>
+      <tr><td>.pricing-card--pro</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td style="color:var(--docs-text-muted)">Adds gradient highlight via ::before pseudo-element</td></tr>
+      <tr><td>.pricing-cards</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Outer container for the cards section</td></tr>
+      <tr><td>.pricing-cards__grid</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Grid layout for the card list</td></tr>
+      <tr><td>.pricing-card__header</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Top section containing name, price, and description</td></tr>
+      <tr><td>.pricing-card__name</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Plan name label</td></tr>
+      <tr><td>.pricing-card__price</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Wrapper for amount and period</td></tr>
+      <tr><td>.pricing-card__amount</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Numeric price display</td></tr>
+      <tr><td>.pricing-card__amount--custom</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td style="color:var(--docs-text-muted)">Variant for non-numeric pricing (e.g. "Contact us")</td></tr>
+      <tr><td>.pricing-card__period</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Billing period label (e.g. /month)</td></tr>
+      <tr><td>.pricing-card__desc</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Short plan description</td></tr>
+      <tr><td>.pricing-card__popular</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">"Most popular" badge</td></tr>
+      <tr><td>.pricing-card__features</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Feature list</td></tr>
+      <tr><td>.pricing-card__features-intro</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Introductory text above the feature list</td></tr>
+      <tr><td>.pricing-card__cta</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Call-to-action button at the bottom of the card</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>

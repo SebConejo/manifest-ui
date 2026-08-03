@@ -1,0 +1,43 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Selfhost Field">
+  <h1>Selfhost Field <span class="docs-tag">Form</span></h1>
+  <p class="docs-lead">Labeled select field used in the self-host signup form. Appearance is reset and a custom chevron SVG is injected via background-image.</p>
+
+  <h2>Preview</h2>
+  <div class="docs-preview">
+    <link rel="stylesheet" href="/styles/manifest.css" />
+    <div class="selfhost-field">
+      <label class="selfhost-field__label" for="sh-cloud">Cloud provider</label>
+      <select class="selfhost-field__select" id="sh-cloud">
+        <option>AWS</option>
+        <option>Google Cloud</option>
+        <option>Azure</option>
+        <option>Other</option>
+      </select>
+    </div>
+  </div>
+
+  <h2>HTML</h2>
+  <div class="docs-code"><pre>&lt;div class="selfhost-field"&gt;
+  &lt;label class="selfhost-field__label" for="sh-cloud"&gt;Cloud provider&lt;/label&gt;
+  &lt;select class="selfhost-field__select" id="sh-cloud"&gt;
+    &lt;option&gt;AWS&lt;/option&gt;
+    &lt;option&gt;Google Cloud&lt;/option&gt;
+    &lt;option&gt;Azure&lt;/option&gt;
+    &lt;option&gt;Other&lt;/option&gt;
+  &lt;/select&gt;
+&lt;/div&gt;</pre></div>
+
+  <h2>Class reference</h2>
+  <table class="docs-table">
+    <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>.selfhost-field</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Field wrapper; adds bottom margin</td></tr>
+      <tr><td>.selfhost-field__label</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Block label above the select</td></tr>
+      <tr><td>.selfhost-field__select</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Full-width select with reset appearance and custom chevron</td></tr>
+      <tr><td>.selfhost-field__select:focus</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Removes outline; darkens border to --color-text</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>

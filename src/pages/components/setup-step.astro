@@ -1,0 +1,37 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Setup Step">
+  <h1>Setup Step <span class="docs-tag">Setup</span></h1>
+  <p class="docs-lead">Descriptive paragraph that introduces a setup step inside a <code>.setup-agents-card</code>. Uses a muted text color and comfortable line-height to keep multi-line instructions readable.</p>
+
+  <h2>Preview</h2>
+  <div class="docs-preview">
+    <link rel="stylesheet" href="/styles/manifest.css" />
+    <div class="setup-agents-card">
+      <p class="setup-step__desc">
+        Register Manifest in your config to route each request to the best
+        provider using the model
+        <code class="setup-model-hint__code">manifest/auto</code>.
+      </p>
+    </div>
+  </div>
+
+  <h2>HTML</h2>
+  <div class="docs-code"><pre>&lt;div class="setup-agents-card"&gt;
+  &lt;p class="setup-step__desc"&gt;
+    Register Manifest in your config to route each request to the best
+    provider using the model
+    &lt;code class="setup-model-hint__code"&gt;manifest/auto&lt;/code&gt;.
+  &lt;/p&gt;
+  &lt;!-- segment tabs, code blocks, or onboard fields follow --&gt;
+&lt;/div&gt;</pre></div>
+
+  <h2>Class reference</h2>
+  <table class="docs-table">
+    <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>.setup-step__desc</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Muted descriptive paragraph; base font size, 1.5 line-height, bottom margin</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>

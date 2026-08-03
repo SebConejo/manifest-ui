@@ -1,0 +1,33 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Canvas Card">
+  <h1>Canvas Card <span class="docs-tag">Layout</span></h1>
+  <p class="docs-lead">A structural background card for full-bleed canvas sections. Provides a cream background and horizontal padding; child elements handle their own spacing.</p>
+
+  <h2>Preview</h2>
+  <div class="docs-preview">
+    <link rel="stylesheet" href="/styles/manifest.css" />
+    <div class="canvas-card">
+      <div class="container--narrow">
+        <p>Content inside a canvas card with a narrow container.</p>
+      </div>
+    </div>
+  </div>
+
+  <h2>HTML</h2>
+  <div class="docs-code"><pre>&lt;div class="canvas-card"&gt;
+  &lt;div class="container--narrow"&gt;
+    &lt;!-- page content --&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre></div>
+
+  <h2>Class reference</h2>
+  <table class="docs-table">
+    <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>.canvas-card</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Root element; positions content above a canvas background with xl padding</td></tr>
+      <tr><td>.canvas-card .container--narrow</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Adds top spacing when a narrow container is the direct child</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>

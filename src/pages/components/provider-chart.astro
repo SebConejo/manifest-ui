@@ -1,0 +1,67 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Provider Chart">
+  <h1>Provider Chart <span class="docs-tag">Providers</span></h1>
+  <p class="docs-lead">uPlot-based time series chart for provider uptime/latency metrics. Includes loading spinner and hover tooltip.</p>
+
+  <h2>Preview</h2>
+  <div class="docs-preview">
+    <link rel="stylesheet" href="/styles/manifest.css" />
+    <div class="provider-chart-section">
+      <h3 class="provider-chart__title">Uptime (last 30 days)</h3>
+      <div class="provider-chart__wrap">
+        <!-- uPlot chart renders here -->
+        <div class="provider-chart__loader">
+          <div class="provider-chart__spinner"></div>
+        </div>
+        <div class="provider-chart__tooltip">
+          <span class="provider-chart__tooltip-date">Aug 3, 2026</span>
+          <div class="provider-chart__tooltip-row">
+            <span class="provider-chart__tooltip-dot"></span>
+            <span class="provider-chart__tooltip-name">Uptime</span>
+            <span class="provider-chart__tooltip-value">99.9%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2>HTML</h2>
+  <div class="docs-code"><pre>&lt;div class="provider-chart-section"&gt;
+  &lt;h3 class="provider-chart__title"&gt;Uptime (last 30 days)&lt;/h3&gt;
+  &lt;div class="provider-chart__wrap"&gt;
+    &lt;!-- uPlot chart renders here --&gt;
+    &lt;div class="provider-chart__loader"&gt;
+      &lt;div class="provider-chart__spinner"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="provider-chart__tooltip"&gt;
+      &lt;span class="provider-chart__tooltip-date"&gt;Aug 3, 2026&lt;/span&gt;
+      &lt;div class="provider-chart__tooltip-row"&gt;
+        &lt;span class="provider-chart__tooltip-dot"&gt;&lt;/span&gt;
+        &lt;span class="provider-chart__tooltip-name"&gt;Uptime&lt;/span&gt;
+        &lt;span class="provider-chart__tooltip-value"&gt;99.9%&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre></div>
+
+  <h2>Class reference</h2>
+  <table class="docs-table">
+    <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>.provider-chart-section</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Chart section root element</td></tr>
+      <tr><td>.provider-chart__title</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Chart heading above the canvas</td></tr>
+      <tr><td>.provider-chart__wrap</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Positioned container for the uPlot canvas, loader, and tooltip</td></tr>
+      <tr><td>.provider-chart__wrap .uplot</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">uPlot-injected canvas element inside the wrap</td></tr>
+      <tr><td>.provider-chart__loader</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Overlay shown while chart data loads</td></tr>
+      <tr><td>.provider-chart__spinner</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Animated spinning indicator</td></tr>
+      <tr><td>.provider-chart__tooltip</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Floating tooltip shown on hover</td></tr>
+      <tr><td>.provider-chart__tooltip-date</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Date label at the top of the tooltip</td></tr>
+      <tr><td>.provider-chart__tooltip-row</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Single metric row inside the tooltip</td></tr>
+      <tr><td>.provider-chart__tooltip-dot</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Colored series dot in a tooltip row</td></tr>
+      <tr><td>.provider-chart__tooltip-name</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Metric name label in a tooltip row</td></tr>
+      <tr><td>.provider-chart__tooltip-value</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Metric value in a tooltip row</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>

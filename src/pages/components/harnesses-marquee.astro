@@ -1,0 +1,38 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Harnesses Marquee">
+  <h1>Harnesses Marquee <span class="docs-tag">Sections</span></h1>
+  <p class="docs-lead">Infinite horizontal marquee of harness/agent logos.</p>
+
+  <h2>Preview</h2>
+  <div class="docs-preview">
+    <link rel="stylesheet" href="/styles/manifest.css" />
+    <div class="harnesses__marquee">
+      <div class="harnesses__track">
+        <img src="https://placehold.co/80x40" alt="Agent logo" />
+        <img src="https://placehold.co/80x40" alt="Agent logo" />
+        <img src="https://placehold.co/80x40" alt="Agent logo" />
+      </div>
+    </div>
+  </div>
+
+  <h2>HTML</h2>
+  <div class="docs-code">
+    <pre>&lt;div class="harnesses__marquee"&gt;
+  &lt;div class="harnesses__track"&gt;
+    &lt;img src="..." alt="Agent logo" /&gt;
+    &lt;img src="..." alt="Agent logo" /&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+  </div>
+
+  <h2>Class reference</h2>
+  <table class="docs-table">
+    <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>.harnesses__marquee</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Clipping container for the infinite scroll</td></tr>
+      <tr><td>.harnesses__track</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Animated inner track holding the logos</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>

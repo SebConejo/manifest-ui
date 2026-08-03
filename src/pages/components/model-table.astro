@@ -1,0 +1,109 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Model Table">
+  <h1>Model Table <span class="docs-tag">Tables</span></h1>
+  <p class="docs-lead">Data table listing LLM models with provider, pricing, and API key info. Includes skeleton loading states.</p>
+
+  <h2>Preview</h2>
+  <div class="docs-preview">
+    <link rel="stylesheet" href="/styles/manifest.css" />
+    <table class="model-table">
+      <tbody>
+        <tr>
+          <td class="model-table__rank">1</td>
+          <td class="model-table__model-cell">
+            <div class="model-table__model-info">
+              <span class="model-table__provider-icon">
+                <img src="" alt="" />
+              </span>
+              <div>
+                <span class="model-table__model-name">gpt-4o</span>
+                <span class="model-table__model-provider">OpenAI</span>
+              </div>
+            </div>
+          </td>
+          <td class="model-table__price">
+            <span>$2.50</span>
+            <span class="model-table__price-label">/ 1M in</span>
+          </td>
+          <td><span class="model-table__free-badge">Free</span></td>
+        </tr>
+        <tr class="model-table__skeleton-row">
+          <td><div class="model-table__skeleton-type"></div></td>
+          <td><div class="model-table__skeleton-token"></div></td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr><td colspan="5" class="model-table__footer">
+          <a class="model-table__footer-link" href="#">View all models</a>
+        </td></tr>
+      </tfoot>
+    </table>
+  </div>
+
+  <h2>HTML</h2>
+  <div class="docs-code"><pre>&lt;table class="model-table"&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td class="model-table__rank"&gt;1&lt;/td&gt;
+      &lt;td class="model-table__model-cell"&gt;
+        &lt;div class="model-table__model-info"&gt;
+          &lt;span class="model-table__provider-icon"&gt;
+            &lt;img src="..." alt="" /&gt;
+          &lt;/span&gt;
+          &lt;div&gt;
+            &lt;span class="model-table__model-name"&gt;gpt-4o&lt;/span&gt;
+            &lt;span class="model-table__model-provider"&gt;OpenAI&lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/td&gt;
+      &lt;td class="model-table__price"&gt;
+        &lt;span&gt;$2.50&lt;/span&gt;
+        &lt;span class="model-table__price-label"&gt;/ 1M in&lt;/span&gt;
+      &lt;/td&gt;
+      &lt;td&gt;&lt;span class="model-table__free-badge"&gt;Free&lt;/span&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr class="model-table__skeleton-row"&gt;
+      &lt;td&gt;&lt;div class="model-table__skeleton-type"&gt;&lt;/div&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;div class="model-table__skeleton-token"&gt;&lt;/div&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tfoot&gt;
+    &lt;tr&gt;&lt;td colspan="5" class="model-table__footer"&gt;
+      &lt;a class="model-table__footer-link" href="#"&gt;View all models&lt;/a&gt;
+    &lt;/td&gt;&lt;/tr&gt;
+  &lt;/tfoot&gt;
+&lt;/table&gt;</pre></div>
+
+  <h2>Class reference</h2>
+  <table class="docs-table">
+    <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>.model-table</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Root table element</td></tr>
+      <tr><td>.model-table__rank</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Ranking number cell</td></tr>
+      <tr><td>.model-table__model-cell</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Cell wrapping model identity content</td></tr>
+      <tr><td>.model-table__model-info</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Flex row combining icon and name/provider</td></tr>
+      <tr><td>.model-table__model-name</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Model identifier text</td></tr>
+      <tr><td>.model-table__model-provider</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Provider name below the model name</td></tr>
+      <tr><td>.model-table__provider-link</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Anchor wrapping the provider name</td></tr>
+      <tr><td>.model-table__provider-icon</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Provider logo wrapper</td></tr>
+      <tr><td>.model-table__provider-icon--letter</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td style="color:var(--docs-text-muted)">Fallback letter avatar when no logo is available</td></tr>
+      <tr><td>.model-table__price</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Pricing cell</td></tr>
+      <tr><td>.model-table__price-label</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Unit label next to the price (e.g. "/ 1M in")</td></tr>
+      <tr><td>.model-table__tokens</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Token count display</td></tr>
+      <tr><td>.model-table__tokens-unit</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Unit label for the token count</td></tr>
+      <tr><td>.model-table__apikey-badge</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Badge indicating API key requirement</td></tr>
+      <tr><td>.model-table__free-badge</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Badge for free-tier models</td></tr>
+      <tr><td>.model-table__subscription-badge</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Badge for subscription-gated models</td></tr>
+      <tr><td>.model-table__info</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Info icon trigger for tooltip</td></tr>
+      <tr><td>.model-table__tooltip</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Tooltip popup anchored to the info icon</td></tr>
+      <tr><td>.model-table__loading</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Applied to the table while data is fetching</td></tr>
+      <tr><td>.model-table__skeleton-row</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Placeholder row shown during loading</td></tr>
+      <tr><td>.model-table__skeleton-type</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Animated skeleton block for type/name column</td></tr>
+      <tr><td>.model-table__skeleton-token</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Animated skeleton block for token/price column</td></tr>
+      <tr><td>.model-table__footer</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Footer cell spanning all columns</td></tr>
+      <tr><td>.model-table__footer-link</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Link to the full model listing page</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>

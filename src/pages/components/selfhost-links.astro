@@ -1,0 +1,57 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Selfhost Links">
+  <h1>Selfhost Links <span class="docs-tag">Navigation</span></h1>
+  <p class="docs-lead">Vertical link list with a top border and a dividing line between items. Each row uses the shared <code>.opensource__link</code> pattern with an icon label on the left.</p>
+
+  <h2>Preview</h2>
+  <div class="docs-preview">
+    <link rel="stylesheet" href="/styles/manifest.css" />
+    <div class="selfhost-links">
+      <a class="opensource__link" href="#">
+        <span class="selfhost-links__label">
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+          Documentation
+        </span>
+        <svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path fill="currentColor" d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      </a>
+      <a class="opensource__link" href="#">
+        <span class="selfhost-links__label">
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+          GitHub repository
+        </span>
+        <svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path fill="currentColor" d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <h2>HTML</h2>
+  <div class="docs-code"><pre>&lt;div class="selfhost-links"&gt;
+  &lt;a class="opensource__link" href="#"&gt;
+    &lt;span class="selfhost-links__label"&gt;
+      &lt;svg ...&gt;&lt;/svg&gt;
+      Documentation
+    &lt;/span&gt;
+    &lt;svg ...&gt;&lt;/svg&gt;
+  &lt;/a&gt;
+  &lt;a class="opensource__link" href="#"&gt;
+    &lt;span class="selfhost-links__label"&gt;
+      &lt;svg ...&gt;&lt;/svg&gt;
+      GitHub repository
+    &lt;/span&gt;
+    &lt;svg ...&gt;&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/div&gt;</pre></div>
+
+  <h2>Class reference</h2>
+  <table class="docs-table">
+    <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>.selfhost-links</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Column flex container with a top border</td></tr>
+      <tr><td>.selfhost-links .opensource__link</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Full-width row with bottom border; space-between layout</td></tr>
+      <tr><td>.selfhost-links__label</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Left-side flex group of icon and link text</td></tr>
+      <tr><td>.selfhost-links__label svg</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Icon inside the label; flex-shrink: 0</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>

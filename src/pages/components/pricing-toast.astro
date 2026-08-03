@@ -1,0 +1,41 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Pricing Toast">
+  <h1>Pricing Toast <span class="docs-tag">Feedback</span></h1>
+  <p class="docs-lead">Fixed-position toast notification for the pricing page. Shows a success message with a dismiss button. Hidden via the <code>hidden</code> attribute.</p>
+
+  <h2>Preview</h2>
+  <div class="docs-preview">
+    <link rel="stylesheet" href="/styles/manifest.css" />
+    <div style="position:relative;min-height:80px;">
+      <div class="pricing-toast" style="position:static;display:flex;">
+        <i class="bx bx-check"></i>
+        <span>Plan selected successfully.</span>
+        <button class="pricing-toast__close" aria-label="Dismiss">&times;</button>
+      </div>
+    </div>
+  </div>
+
+  <h2>HTML</h2>
+  <div class="docs-code"><pre>&lt;div class="pricing-toast"&gt;
+  &lt;i class="bx bx-check"&gt;&lt;/i&gt;
+  &lt;span&gt;Plan selected successfully.&lt;/span&gt;
+  &lt;button class="pricing-toast__close" aria-label="Dismiss"&gt;&amp;times;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- Hidden state --&gt;
+&lt;div class="pricing-toast" hidden&gt;…&lt;/div&gt;</pre></div>
+
+  <h2>Class reference</h2>
+  <table class="docs-table">
+    <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>.pricing-toast</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Fixed bottom-right toast container; flex row, z-index 100001</td></tr>
+      <tr><td>.pricing-toast[hidden]</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Hides the toast via <code>display:none</code></td></tr>
+      <tr><td>.pricing-toast .bx-check</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Success icon; colored with <code>--color-success</code></td></tr>
+      <tr><td>.pricing-toast__close</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Unstyled dismiss button; muted color</td></tr>
+      <tr><td>.pricing-toast__close:hover</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Full text color on hover</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>

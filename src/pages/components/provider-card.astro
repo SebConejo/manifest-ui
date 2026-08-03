@@ -1,0 +1,98 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Provider Card">
+  <h1>Provider Card <span class="docs-tag">Providers</span></h1>
+  <p class="docs-lead">Detailed provider card used on individual provider pages. Shows logo, tags, API URL, model list (collapsible), and action buttons.</p>
+
+  <h2>Preview</h2>
+  <div class="docs-preview">
+    <link rel="stylesheet" href="/styles/manifest.css" />
+    <div class="provider-card">
+      <div class="provider-card__header">
+        <div class="provider-card__identity">
+          <div class="provider-card__logo">
+            <img src="https://placehold.co/40x40/fcfaf5/2c2418?text=OA" alt="OpenAI" />
+          </div>
+          <span class="provider-card__name">OpenAI</span>
+        </div>
+        <div class="provider-card__tags">
+          <span class="provider-card__tag">Chat</span>
+          <span class="provider-card__tag">Embedding</span>
+        </div>
+      </div>
+      <div class="provider-card__url-row">
+        <div class="provider-card__base-url">
+          <span class="provider-card__base-url-label">Base URL</span>
+          <span class="provider-card__base-url-value">https://api.openai.com/v1</span>
+        </div>
+        <button class="provider-card__copy-btn">Copy</button>
+      </div>
+      <div class="provider-card__models">
+        <div class="provider-card__models-inner"><!-- model rows --></div>
+        <button class="provider-card__toggle">Show all models</button>
+      </div>
+      <div class="provider-card__actions">
+        <a class="provider-card__btn-key btn btn--secondary" href="#">Get API key</a>
+      </div>
+    </div>
+  </div>
+
+  <h2>HTML</h2>
+  <div class="docs-code"><pre>&lt;div class="provider-card"&gt;
+  &lt;div class="provider-card__header"&gt;
+    &lt;div class="provider-card__identity"&gt;
+      &lt;div class="provider-card__logo"&gt;
+        &lt;img src="..." alt="OpenAI" /&gt;
+      &lt;/div&gt;
+      &lt;span class="provider-card__name"&gt;OpenAI&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="provider-card__tags"&gt;
+      &lt;span class="provider-card__tag"&gt;Chat&lt;/span&gt;
+      &lt;span class="provider-card__tag"&gt;Embedding&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="provider-card__url-row"&gt;
+    &lt;div class="provider-card__base-url"&gt;
+      &lt;span class="provider-card__base-url-label"&gt;Base URL&lt;/span&gt;
+      &lt;span class="provider-card__base-url-value"&gt;https://api.openai.com/v1&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;button class="provider-card__copy-btn"&gt;Copy&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class="provider-card__models"&gt;
+    &lt;div class="provider-card__models-inner"&gt;&lt;!-- model rows --&gt;&lt;/div&gt;
+    &lt;button class="provider-card__toggle"&gt;Show all models&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class="provider-card__actions"&gt;
+    &lt;a class="provider-card__btn-key btn btn--secondary" href="#"&gt;Get API key&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre></div>
+
+  <h2>Class reference</h2>
+  <table class="docs-table">
+    <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>.provider-card</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Card root element</td></tr>
+      <tr><td>.provider-card__header</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Top row with identity and tags</td></tr>
+      <tr><td>.provider-card__logo</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Provider logo container</td></tr>
+      <tr><td>.provider-card__logo--letter</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td style="color:var(--docs-text-muted)">Letter-based fallback logo</td></tr>
+      <tr><td>.provider-card__name</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Provider display name</td></tr>
+      <tr><td>.provider-card__identity</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Logo and name grouped together</td></tr>
+      <tr><td>.provider-card__tags</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Container for capability tags</td></tr>
+      <tr><td>.provider-card__tag</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Individual capability tag pill</td></tr>
+      <tr><td>.provider-card__tag::before</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Pseudo-element icon prefix for each tag</td></tr>
+      <tr><td>.provider-card__warning</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Inline warning message strip</td></tr>
+      <tr><td>.provider-card__actions</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Bottom action button row</td></tr>
+      <tr><td>.provider-card__btn-key</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">API key CTA link styled as a button</td></tr>
+      <tr><td>.provider-card__copy-btn</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Copy base URL button</td></tr>
+      <tr><td>.provider-card__models</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Collapsible model list wrapper</td></tr>
+      <tr><td>.provider-card__models.is-collapsed</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Collapses the model list to a truncated height</td></tr>
+      <tr><td>.provider-card__models-inner</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Inner scroll container for model rows</td></tr>
+      <tr><td>.provider-card__toggle</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Show/hide toggle for the model list</td></tr>
+      <tr><td>.provider-card__url-row</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Row containing base URL and copy button</td></tr>
+      <tr><td>.provider-card__base-url</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Base URL label and value grouped</td></tr>
+      <tr><td>.provider-card__base-url-label</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Muted label text before the URL</td></tr>
+      <tr><td>.provider-card__base-url-value</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Actual base URL string</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>

@@ -1,0 +1,40 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Agent Card">
+  <h1>Agent Card <span class="docs-tag">Agents</span></h1>
+  <p class="docs-lead">Compact card for the agents hub grid. Shows logo, title, and short description.</p>
+
+  <h2>Preview</h2>
+  <div class="docs-preview">
+    <link rel="stylesheet" href="/styles/manifest.css" />
+    <a class="agent-card" href="#">
+      <div class="agent-card__head">
+        <img class="agent-card__logo" src="https://placehold.co/48x48/fcfaf5/2c2418?text=A" alt="Agent" />
+        <h3 class="agent-card__title">Agent Name</h3>
+      </div>
+      <p class="agent-card__desc">Short description of what this agent does.</p>
+    </a>
+  </div>
+
+  <h2>HTML</h2>
+  <div class="docs-code"><pre>&lt;a class="agent-card" href="#"&gt;
+  &lt;div class="agent-card__head"&gt;
+    &lt;img class="agent-card__logo" src="..." alt="Agent" /&gt;
+    &lt;h3 class="agent-card__title"&gt;Agent Name&lt;/h3&gt;
+  &lt;/div&gt;
+  &lt;p class="agent-card__desc"&gt;Short description of what this agent does.&lt;/p&gt;
+&lt;/a&gt;</pre></div>
+
+  <h2>Class reference</h2>
+  <table class="docs-table">
+    <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>.agent-card</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Card root anchor element</td></tr>
+      <tr><td>.agent-card__head</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Row containing logo and title</td></tr>
+      <tr><td>.agent-card__logo</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Agent logo image</td></tr>
+      <tr><td>.agent-card__title</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Agent name heading</td></tr>
+      <tr><td>.agent-card__desc</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Short description text</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>

@@ -1,0 +1,55 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Logos">
+  <h1>Logos <span class="docs-tag">Global</span></h1>
+  <p class="docs-lead">Infinite horizontal marquee of client/partner logos. Five aspect-ratio modifiers adapt each logo to its natural shape.</p>
+
+  <h2>Preview</h2>
+  <div class="docs-preview">
+    <link rel="stylesheet" href="/styles/manifest.css" />
+    <div class="logos">
+      <p class="logos__label">Trusted by teams at</p>
+      <div class="logos__marquee">
+        <div class="logos__track">
+          <img class="logos__logo logos__logo--landscape" src="..." alt="Company" />
+          <img class="logos__logo logos__logo--square" src="..." alt="Company" />
+          <img class="logos__logo logos__logo--wide" src="..." alt="Company" />
+          <!-- duplicated for seamless loop -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2>HTML</h2>
+  <div class="docs-code">
+    <pre>&lt;div class="logos"&gt;
+  &lt;p class="logos__label"&gt;Trusted by teams at&lt;/p&gt;
+  &lt;div class="logos__marquee"&gt;
+    &lt;div class="logos__track"&gt;
+      &lt;img class="logos__logo logos__logo--landscape" src="..." alt="Company" /&gt;
+      &lt;img class="logos__logo logos__logo--square" src="..." alt="Company" /&gt;
+      &lt;img class="logos__logo logos__logo--wide" src="..." alt="Company" /&gt;
+      &lt;!-- duplicated for seamless loop --&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+  </div>
+
+  <h2>Class reference</h2>
+  <table class="docs-table">
+    <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>.logos</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Base logos marquee wrapper</td></tr>
+      <tr><td>.logos__label</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Text label above the marquee</td></tr>
+      <tr><td>.logos__marquee</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Overflow-hidden viewport for the scrolling track</td></tr>
+      <tr><td>.logos__track</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Animated scrolling row of logos</td></tr>
+      <tr><td>.logos__logo</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Individual logo image</td></tr>
+      <tr><td>.logos__logo--landscape</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td style="color:var(--docs-text-muted)">Landscape aspect ratio</td></tr>
+      <tr><td>.logos__logo--long</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td style="color:var(--docs-text-muted)">Long horizontal aspect ratio</td></tr>
+      <tr><td>.logos__logo--portrait</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td style="color:var(--docs-text-muted)">Portrait aspect ratio</td></tr>
+      <tr><td>.logos__logo--square</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td style="color:var(--docs-text-muted)">Square aspect ratio</td></tr>
+      <tr><td>.logos__logo--wide</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td style="color:var(--docs-text-muted)">Wide aspect ratio</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>

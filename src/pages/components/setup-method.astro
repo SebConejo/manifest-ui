@@ -1,0 +1,40 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Setup Method">
+  <h1>Setup Method <span class="docs-tag">Setup</span></h1>
+  <p class="docs-lead">Hint text and styled code block for displaying setup instructions. The hint is a small muted paragraph; the code block is a monospace container with soft background and horizontal scroll.</p>
+
+  <h2>Preview</h2>
+  <div class="docs-preview">
+    <link rel="stylesheet" href="/styles/manifest.css" />
+    <p class="setup-method__hint">
+      Point the SDK at Manifest by setting these env vars in your shell or
+      <code class="setup-model-hint__code">.env</code> file:
+    </p>
+    <div class="setup-method__code">
+      <pre><code>export OPENAI_BASE_URL="https://api.manifest.build/v1"
+export OPENAI_API_KEY="mnfst_YOUR_KEY"</code></pre>
+    </div>
+  </div>
+
+  <h2>HTML</h2>
+  <div class="docs-code"><pre>&lt;p class="setup-method__hint"&gt;
+  Set these env vars in your shell or
+  &lt;code class="setup-model-hint__code"&gt;.env&lt;/code&gt; file:
+&lt;/p&gt;
+&lt;div class="setup-method__code"&gt;
+  &lt;pre&gt;&lt;code id="snippet" data-lang="bash"&gt;export API_KEY="mnfst_YOUR_KEY"&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</pre></div>
+
+  <h2>Class reference</h2>
+  <table class="docs-table">
+    <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>.setup-method__hint</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Small muted paragraph introducing a code block</td></tr>
+      <tr><td>.setup-method__code</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Monospace code container; warm background, rounded, horizontal scroll, right padding for copy button</td></tr>
+      <tr><td>.setup-method__code pre</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Resets margin; wraps long lines</td></tr>
+      <tr><td>.setup-method__code code</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Inherits font and size from container; no extra background</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>
