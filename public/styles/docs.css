@@ -282,6 +282,13 @@ body {
 .docs-tag--element { background: rgba(234,179,8,0.15); color: #fbbf24; }
 .docs-tag--state { background: rgba(239,68,68,0.15); color: #f87171; }
 
+/* Chip selected state: dark background (the real page uses --color-text, not accent) */
+.docs-preview .selfhost-chip.is-selected {
+  background: var(--color-text);
+  border-color: var(--color-text);
+  color: #fff;
+}
+
 .docs-preview-note {
   background: rgba(255,255,255,0.04);
   border: 1px solid rgba(255,255,255,0.08);
