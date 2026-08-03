@@ -42,25 +42,20 @@ import DocsLayout from '../../layouts/DocsLayout.astro';
   <table class="docs-table">
     <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
     <tbody>
-      <tr><td>.nav</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Root sticky navigation bar, height 68px with backdrop blur</td></tr>
-      <tr><td>.nav__inner</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Inner flex row constraining all nav children</td></tr>
-      <tr><td>.nav__logo</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Logo anchor wrapping the logo image</td></tr>
-      <tr><td>.nav__logo-img</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Logo image, full wordmark by default</td></tr>
-      <tr><td>.nav__logo-img--mobile</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td style="color:var(--docs-text-muted)">Alternate logo mark shown on small screens</td></tr>
-      <tr><td>.nav__logo-wrap</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Wrapper that controls logo layout and spacing</td></tr>
-      <tr><td>.nav__links</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Horizontal list of navigation items</td></tr>
-      <tr><td>.nav__link</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Individual navigation anchor</td></tr>
-      <tr><td>.nav__actions</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Right-side slot for CTA and auth links</td></tr>
-      <tr><td>.nav__signin</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Sign in text link</td></tr>
-      <tr><td>.nav__badge</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Pill badge used for social proof (stars, etc.)</td></tr>
-      <tr><td>.nav__item</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">List item in .nav__links</td></tr>
-      <tr><td>.nav__trigger</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Nav item that opens a mega menu on click</td></tr>
-      <tr><td>.nav__chevron</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Chevron icon inside a trigger item</td></tr>
-      <tr><td>.nav__burger</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Hamburger button that opens the mobile drawer</td></tr>
-      <tr><td>.nav__scrim</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Full-screen overlay shown behind open menus</td></tr>
-      <tr><td>.nav__social--stars</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td style="color:var(--docs-text-muted)">Stars icon variant for .nav__badge social count</td></tr>
-      <tr><td>.nav__social-label</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Label text inside the social badge</td></tr>
-      <tr><td>.nav__social-count</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Numeric count inside the social badge</td></tr>
+      <tr><td>.nav .nav__links</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Links row, stretched to full header height so the mega panel anchors flush to the bottom border</td></tr>
+      <tr><td>.nav__item</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Flex list item aligned to full nav height</td></tr>
+      <tr><td>.nav__trigger</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Button that opens a mega menu; borderless, inherits body font at var(--size-sm) weight 600</td></tr>
+      <tr><td>.nav__trigger:hover</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Color shifts to var(--color-accent)</td></tr>
+      <tr><td>.nav__trigger[aria-expanded='true']</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Color shifts to var(--color-accent) while the panel is open</td></tr>
+      <tr><td>.nav__chevron</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Chevron icon inside a trigger; rotates 180° when the panel is open</td></tr>
+      <tr><td>.nav__trigger[aria-expanded='true'] .nav__chevron</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Applies rotate(180deg) to the chevron</td></tr>
+      <tr><td>.nav__burger</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">44×44 px hamburger button, hidden on desktop, shown below 1023 px</td></tr>
+      <tr><td>.nav__scrim</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Fixed full-screen overlay with blur backdrop shown behind open menus</td></tr>
+      <tr><td>.nav__social--stars</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td style="color:var(--docs-text-muted)">Two-part pill button (label + count) for the GitHub star count; 28 px tall, 6 px radius border</td></tr>
+      <tr><td>.nav__social--stars:hover</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Darkens the outer border and the inner divider</td></tr>
+      <tr><td>.nav__social-label</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Left half of the stars button; card background with icon and label text</td></tr>
+      <tr><td>.nav__social-count</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Right half of the stars button; alt background, tabular-nums, left-border divider</td></tr>
+      <tr><td>.drawer__socials</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Flex row of social links at the bottom of the mobile drawer; defined in nav-menu.css</td></tr>
     </tbody>
   </table>
 </DocsLayout>

@@ -1,0 +1,161 @@
+/* ========================================
+   Mobile nav: burger, scrim and drawer (< 1024px)
+   Behaviour lives in src/nav-menu.js, markup in partials/header.js.
+   At >= 1024px the drawer is replaced by the mega menu (src/nav-menu.css).
+   ======================================== */
+
+/* ---- Burger + scrim ---- */
+.nav__burger {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin-left: auto;
+  padding: 0;
+  border: 1px solid rgba(44, 36, 24, 0.1);
+  border-radius: 10px;
+  background: none;
+  color: var(--color-text);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.nav__scrim {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  background: rgba(44, 36, 24, 0.35);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+body.has-drawer-open {
+  overflow: hidden;
+}
+
+/* ---- Mobile drawer ---- */
+.drawer {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  max-height: calc(100dvh - var(--nav-height));
+  overflow-y: auto;
+  background: var(--color-bg);
+  border-bottom: 1px solid rgba(44, 36, 24, 0.08);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition:
+    opacity 0.18s ease,
+    transform 0.18s ease,
+    visibility 0s linear 0.18s;
+}
+
+.drawer.is-open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition:
+    opacity 0.18s ease,
+    transform 0.18s ease,
+    visibility 0s;
+}
+
+.drawer__inner {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 5% 24px;
+}
+
+.drawer__summary,
+.drawer__top-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 4px;
+  border-bottom: 1px solid rgba(44, 36, 24, 0.06);
+  font-family: var(--font-body);
+  font-size: var(--size-base);
+  font-weight: 600;
+  color: var(--color-text);
+  cursor: pointer;
+  list-style: none;
+}
+
+.drawer__summary::-webkit-details-marker {
+  display: none;
+}
+
+.drawer__summary i {
+  font-size: 1.25rem;
+  color: var(--color-text-muted);
+  transition: transform 0.2s ease;
+}
+
+.drawer__section[open] .drawer__summary i {
+  transform: rotate(180deg);
+}
+
+.drawer__panel {
+  display: flex;
+  flex-direction: column;
+  padding: 6px 0 12px;
+}
+
+.drawer__link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 4px 12px 12px;
+  font-size: var(--size-sm);
+  font-weight: 500;
+  color: var(--color-text-muted);
+  border-radius: 10px;
+}
+
+.drawer__link i:first-child {
+  font-size: 1.2rem;
+}
+
+.drawer__link:hover {
+  background: var(--color-bg-alt);
+  color: var(--color-text);
+}
+
+.drawer__actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.drawer__actions .btn {
+  flex: 1;
+  justify-content: center;
+}
+
+/* ---- Breakpoint: swap mega-menu for drawer ---- */
+@media (max-width: 1023px) {
+  .nav .nav__links,
+  .nav .nav__actions {
+    display: none;
+  }
+
+  .nav .nav__burger {
+    display: inline-flex;
+  }
+}
+
+@media (min-width: 1024px) {
+  .drawer {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .drawer,
+  .drawer__summary i {
+    transition: none;
+  }
+}

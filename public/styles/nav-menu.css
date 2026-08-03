@@ -1,0 +1,336 @@
+/* ========================================
+   Desktop mega menu (>= 1024px)
+   Behaviour lives in src/nav-menu.js, markup in partials/header.js.
+   Below 1024px this is replaced by the drawer — see src/nav-drawer.css.
+   ======================================== */
+
+:root {
+  --nav-height: 68px;
+}
+
+/* This file is @imported at the top of style.css, so its rules sit earliest in
+   the cascade. Anything that has to beat an existing `.nav__*` rule in
+   style.css is qualified with `.nav` to win on specificity rather than order. */
+
+/* The nav links row stretches to the full header height so a panel anchored at
+   `top: 100%` lands exactly on the header's bottom border. */
+.nav .nav__links {
+  position: relative;
+  top: 5px;
+  align-self: stretch;
+  align-items: center;
+}
+
+.nav__item {
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+}
+
+.nav__trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: var(--size-sm);
+  font-weight: 600;
+  color: var(--color-text);
+  transition: color 0.15s ease;
+}
+
+.nav__trigger:hover,
+.nav__trigger[aria-expanded='true'] {
+  color: var(--color-accent);
+}
+
+.nav__chevron {
+  font-size: 1.1rem;
+  transition: transform 0.2s ease;
+}
+
+.nav__trigger[aria-expanded='true'] .nav__chevron {
+  transform: rotate(180deg);
+}
+
+/* ---- Panel shell ---- */
+/* `.mega` is a transparent wrapper whose top padding bridges the gap between
+   the header and the card, so the pointer never leaves the hover target. */
+.mega {
+  position: absolute;
+  top: 100%;
+  left: -24px;
+  padding-top: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  /* `visibility` is stepped, never interpolated: it flips to visible instantly
+     on open (so the panel is focusable on the very next frame) and waits for
+     the fade to finish on close. Transitioning it over 0.18s instead would
+     leave the panel `hidden` — and its links unfocusable — while it fades in. */
+  transition:
+    opacity 0.18s ease,
+    transform 0.18s ease,
+    visibility 0s linear 0.18s;
+}
+
+.mega.is-open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition:
+    opacity 0.18s ease,
+    transform 0.18s ease,
+    visibility 0s;
+}
+
+.mega__inner {
+  display: grid;
+  background: var(--color-bg-card);
+  border: 1px solid rgba(44, 36, 24, 0.08);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow:
+    0 1px 2px rgba(44, 36, 24, 0.04),
+    0 12px 32px -8px rgba(44, 36, 24, 0.12);
+}
+
+.mega__grid {
+  padding: 24px;
+}
+
+.mega--product .mega__inner {
+  width: 804px;
+  max-width: min(804px, calc(100vw - 32px));
+  grid-template-columns: minmax(0, 1fr) 264px;
+}
+
+.mega--solutions .mega__inner {
+  width: 804px;
+  grid-template-columns: minmax(0, 1fr) 264px;
+}
+
+/* ---- Menu rows: icon tile + title + description ---- */
+.mega__item {
+  display: flex;
+  gap: 14px;
+  padding: 10px;
+  border-radius: var(--radius);
+  transition: background 0.15s ease;
+}
+
+.mega__item:hover {
+  background: var(--color-bg-alt);
+}
+
+.mega__icon {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: rgba(44, 36, 24, 0.06);
+  color: var(--color-text-muted);
+  font-size: 1.25rem;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
+}
+
+.mega__item:hover .mega__icon {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.mega__body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.mega__title {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--size-sm);
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--color-text);
+}
+
+.mega__desc {
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--color-text-muted);
+}
+
+.mega__external {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+}
+
+/* ---- Featured right rail ---- */
+.mega__rail {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 20px;
+  border-radius: 0;
+  background: var(--color-bg-alt);
+  border: 0;
+  border-left: 1px solid rgba(44, 36, 24, 0.08);
+  transition:
+    border-color 0.15s ease,
+    background 0.15s ease;
+}
+
+.mega__rail:hover {
+  background: var(--color-bg);
+  border-left-color: rgba(8, 145, 178, 0.25);
+}
+
+.mega__rail-eyebrow {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-accent);
+}
+
+.mega__rail-title {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-family: var(--font-display);
+  font-size: var(--size-base);
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--color-text);
+}
+
+.mega__rail-desc {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+}
+
+.mega__rail-cta {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-top: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+.mega__rail:hover .mega__rail-cta i {
+  transform: translateX(3px);
+}
+
+.mega__rail-cta i {
+  transition: transform 0.15s ease;
+}
+
+/* Live star count, pinned to the right of the rail's call to action. */
+.mega__rail-stat {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: auto;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--color-accent-subtle);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-accent-dark);
+}
+
+/* ---- Directional slide animations (switching between panels) ---- */
+@keyframes mega-slide-from-right {
+  from { opacity: 0; transform: translateX(16px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes mega-slide-from-left {
+  from { opacity: 0; transform: translateX(-16px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.mega.is-open.mega--from-right .mega__inner {
+  animation: mega-slide-from-right 0.18s ease forwards;
+}
+
+.mega.is-open.mega--from-left .mega__inner {
+  animation: mega-slide-from-left 0.18s ease forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mega,
+  .nav__chevron,
+  .mega__rail-cta i {
+    transition: none;
+  }
+
+  .mega.is-open.mega--from-right .mega__inner,
+  .mega.is-open.mega--from-left .mega__inner {
+    animation: none;
+  }
+}
+
+/* ---- GitHub star button ---- */
+.nav__social--stars {
+  display: inline-flex;
+  align-items: stretch;
+  height: 28px;
+  border: 1px solid rgba(44, 36, 24, 0.18);
+  border-radius: 6px;
+  overflow: hidden;
+  color: var(--color-text);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1;
+  transition: border-color 0.15s ease;
+  text-decoration: none;
+}
+
+.nav__social--stars:hover {
+  border-color: rgba(44, 36, 24, 0.35);
+}
+
+.nav__social-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 10px;
+  background: var(--color-bg-card);
+}
+
+.nav__social-label i {
+  font-size: 1.1rem;
+}
+
+.nav__social-count {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 10px;
+  border-left: 1px solid rgba(44, 36, 24, 0.18);
+  background: var(--color-bg-alt);
+  font-variant-numeric: tabular-nums;
+  transition: border-color 0.15s ease;
+}
+
+.nav__social--stars:hover .nav__social-count {
+  border-left-color: rgba(44, 36, 24, 0.35);
+}
+
+.drawer__socials {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}

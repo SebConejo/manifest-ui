@@ -38,18 +38,23 @@ import DocsLayout from '../../layouts/DocsLayout.astro';
   <table class="docs-table">
     <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
     <tbody>
-      <tr><td>.drawer</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Root drawer panel, off-screen by default on mobile</td></tr>
-      <tr><td>.drawer.is-open</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Slides the drawer into view from the right</td></tr>
+      <tr><td>.drawer</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Full-width panel below the nav bar, hidden by default; slides down on open</td></tr>
+      <tr><td>.drawer.is-open</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Sets opacity 1, visibility visible, translateY(0)</td></tr>
       <tr><td>body.has-drawer-open</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Locks body scroll while the drawer is open</td></tr>
-      <tr><td>.drawer__inner</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Inner flex column holding all drawer sections</td></tr>
-      <tr><td>.drawer__summary</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Top section showing the home or brand link</td></tr>
-      <tr><td>.drawer__top-link</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Prominent link at the top of the drawer</td></tr>
-      <tr><td>.drawer__panel</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Scrollable list of navigation links</td></tr>
-      <tr><td>.drawer__link</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Individual navigation link row</td></tr>
-      <tr><td>.drawer__link:hover</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Highlight background on hover</td></tr>
-      <tr><td>.drawer__actions</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Bottom slot for CTA buttons</td></tr>
-      <tr><td>.drawer__socials</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Social links row at the bottom of the drawer</td></tr>
-      <tr><td>.nav__burger</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Hamburger button in the nav that triggers the drawer</td></tr>
+      <tr><td>.drawer__inner</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Flex column inside the drawer; padding 12px 5% 24px</td></tr>
+      <tr><td>.drawer__summary</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Accordion summary row; flex space-between, bottom border, font weight 600 at var(--size-base)</td></tr>
+      <tr><td>.drawer__summary::-webkit-details-marker</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Hides the native details/summary triangle in WebKit</td></tr>
+      <tr><td>.drawer__summary i</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Chevron icon inside the summary; muted color, rotates 180° when section is open</td></tr>
+      <tr><td>.drawer__section[open] .drawer__summary i</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Applies rotate(180deg) to the summary chevron</td></tr>
+      <tr><td>.drawer__top-link</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Shares the same rule as .drawer__summary; top-level anchor link with matching flex and border style</td></tr>
+      <tr><td>.drawer__panel</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Flex column of links; padding 6px 0 12px</td></tr>
+      <tr><td>.drawer__link</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Flex row link; gap 12px, muted color at var(--size-sm) weight 500, 10 px border radius</td></tr>
+      <tr><td>.drawer__link i:first-child</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Leading icon at 1.2 rem</td></tr>
+      <tr><td>.drawer__link:hover</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Alt background, text shifts to var(--color-text)</td></tr>
+      <tr><td>.drawer__actions</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Flex row of CTA buttons; gap 12px, margin-top 20px</td></tr>
+      <tr><td>.drawer__actions .btn</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Each button grows to fill equal width (flex: 1) and centers its label</td></tr>
+      <tr><td>.nav__burger</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Hamburger button that triggers the drawer; hidden on desktop, displayed below 1023 px</td></tr>
+      <tr><td>.nav__scrim</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Fixed full-screen overlay with blur backdrop</td></tr>
     </tbody>
   </table>
 </DocsLayout>

@@ -23,8 +23,10 @@ import DocsLayout from '../../layouts/DocsLayout.astro';
   <table class="docs-table">
     <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
     <tbody>
-      <tr><td>.blog-index</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Page-level wrapper for the blog listing</td></tr>
-      <tr><td>.blog-index__title</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Page heading</td></tr>
+      <tr><td>.blog-index</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Page-level wrapper; padding var(--space-2xl) 0 var(--space-3xl)</td></tr>
+      <tr><td>.blog-index__title</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Page heading at var(--size-4xl); reduces to var(--size-3xl) below 768 px</td></tr>
+      <tr><td>.blog-index__empty</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Empty-state message; var(--size-lg), muted color, centered, tall vertical padding</td></tr>
+      <tr><td>.blog-tabs</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Flex row of filter tabs; gap var(--space-sm), margin-bottom var(--space-xl)</td></tr>
     </tbody>
   </table>
 </DocsLayout>

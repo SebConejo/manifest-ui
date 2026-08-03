@@ -1,0 +1,290 @@
+/* ========================================
+   Changelog — auto-generated from GitHub releases
+   (vite-plugin-changelog). Loads alongside style.css.
+   ======================================== */
+
+.changelog {
+  padding: var(--space-2xl) 0 var(--space-3xl);
+}
+
+.changelog__intro {
+  max-width: 640px;
+  margin-bottom: var(--space-2xl);
+}
+
+.changelog__title {
+  font-family: var(--font-display);
+  font-size: var(--size-4xl);
+  line-height: 1.1;
+  margin-bottom: var(--space-sm);
+}
+
+.changelog__lede {
+  font-size: var(--size-lg);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.changelog__lede a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* ---- Month grouping ---- */
+.changelog__month {
+  margin-bottom: var(--space-xl);
+}
+
+.changelog__month-label {
+  font-size: var(--size-sm);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-light);
+  padding-bottom: var(--space-xs);
+}
+
+.changelog__entries {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---- Entry: date/version rail + notes ---- */
+.changelog__entry {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: var(--space-xl);
+  padding: var(--space-xl) 0;
+  border-top: 1px solid var(--color-border, #e7e1d5);
+}
+
+.changelog__aside {
+  position: sticky;
+  top: var(--space-xl);
+  align-self: start;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.changelog__date {
+  font-size: var(--size-sm);
+  color: var(--color-text-muted);
+}
+
+.changelog__version {
+  text-decoration: none;
+  width: fit-content;
+}
+
+.changelog__version-badge {
+  display: inline-block;
+  font-family: "Fira Code", monospace;
+  font-size: var(--size-sm);
+  font-weight: 500;
+  color: var(--color-accent-dark);
+  background: var(--color-accent-subtle);
+  border: 1px solid transparent;
+  padding: 2px 10px;
+  border-radius: 9999px;
+  transition: border-color 0.15s ease;
+}
+
+.changelog__version:hover .changelog__version-badge {
+  border-color: var(--color-accent);
+}
+
+.changelog__tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-text-light);
+}
+
+.changelog__tag--pre {
+  color: #b45309;
+}
+
+/* ---- Rendered release notes (markdown) ---- */
+.changelog__notes h2,
+.changelog__notes h3,
+.changelog__notes h4 {
+  font-size: var(--size-lg);
+  font-weight: 600;
+  margin: var(--space-md) 0 var(--space-xs);
+}
+
+.changelog__notes h2:first-child,
+.changelog__notes h3:first-child,
+.changelog__notes h4:first-child {
+  margin-top: 0;
+}
+
+.changelog__notes p {
+  margin-bottom: var(--space-sm);
+  color: var(--color-text);
+  line-height: 1.75;
+}
+
+.changelog__notes ul,
+.changelog__notes ol {
+  margin: 0 0 var(--space-sm);
+  padding-left: var(--space-lg);
+}
+
+.changelog__notes li {
+  margin-bottom: var(--space-xs);
+  line-height: 1.75;
+}
+
+.changelog__notes li > p {
+  margin-bottom: var(--space-xs);
+}
+
+.changelog__notes a:not(.btn) {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.15s ease;
+  overflow-wrap: anywhere;
+}
+
+.changelog__notes a:not(.btn):hover {
+  color: var(--color-accent-dark);
+}
+
+.changelog__notes strong {
+  font-weight: 600;
+}
+
+.changelog__notes blockquote {
+  border-left: 3px solid var(--color-text);
+  padding-left: var(--space-md);
+  margin: var(--space-sm) 0;
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+.changelog__notes code {
+  font-family: "Fira Code", monospace;
+  font-size: 0.85em;
+  background: var(--color-bg-alt);
+  padding: 2px 6px;
+  border-radius: 3px;
+  overflow-wrap: anywhere;
+}
+
+.changelog__notes pre {
+  margin-bottom: var(--space-sm);
+  background: var(--color-text);
+  color: #e5e5e5;
+  padding: var(--space-md);
+  border-radius: 6px;
+  overflow-x: auto;
+  line-height: 1.6;
+}
+
+.changelog__notes pre code {
+  background: none;
+  padding: 0;
+  font-size: 0.78rem;
+  color: inherit;
+}
+
+.changelog__empty-note {
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+/* highlight.js token colors — dark palette tuned to the cream/teal brand */
+.changelog__notes .hljs-comment,
+.changelog__notes .hljs-quote {
+  color: #9a8c78;
+  font-style: italic;
+}
+.changelog__notes .hljs-keyword,
+.changelog__notes .hljs-selector-tag,
+.changelog__notes .hljs-built_in,
+.changelog__notes .hljs-type,
+.changelog__notes .hljs-literal,
+.changelog__notes .hljs-meta {
+  color: #22d3ee;
+}
+.changelog__notes .hljs-string,
+.changelog__notes .hljs-regexp,
+.changelog__notes .hljs-char.escape_,
+.changelog__notes .hljs-subst {
+  color: #8fd19e;
+}
+.changelog__notes .hljs-number,
+.changelog__notes .hljs-symbol,
+.changelog__notes .hljs-bullet,
+.changelog__notes .hljs-attr,
+.changelog__notes .hljs-attribute {
+  color: #e0b265;
+}
+.changelog__notes .hljs-title,
+.changelog__notes .hljs-title.function_,
+.changelog__notes .hljs-title.class_,
+.changelog__notes .hljs-section {
+  color: #7dd3fc;
+}
+.changelog__notes .hljs-variable,
+.changelog__notes .hljs-template-variable,
+.changelog__notes .hljs-params {
+  color: #e5e5e5;
+}
+
+.changelog__source {
+  display: inline-block;
+  margin-top: var(--space-xs);
+  font-size: var(--size-sm);
+  color: var(--color-text-muted);
+  text-decoration: none;
+}
+
+.changelog__source:hover {
+  color: var(--color-accent);
+}
+
+/* ---- Archive link + empty state ---- */
+.changelog__archive {
+  margin-top: var(--space-2xl);
+  padding-top: var(--space-xl);
+  border-top: 1px solid var(--color-border, #e7e1d5);
+  text-align: center;
+}
+
+.changelog__empty {
+  color: var(--color-text-muted);
+  font-size: var(--size-lg);
+  padding: var(--space-2xl) 0;
+}
+
+.changelog__empty a {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  .changelog__entry {
+    grid-template-columns: 1fr;
+    gap: var(--space-sm);
+    padding: var(--space-lg) 0;
+  }
+
+  .changelog__aside {
+    position: static;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-sm);
+  }
+
+  .changelog__title {
+    font-size: var(--size-3xl);
+  }
+}
