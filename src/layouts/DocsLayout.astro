@@ -69,15 +69,14 @@ const nav = [
     label: 'TABLES',
     items: [
       { label: 'Model Table', href: '/components/model-table' },
-      { label: 'Model Listing', href: '/components/model-listing' },
       { label: 'Pricing Compare', href: '/components/pricing-compare' },
     ],
   },
   {
     label: 'TABS & ACCORDIONS',
     items: [
+      { label: 'Tabs', href: '/components/tabs' },
       { label: 'Feature Tabs', href: '/components/feature-tabs' },
-      { label: 'Pricing Tabs', href: '/components/pricing-tabs' },
       { label: 'FAQ', href: '/components/faq' },
       { label: 'Usecases', href: '/components/usecases' },
     ],
@@ -232,5 +231,16 @@ const currentPath = Astro.url.pathname;
       </div>
     </main>
   </div>
+  <script>
+    const sidebar = document.querySelector('.docs-sidebar');
+    const STORAGE_KEY = 'docs-sidebar-scroll';
+    if (sidebar) {
+      const saved = sessionStorage.getItem(STORAGE_KEY);
+      if (saved) sidebar.scrollTop = parseInt(saved, 10);
+      sidebar.addEventListener('scroll', () => {
+        sessionStorage.setItem(STORAGE_KEY, String(sidebar.scrollTop));
+      }, { passive: true });
+    }
+  </script>
 </body>
 </html>

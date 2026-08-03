@@ -1,0 +1,45 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Tabs">
+  <h1>Tabs <span class="docs-tag">Global</span></h1>
+  <p class="docs-lead">Segmented tab strip for switching between views. Active tab gets a white pill with a subtle shadow; inactive tabs are muted and hover to full text color.</p>
+
+  <h2>Preview</h2>
+  <div class="docs-preview">
+    <div class="model-listing__tabs">
+      <button class="model-listing__tab model-listing__tab--active">All models</button>
+      <button class="model-listing__tab">Chat</button>
+      <button class="model-listing__tab">Embedding</button>
+    </div>
+  </div>
+
+  <h2>HTML</h2>
+  <div class="docs-code"><pre>&lt;div class="model-listing__tabs"&gt;
+  &lt;button class="model-listing__tab model-listing__tab--active"&gt;Tab one&lt;/button&gt;
+  &lt;button class="model-listing__tab"&gt;Tab two&lt;/button&gt;
+  &lt;button class="model-listing__tab"&gt;Tab three&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- Panel shown when tab is active --&gt;
+&lt;div class="model-listing__wrapper"&gt;&lt;/div&gt;
+
+&lt;!-- Panel hidden when tab is not active --&gt;
+&lt;div class="model-listing__wrapper model-listing__panel--hidden"&gt;&lt;/div&gt;</pre></div>
+
+  <h2>Class reference</h2>
+  <table class="docs-table">
+    <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>.model-listing__tabs</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Tab strip wrapper — pill container with subtle fill</td></tr>
+      <tr><td>.model-listing__tab</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Individual tab button</td></tr>
+      <tr><td>.model-listing__tab--active</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td style="color:var(--docs-text-muted)">Selected tab — white background, full text color, shadow</td></tr>
+      <tr><td>.model-listing__tab:hover</td><td><span class="docs-tag docs-tag--state">state</span></td><td style="color:var(--docs-text-muted)">Hover on inactive tab</td></tr>
+      <tr><td>.model-listing__wrapper</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Panel container for the tab's content</td></tr>
+      <tr><td>.model-listing__panel--hidden</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td style="color:var(--docs-text-muted)">Hides a panel — toggled via JS when switching tabs</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Notes</h2>
+  <p class="docs-lead" style="margin-bottom:0">The same design also appears as <code style="font-family:monospace;font-size:0.85em">.pricing-tabs</code> / <code style="font-family:monospace;font-size:0.85em">.pricing-tabs__tab</code> on the pricing page — identical CSS, different namespace.</p>
+</DocsLayout>
