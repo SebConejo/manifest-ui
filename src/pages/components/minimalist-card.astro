@@ -1,0 +1,39 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Minimalist Card">
+  <h1>Minimalist Card <span class="docs-tag">Cards</span></h1>
+  <p class="docs-lead">Compact card without a cover image. Used for agents, providers, and similar entity grids. Shows a logo, title, and short description.</p>
+
+  <h2>Preview</h2>
+  <div class="docs-preview">
+    <a class="agent-card" href="#" style="max-width:260px;text-decoration:none;">
+      <div class="agent-card__head">
+        <div style="width:48px;height:48px;border-radius:8px;background:#dbd7d0;flex-shrink:0;"></div>
+        <h3 class="agent-card__title">Entity Name</h3>
+      </div>
+      <p class="agent-card__desc">Short description of what this entity does or represents.</p>
+    </a>
+  </div>
+
+  <h2>HTML</h2>
+  <div class="docs-code"><pre>&lt;a class="agent-card" href="/agents/slug/"&gt;
+  &lt;div class="agent-card__head"&gt;
+    &lt;img class="agent-card__logo" src="logo.svg" alt="Name" /&gt;
+    &lt;h3 class="agent-card__title"&gt;Entity Name&lt;/h3&gt;
+  &lt;/div&gt;
+  &lt;p class="agent-card__desc"&gt;Short description.&lt;/p&gt;
+&lt;/a&gt;</pre></div>
+
+  <h2>Class reference</h2>
+  <table class="docs-table">
+    <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>.agent-card</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">Card root anchor; flex column, border, border-radius 3px</td></tr>
+      <tr><td>.agent-card__head</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Row containing logo and title; flex, gap var(--space-sm), align-items center</td></tr>
+      <tr><td>.agent-card__logo</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">48×48 logo image; object-fit contain</td></tr>
+      <tr><td>.agent-card__title</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Entity name heading; var(--size-base), weight 600</td></tr>
+      <tr><td>.agent-card__desc</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Short description; var(--size-sm), muted color</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>

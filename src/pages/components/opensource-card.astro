@@ -1,0 +1,92 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+<DocsLayout title="Opensource Card">
+  <h1>Opensource Card <span class="docs-tag">Cards</span></h1>
+  <p class="docs-lead">Tight grid of borderless cards with decorative "+" corner marks. Cards share borders, no gap between them. Works in groups of 3 or 6.</p>
+
+  <h2>Preview</h2>
+  <div class="docs-preview">
+    <div class="opensource__grid" style="position:relative;max-width:600px;">
+      <!-- corner marks -->
+      <div class="opensource__corner opensource__corner--tl"></div>
+      <div class="opensource__corner opensource__corner--tc1"></div>
+      <div class="opensource__corner opensource__corner--tc2"></div>
+      <div class="opensource__corner opensource__corner--tr"></div>
+      <div class="opensource__corner opensource__corner--bl"></div>
+      <div class="opensource__corner opensource__corner--bc1"></div>
+      <div class="opensource__corner opensource__corner--bc2"></div>
+      <div class="opensource__corner opensource__corner--br"></div>
+
+      <div class="opensource__card">
+        <div class="opensource__stat">
+          <div style="width:32px;height:32px;border-radius:6px;background:#dbd7d0;"></div>
+          <span class="opensource__metric">1.2k</span>
+        </div>
+        <p class="opensource__card-title">GitHub Stars</p>
+        <p class="opensource__card-text">Open source and growing every week.</p>
+      </div>
+      <div class="opensource__card">
+        <div class="opensource__stat">
+          <div style="width:32px;height:32px;border-radius:6px;background:#dbd7d0;"></div>
+          <span class="opensource__metric">
+            <span class="opensource__dot"></span>
+            Live
+          </span>
+        </div>
+        <p class="opensource__card-title">Production ready</p>
+        <p class="opensource__card-text">Deployed and handling real traffic.</p>
+      </div>
+      <div class="opensource__card">
+        <div class="opensource__stat">
+          <div style="width:32px;height:32px;border-radius:6px;background:#dbd7d0;"></div>
+          <span class="opensource__metric">48</span>
+        </div>
+        <p class="opensource__card-title">Contributors</p>
+        <p class="opensource__card-text">Community-driven development.</p>
+      </div>
+    </div>
+  </div>
+
+  <h2>HTML</h2>
+  <div class="docs-code"><pre>&lt;div class="opensource__grid"&gt;
+  &lt;!-- Corner "+" marks --&gt;
+  &lt;div class="opensource__corner opensource__corner--tl"&gt;&lt;/div&gt;
+  &lt;div class="opensource__corner opensource__corner--tc1"&gt;&lt;/div&gt;
+  &lt;div class="opensource__corner opensource__corner--tc2"&gt;&lt;/div&gt;
+  &lt;div class="opensource__corner opensource__corner--tr"&gt;&lt;/div&gt;
+  &lt;div class="opensource__corner opensource__corner--bl"&gt;&lt;/div&gt;
+  &lt;div class="opensource__corner opensource__corner--bc1"&gt;&lt;/div&gt;
+  &lt;div class="opensource__corner opensource__corner--bc2"&gt;&lt;/div&gt;
+  &lt;div class="opensource__corner opensource__corner--br"&gt;&lt;/div&gt;
+
+  &lt;div class="opensource__card"&gt;
+    &lt;div class="opensource__stat"&gt;
+      &lt;img src="logo.svg" alt="" /&gt;
+      &lt;span class="opensource__metric"&gt;1.2k&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;p class="opensource__card-title"&gt;GitHub Stars&lt;/p&gt;
+    &lt;p class="opensource__card-text"&gt;Description.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;!-- repeat × 3 or × 6 --&gt;
+&lt;/div&gt;</pre></div>
+
+  <h2>Class reference</h2>
+  <table class="docs-table">
+    <thead><tr><th>Class</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>.opensource__grid</td><td><span class="docs-tag">base</span></td><td style="color:var(--docs-text-muted)">repeat(3, 1fr) grid; single outer border; no gap between cards</td></tr>
+      <tr><td>.opensource__corner</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Absolute "+" mark; 11×11 cross drawn with two CSS gradients</td></tr>
+      <tr><td>.opensource__corner--tl/tr/bl/br</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td style="color:var(--docs-text-muted)">Grid corner positions (top-left, top-right, bottom-left, bottom-right)</td></tr>
+      <tr><td>.opensource__corner--tc1/tc2</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td style="color:var(--docs-text-muted)">Top inner column junction marks</td></tr>
+      <tr><td>.opensource__corner--bc1/bc2</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td style="color:var(--docs-text-muted)">Bottom inner column junction marks</td></tr>
+      <tr><td>.opensource__corner--ml/mr/mc1/mc2</td><td><span class="docs-tag docs-tag--modifier">modifier</span></td><td style="color:var(--docs-text-muted)">Middle-row junction marks (for 6-card grid)</td></tr>
+      <tr><td>.opensource__card</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Individual card; flex column, padding 28px; left border removed on :nth-child(3n+1); top border added from row 2 onwards</td></tr>
+      <tr><td>.opensource__stat</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Top row: logo on left, metric pill on right; justify-content space-between</td></tr>
+      <tr><td>.opensource__metric</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Pill badge; muted background, border-radius 999px</td></tr>
+      <tr><td>.opensource__dot</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">8×8 green dot for "live" status inside a metric</td></tr>
+      <tr><td>.opensource__card-title</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Card heading; var(--size-lg), weight 700</td></tr>
+      <tr><td>.opensource__card-text</td><td><span class="docs-tag docs-tag--element">element</span></td><td style="color:var(--docs-text-muted)">Supporting text; var(--size-base), muted, flex 1</td></tr>
+    </tbody>
+  </table>
+</DocsLayout>
